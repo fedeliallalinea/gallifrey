@@ -35,6 +35,7 @@ pkg_nofetch() {
 src_prepare() {
 	find ./ \( -iname "*.bat" -or -iname "*.exe" \) -exec rm {} +
 	mv ./sqlcl/bin/sql ./sqlcl/bin/sqlcl
+	eapply_user
 }
 
 src_install() {
