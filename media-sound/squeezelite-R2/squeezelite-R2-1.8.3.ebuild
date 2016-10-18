@@ -6,8 +6,8 @@ EAPI=6
 
 inherit eutils user flag-o-matic git-r3
 
-DESCRIPTION="Squeezelite is a small headless Squeezebox emulator using ALSA audio output"
-HOMEPAGE="https://code.google.com/p/squeezelite"
+DESCRIPTION="Squeezelite R2 is a small headless Squeezebox emulator using ALSA audio output modified by Marco Curti"
+HOMEPAGE="https://github.com/marcoc1712/squeezelite-R2"
 SRC_URI="https://github.com/marcoc1712/${PN}/archive/v${PV}-(R2).tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
