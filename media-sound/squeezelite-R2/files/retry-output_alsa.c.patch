@@ -1,0 +1,25 @@
+diff --git a/output_alsa.c b/output_alsa.c
+index b994269..124c363 100644
+--- a/output_alsa.c
++++ b/output_alsa.c
+@@ -32,6 +32,7 @@
+ #include <sys/mman.h>
+ #include <malloc.h>
+ #include <math.h>
++#include <unistd.h>
+ 
+ #define MAX_DEVICE_LEN 128
+ 
+@@ -383,9 +384,9 @@ static int alsa_open(const char *device, unsigned sample_rate, unsigned alsa_buf
+ 	bool retry;
+ 	do {
+ 		// open device
+-		if ((err = snd_pcm_open(&pcmp, alsa.device, SND_PCM_STREAM_PLAYBACK, 0)) < 0) {
+-			LOG_ERROR("playback open error: %s", snd_strerror(err));
+-			return err;
++		while ((err = snd_pcm_open(&pcmp, alsa.device, SND_PCM_STREAM_PLAYBACK, 0)) < 0) {
++			LOG_WARN("playback open error: %s", snd_strerror(err));
++			sleep(5);
+ 		}
+ 
+ 		// init params

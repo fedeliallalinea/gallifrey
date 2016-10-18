@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+    <repo priority="150" quality="experimental" status="unofficial">
+        <name>gallifrey</name>
+        <description lang="en">fedeliallalinea's Gentoo Overlay</description>
+        <homepage>https://github.com/fedeliallalinea/gallifrey.git</homepage>
+        <owner>
+            <name>fedeliallalinea</name>
+            <email>fedeliallalinea@gmail.com</email>
+        </owner>
+        <source type="git">https://github.com/fedeliallalinea/gallifrey.git</source>
+        <feed>https://github.com/fedeliallalinea/gallifrey/commits/master.atom</feed>
+    </repo>
+</repositories>

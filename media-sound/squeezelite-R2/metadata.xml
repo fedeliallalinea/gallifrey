@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+    <email>fedeliallalinea@gmail.com</email>
+    <name>fedeliallalinea</name>
+</maintainer>
+<use>
+   <flag name='dsd'>dsd support enabled via dsd2pcm <pkg>media-sound/squeezelite-R2</pkg></flag>
+   <flag name='mpg123'>mpg123 support <pkg>media-sound/squeezelite-R2</pkg></flag>
+   <flag name='resample'>resample support enabled via soxr<pkg>media-sound/squeezelite-R2</pkg></flag>
+   <flag name='visexport'>audio data export to jivelite support enabled<pkg>media-sound/squeezelite-R2</pkg></flag>
+</use>
+</pkgmetadata>

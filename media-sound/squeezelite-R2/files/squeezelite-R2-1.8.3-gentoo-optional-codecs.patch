@@ -1,0 +1,126 @@
+diff --git a/decode.c b/decode.c
+index add5fcb..333d76b 100644
+--- a/decode.c
++++ b/decode.c
+@@ -138,16 +138,26 @@ void decode_init(log_level level, const char *include_codecs, const char *exclud
+ 	if (!strstr(exclude_codecs, "alac") && (!include_codecs || strstr(include_codecs, "alac")))  codecs[i++] = register_ff("alc");
+ 	if (!strstr(exclude_codecs, "wma")  && (!include_codecs || strstr(include_codecs, "wma")))   codecs[i++] = register_ff("wma");
+ #endif
++#ifndef SL_NO_AAC
+ 	if (!strstr(exclude_codecs, "aac")  && (!include_codecs || strstr(include_codecs, "aac")))  codecs[i++] = register_faad();
++#endif
++#ifndef SL_NO_OGG
+ 	if (!strstr(exclude_codecs, "ogg")  && (!include_codecs || strstr(include_codecs, "ogg")))  codecs[i++] = register_vorbis();
++#endif
++#ifndef SL_NO_FLAC
+ 	if (!strstr(exclude_codecs, "flac") && (!include_codecs || strstr(include_codecs, "flac"))) codecs[i++] = register_flac();
++#endif
+ 	if (!strstr(exclude_codecs, "pcm")  && (!include_codecs || strstr(include_codecs, "pcm")))  codecs[i++] = register_pcm();
+ 
+ 	// try mad then mpg for mp3 unless command line option passed
++#ifndef SL_NO_MAD
+ 	if (!(strstr(exclude_codecs, "mp3") || strstr(exclude_codecs, "mad")) &&
+ 		(!include_codecs || strstr(include_codecs, "mp3") || strstr(include_codecs, "mad")))	codecs[i] = register_mad();
++#endif
++#ifndef SL_NO_MPG123
+ 	if (!(strstr(exclude_codecs, "mp3") || strstr(exclude_codecs, "mpg")) && !codecs[i] &&
+ 		(!include_codecs || strstr(include_codecs, "mp3") || strstr(include_codecs, "mpg")))    codecs[i] = register_mpg();
++#endif
+ 
+ 	mutex_create(decode.mutex);
+ 
+diff --git a/faad.c b/faad.c
+index 96d33ca..f994cf3 100644
+--- a/faad.c
++++ b/faad.c
+@@ -20,6 +20,8 @@
+ 
+ #include "squeezelite.h"
+ 
++#ifndef SL_NO_AAC
++
+ #include <neaacdec.h>
+ 
+ #define WRAPBUF_LEN 2048
+@@ -640,3 +642,5 @@ struct codec *register_faad(void) {
+ 	LOG_INFO("using faad to decode aac");
+ 	return &ret;
+ }
++
++#endif
+diff --git a/flac.c b/flac.c
+index a5c7b3b..6240d84 100644
+--- a/flac.c
++++ b/flac.c
+@@ -20,6 +20,8 @@
+ 
+ #include "squeezelite.h"
+ 
++#ifndef SL_NO_FLAC
++
+ #include <FLAC/stream_decoder.h>
+ 
+ struct flac {
+@@ -286,3 +288,5 @@ struct codec *register_flac(void) {
+ 	LOG_INFO("using flac to decode flc");
+ 	return &ret;
+ }
++
++#endif
+diff --git a/mad.c b/mad.c
+index 30e2498..b667900 100644
+--- a/mad.c
++++ b/mad.c
+@@ -20,6 +20,8 @@
+ 
+ #include "squeezelite.h"
+ 
++#ifndef SL_NO_MAD
++
+ #include <mad.h>
+ 
+ #define MAD_DELAY 529
+@@ -412,3 +414,5 @@ struct codec *register_mad(void) {
+ 	LOG_INFO("using mad to decode mp3");
+ 	return &ret;
+ }
++
++#endif
+diff --git a/mpg.c b/mpg.c
+index f3074f2..bcf79d6 100644
+--- a/mpg.c
++++ b/mpg.c
+@@ -20,6 +20,8 @@
+ 
+ #include "squeezelite.h"
+ 
++#ifndef SL_NO_MAD
++
+ #include <mpg123.h>
+ 
+ #define READ_SIZE  512
+@@ -274,3 +276,5 @@ struct codec *register_mpg(void) {
+ 	LOG_INFO("using mpg to decode mp3");
+ 	return &ret;
+ }
++
++#endif
+diff --git a/vorbis.c b/vorbis.c
+index 0809bee..7f258f3 100644
+--- a/vorbis.c
++++ b/vorbis.c
+@@ -20,6 +20,8 @@
+ 
+ #include "squeezelite.h"
+ 
++#ifndef SL_NO_OGG
++
+ // automatically select between floating point (preferred) and fixed point libraries:
+ // NOTE: works with Tremor version here: http://svn.xiph.org/trunk/Tremor, not vorbisidec.1.0.2 currently in ubuntu
+ 
+@@ -329,3 +331,5 @@ struct codec *register_vorbis(void) {
+ 	LOG_INFO("using vorbis to decode ogg");
+ 	return &ret;
+ }
++
++#endif
