@@ -4,7 +4,7 @@ Preparing Overlays (Layman >=2.3.0)
 
 First, make sure you have Layman 2.3.0 or greater, if not 
 
-    # echo ">=app-portage/layman-2.3.0 >> /etc/portage/package.accept_keywords"
+    # echo ">=app-portage/layman-2.3.0" >> /etc/portage/package.accept_keywords
 
 Now, install Layman (checking that the `git` USE flag is enabled):
 
