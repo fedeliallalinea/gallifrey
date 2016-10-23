@@ -31,6 +31,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	# Create the user and group if not already present
+	enewgroup squeezelite
 	enewuser squeezelite -1 -1 "/dev/null" audio
 }
 
