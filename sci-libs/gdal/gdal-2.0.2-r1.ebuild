@@ -16,10 +16,10 @@ DESCRIPTION="Translator library for raster geospatial data formats (includes OGR
 HOMEPAGE="http://www.gdal.org/"
 SRC_URI="http://download.osgeo.org/${PN}/${PV}/${P}.tar.gz"
 
-SLOT="0"
-LICENSE="MIT"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="armadillo +aux_xml curl debug doc fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc ogdi opencl pdf perl png postgres oracle python spatialite sqlite threads xls"
+SLOT="0/2"
+LICENSE="BSD Info-ZIP MIT"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="armadillo +aux_xml curl debug doc fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc ogdi opencl oracle pdf perl png postgres python spatialite sqlite threads xls"
 
 RDEPEND="
 	dev-libs/expat
@@ -38,7 +38,7 @@ RDEPEND="
 	hdf5? ( >=sci-libs/hdf5-1.6.4[szip] )
 	java? ( >=virtual/jre-1.6:* )
 	jpeg? ( virtual/jpeg:0= )
-	jpeg2k? ( media-libs/jasper )
+	jpeg2k? ( media-libs/jasper:= )
 	mysql? ( virtual/mysql )
 	netcdf? ( sci-libs/netcdf )
 	odbc?   ( dev-db/unixODBC )
@@ -252,7 +252,7 @@ src_configure() {
 
 src_compile() {
 	if use perl; then
-		rm "${S}"/swig/perl/*_wrap.cpp
+		rm "${S}"/swig/perl/*_wrap.cpp || die
 		emake -C "${S}"/swig/perl generate
 	fi
 
@@ -268,7 +268,7 @@ src_compile() {
 	use doc && emake docs
 
 	compile_python() {
-		rm -f swig/python/*_wrap.cpp
+		rm -f swig/python/*_wrap.cpp || die
 		emake -C swig/python generate
 		emake -C swig/python build
 	}
