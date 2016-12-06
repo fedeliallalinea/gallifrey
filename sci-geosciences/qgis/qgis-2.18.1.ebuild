@@ -30,7 +30,7 @@ RDEPEND="
 	>=sci-libs/gdal-1.6.1:=[geos,python?,oracle?,${PYTHON_USEDEP}]
 	sci-libs/geos
 	gsl? ( sci-libs/gsl:= )
-	sci-libs/libspatialindex:=
+	>=sci-libs/libspatialindex-1.8.5
 	sci-libs/proj
 	dev-qt/designer:4
 	dev-qt/qtcore:4
@@ -63,7 +63,7 @@ RDEPEND="
 		${PYTHON_DEPS}
 	)
 	dev-db/sqlite:3
-	dev-db/spatialite
+	>=dev-db/spatialite-4.1.0
 	app-crypt/qca:2[qt4,ssl]
 "
 
