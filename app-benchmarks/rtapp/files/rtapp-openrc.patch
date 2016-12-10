@@ -1,0 +1,23 @@
+diff -Naur RTapp.orig/rtreset RTapp/rtreset
+--- RTapp.orig/rtreset	2016-12-10 17:26:35.682013370 +0100
++++ RTapp/rtreset	2016-12-10 17:27:59.331015241 +0100
+@@ -17,8 +17,8 @@
+ # This will reset priority of Applications list and irq
+ if [[ `whoami` = 'root' ]]; then
+ 
+-    systemctl stop rtapp.timer
+-    systemctl stop rtirq.service
++    service rtapp-timer stop
++    service rtirq stop
+     
+     PIDS=`ps -eo pid,comm | egrep -i IRQ | awk '{print $1}'`
+ 	for PID in ${PIDS}
+@@ -36,7 +36,7 @@
+     echo "
+ Priority of Applications list and irqs have been reset.
+ rtirq.service and rtapp.timer have been stopped. 
+-For restarting realtime services execute as root 'systemctl start rtirq.service' and 'systemctl start rtapp.timer'
++For restarting realtime services execute as root 'service rtirq start' and 'service rtapp-timer start'
+ "
+ 
+   else
