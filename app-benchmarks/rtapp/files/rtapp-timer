@@ -1,0 +1,10 @@
+#!/bin/bash
+
+source /etc/conf.d/rtapp-timer
+
+sleep ${OnBootSec}
+while true
+do
+	/usr/bin/rtapp
+	sleep ${OnUnitActiveSec} 
+done
