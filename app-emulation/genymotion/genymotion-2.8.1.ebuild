@@ -29,7 +29,7 @@ RDEPEND="|| ( >=app-emulation/virtualbox-5.0.28 >=app-emulation/virtualbox-bin-5
 	media-libs/fontconfig:1.0
 	media-libs/harfbuzz[graphite]
 	>=dev-libs/libffi-3.0.13-r1
-	media-libs/gst-plugins-base[orc]
+	media-libs/gstreamer[orc]
 "
 
 pkg_setup() {
