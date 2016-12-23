@@ -6,7 +6,7 @@ EAPI="6"
 
 inherit eutils multilib
 
-GCC_VERSION="4.9.3"
+GCC_VERSION="4.9.4"
 GNATGCC_SLOT="4.9"
 ISL_VERSION="0.12.2"
 CLOOG_VERSION="0.18.1"
