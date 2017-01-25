@@ -1,6 +1,6 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI=6
 
@@ -19,7 +19,8 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND=">=virtual/jdk-1.7.0
-	dev-java/java-config:2"
+	dev-java/java-config:2
+	dev-db/oracle-instantclient"
 
 S="${WORKDIR}"
 
@@ -27,15 +28,15 @@ pkg_nofetch() {
 	eerror "Please go to"
 	eerror "	${HOMEPAGE}"
 	eerror "and download"
-	eerror "	Oracle SQL Datam Modeler for Linux RPM"
+	eerror "	Command Line - SQLcl"
 	eerror "		${SRC_URI}"
 	eerror "and move it to ${DISTDIR}"
 }
 
 src_prepare() {
+	default
 	find ./ \( -iname "*.bat" -or -iname "*.exe" \) -exec rm {} +
 	mv ./sqlcl/bin/sql ./sqlcl/bin/sqlcl
-	eapply_user
 }
 
 src_install() {
@@ -49,5 +50,5 @@ src_install() {
 	insinto /opt/${PN}/lib
 	doins -r *
 
-	dosym /opt/${PN}/bin/sqlcl /usr/bin/sqlcl
+	dosym "${ED%/}"/opt/${PN}/bin/sqlcl /usr/bin/sqlcl
 }
