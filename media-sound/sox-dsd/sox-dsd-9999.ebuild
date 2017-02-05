@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit autotools git-r3
+inherit autotools git-r3 flag-o-matic
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -13,9 +13,10 @@ EGIT_REPO_URI="https://github.com/mansr/sox.git"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa amr ao debug encode flac id3tag ladspa mad ogg openmp oss opus png pulseaudio sndfile static-libs twolame wavpack"
+IUSE="alsa amr ao debug encode flac id3tag ladspa mad ogg openmp oss opus png pulseaudio sndfile static-libs twolame wavpack cpu_flags_x86_avx cpu_flags_x86_sse2"
 
 RDEPEND="
+	!media-sound/sox
 	dev-libs/libltdl:0=
 	>=media-sound/gsm-1.0.12-r1
 	alsa? ( media-libs/alsa-lib )
@@ -42,6 +43,14 @@ DOCS=( AUTHORS ChangeLog NEWS README.sh )
 
 src_prepare() {
 	sed -i -e 's:CFLAGS="-g":CFLAGS="$CFLAGS -g":' configure.ac || die #386027
+
+	if use cpu_flags_x86_sse2; then
+		append-cflags -msse2
+	fi
+
+	if use cpu_flags_x86_avx; then
+		append-cflags -mavx
+	fi
 
 	eautoreconf
 }
