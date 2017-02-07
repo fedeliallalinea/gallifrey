@@ -6,9 +6,9 @@ EAPI=5
 
 inherit autotools git-r3 flag-o-matic
 
-DESCRIPTION="The swiss army knife of sound processing programs"
-HOMEPAGE="http://sox.sourceforge.net"
-EGIT_REPO_URI="https://github.com/mansr/sox.git"
+DESCRIPTION="The swiss army knife of sound processing programsi with DSD support"
+HOMEPAGE="https://github.com/marcoc1712/sox"
+EGIT_REPO_URI="https://github.com/marcoc1712/sox.git"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
