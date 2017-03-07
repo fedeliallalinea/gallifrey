@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -31,6 +31,7 @@ ADA_OBJECTS_PATH="${ROOT}/usr/lib/gnat-gcc/${CHOST}/${GNATGCC_SLOT}/adalib"
 GNATGCC_PATH="${ROOT}/usr/${CHOST}/gnat-gcc-bin/${GNATGCC_SLOT}:${ROOT}/usr/libexec/gnat-gcc/${CHOST}/${GNATGCC_SLOT}"
 
 src_prepare() {
+	default
 	src_copy_vhdl_sources
 
 	sed -i -e 's/ADAC = \$(CC)/ADAC = gnatgcc/' gcc/vhdl/Makefile.in || die "sed failed"

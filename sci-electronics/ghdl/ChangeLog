@@ -1,0 +1,2 @@
+  27 Feb 2017;  <fat@gentoo.org> ghdl-0.33-r1.ebuild:
+  sci-electronics/ghdl: added missing default function on src_prepare
