@@ -1,0 +1,25 @@
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/Daphile patches and squeezelite-R2-1.8.4-R2-/Daphile patches
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/dsd2pcm and squeezelite-R2-1.8.4-R2-/dsd2pcm
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/include and squeezelite-R2-1.8.4-R2-/include
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/include-osx and squeezelite-R2-1.8.4-R2-/include-osx
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/lib_osx and squeezelite-R2-1.8.4-R2-/lib_osx
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/nbproject and squeezelite-R2-1.8.4-R2-/nbproject
+diff -Nau squeezelite-R2-1.8.4-R2-.orig/output_alsa.c squeezelite-R2-1.8.4-R2-/output_alsa.c
+--- squeezelite-R2-1.8.4-R2-.orig/output_alsa.c	2017-03-24 10:37:20.490024069 +0100
++++ squeezelite-R2-1.8.4-R2-/output_alsa.c	2017-03-24 10:37:38.960024109 +0100
+@@ -369,9 +369,9 @@
+ 	bool retry;
+ 	do {
+ 		// open device
+-		if ((err = snd_pcm_open(&pcmp, alsa.device, SND_PCM_STREAM_PLAYBACK, 0)) < 0) {
+-			LOG_ERROR("playback open error: %s", snd_strerror(err));
+-			return err;
++		while ((err = snd_pcm_open(&pcmp, alsa.device, SND_PCM_STREAM_PLAYBACK, 0)) < 0) {
++			LOG_WARN("playback open error: %s", snd_strerror(err));
++			sleep(5);
+ 		}
+ 
+ 		// init params
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/patches and squeezelite-R2-1.8.4-R2-/patches
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/scripts and squeezelite-R2-1.8.4-R2-/scripts
+Common subdirectories: squeezelite-R2-1.8.4-R2-.orig/.vs and squeezelite-R2-1.8.4-R2-/.vs
