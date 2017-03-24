@@ -43,10 +43,6 @@ src_unpack() {
 src_prepare () {
 	# Apply patches
 	epatch "${FILESDIR}/${PN}-gentoo-makefile.patch"
-	if use pulseaudio ; then
-		epatch "${FILESDIR}/${P}-retry-output_alsa.c.patch"
-    fi
-
 	eapply_user
 }
 
@@ -94,8 +90,4 @@ pkg_postinst() {
 	elog "  rc-update add squeezelite-R2 default"
 	elog "Edit /etc/conf.d/squeezelite-R2 to customise -- in particular"
 	elog "you may want to set the audio device to be used."
-	if use pulseaudio ; then
-		elog "The pulseaudio server must be configured to allow access for squeezelite - see:"
-		elog "https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/#index22h3"
-	fi
 }
