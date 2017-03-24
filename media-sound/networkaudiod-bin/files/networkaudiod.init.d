@@ -8,9 +8,9 @@ description="Network Audio Daemon"
 user="networkaudiod:networkaudiod"
 logfile="/var/log/networkaudiod.log"
 command="/usr/sbin/networkaudiod"
-command_args="-D"
+command_args=""
 pidfile="/run/networkaudiod.pid"
-start_stop_daemon_args="--pidfile ${pidfile} --user ${user}"
+start_stop_daemon_args="--nicelevel -10 --background --make-pidfile --stderr ${logfile} --user ${user}"
 
 depend() {
     need net

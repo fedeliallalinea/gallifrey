@@ -42,7 +42,7 @@ src_unpack() {
 
 src_prepare () {
 	# Apply patches
-	epatch "${FILESDIR}/${P}-gentoo-makefile.patch"
+	epatch "${FILESDIR}/${PN}-gentoo-makefile.patch"
 	eapply_user
 }
 

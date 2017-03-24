@@ -43,10 +43,10 @@ src_unpack() {
 src_prepare () {
 	# Apply patches
 	epatch "${FILESDIR}/${PN}-gentoo-makefile.patch"
-	epatch "${FILESDIR}/${P}-gentoo-optional-codecs.patch"
 	if use pulseaudio ; then
 		epatch "${FILESDIR}/${P}-retry-output_alsa.c.patch"
-	fi
+    fi
+
 	eapply_user
 }
 
