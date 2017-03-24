@@ -6,33 +6,33 @@ EAPI=6
 
 inherit eutils user flag-o-matic git-r3
 
-DESCRIPTION="Squeezelite R2 is a small headless Squeezebox emulator using ALSA audio output modified by Marco Curti"
+DESCRIPTION="Small headless Squeezebox emulator. R2 version is designed to play server side decoded and oversampled pcm streams. "
 HOMEPAGE="https://github.com/marcoc1712/squeezelite-R2"
 SRC_URI="https://github.com/marcoc1712/${PN}/archive/v${PV}-(R2).tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aac dsd ffmpeg flac mad mpg123 +pulseaudio resample visexport vorbis"
+IUSE="dsd resample visexport ffmpeg lirc"
 
-# ffmpeg provides alac and wma codecs
 DEPEND="media-libs/alsa-lib
-		flac? ( media-libs/flac )
-		ffmpeg? ( media-video/ffmpeg )
-		vorbis? ( media-libs/libvorbis )
-		mad? ( media-libs/libmad )
-		mpg123? ( media-sound/mpg123 )
-		aac? ( media-libs/faad2 )
+		media-libs/flac
+		media-libs/libvorbis
+		media-libs/libmad
+		media-libs/faad2
+		media-sound/mpg123
 		resample? ( media-libs/soxr )
 		visexport? ( media-sound/jivelite )
-		pulseaudio? ( media-plugins/alsa-plugins[pulseaudio] )
+		ffmpeg? ( media-video/ffmpeg )
+		lirc? ( app-misc/lirc )
 "
 RDEPEND="${DEPEND}
 		 media-sound/alsa-utils"
 
 pkg_setup() {
+	# Create the user and group if not already present
 	enewgroup squeezelite
-	enewuser squeezelite -1 -1 "/dev/null" "squeezelite,audio"
+	enewuser squeezelite -1 -1 "/dev/null" audio
 }
 
 src_unpack() {
@@ -70,32 +70,12 @@ src_compile() {
 		append-cflags "-DVISEXPORT"
 		einfo "audio data export to jivelite support enabled"
 	fi
-
-	# Configure other optional codec support; this is added to the original
-	# source via a patch in this ebuild at present.
-	if ! use flac; then
-		append-cflags "-DSL_NO_FLAC"
-		einfo "FLAC support disabled; add 'flac' USE flag if you need it"
+	
+	if use lirc; then
+		append-cflags "-DIR"
+		einfo "infra-red support enabled via lirc"
 	fi
-	if ! use vorbis; then
-		append-cflags "-DSL_NO_OGG"
-		einfo "Ogg/Vorbis support disabled; add 'vorbis' USE flag if you need it"
-	fi
-	if ! use mad; then
-		append-cflags "-DSL_NO_MAD"
-	fi
-	if ! use mpg123; then
-		append-cflags "-DSL_NO_MPG123"
-	fi
-	if ! use mad && ! use mpg123; then
-		einfo "MP3 support disabled; add 'mad' (recommended)"
-		einfo "  or 'mpg123' USE flag if you need it"
-	fi
-	if ! use aac; then
-		append-cflags "-DSL_NO_AAC"
-		einfo "AAC support disabled; add 'aac' USE flag if you need it"
-	fi
-
+	
 	# Build it
 	emake || die "emake failed"
 }
@@ -112,7 +92,7 @@ pkg_postinst() {
 	# Provide some post-installation tips.
 	elog "If you want start Squeezelite automatically on system boot:"
 	elog "  rc-update add squeezelite-R2 default"
-	elog "Edit /etc/cond.d/squeezelite to customise -- in particular"
+	elog "Edit /etc/conf.d/squeezelite-R2 to customise -- in particular"
 	elog "you may want to set the audio device to be used."
 	if use pulseaudio ; then
 		elog "The pulseaudio server must be configured to allow access for squeezelite - see:"
