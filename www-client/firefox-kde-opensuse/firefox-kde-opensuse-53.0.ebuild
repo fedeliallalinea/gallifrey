@@ -35,7 +35,7 @@ MOZCONFIG_OPTIONAL_GTK2ONLY=1
 #MOZCONFIG_OPTIONAL_QT5=1
 MOZCONFIG_OPTIONAL_WIFI=1
 
-inherit check-reqs flag-o-matic toolchain-funcs gnome2-utils mozconfig-kde-v6.52 pax-utils fdo-mime autotools virtualx mozlinguas-kde-v2 mercurial
+inherit check-reqs flag-o-matic toolchain-funcs gnome2-utils mozconfig-kde-v6.53 pax-utils fdo-mime autotools virtualx mozlinguas-kde-v2 mercurial
 
 DESCRIPTION="Firefox Web Browser, with SUSE patchset, to provide better KDE integration"
 HOMEPAGE="http://www.mozilla.com/firefox
