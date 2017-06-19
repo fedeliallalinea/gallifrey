@@ -4,7 +4,7 @@
 EAPI=6
 
 if [[ ${PV} == 9999* ]]; then
-	EGIT_REPO_URI="git://github.com/fedeliallalinea/gpo-zugaina-downloader.git"
+	EGIT_REPO_URI="https://github.com/fedeliallalinea/gpo-zugaina-downloader.git"
 	inherit git-r3
 else
 	SRC_URI="https://github.com/fedeliallalinea/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
