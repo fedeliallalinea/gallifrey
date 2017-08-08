@@ -24,7 +24,7 @@ DEPEND="app-arch/unzip"
 mozversion_extension_location() {
 	case ${MOZ_PN} in
 		firefox|firefox-bin)
-			if [[ $(get_version_component_range 1) -ge 21 ]]; then
+			if [[ $(get_version_component_range 1) -ge 21 ]] ; then
 				return 0
 			fi
 		;;
@@ -44,7 +44,7 @@ xpi_unpack() {
 		einfo "Unpacking ${xpi} to ${PWD}"
 		xpiname=$(basename ${xpi%.*})
 
-		if   [[ "${xpi:0:2}" != "./" ]] && [[ "${xpi:0:1}" != "/" ]]; then
+		if   [[ "${xpi:0:2}" != "./" ]] && [[ "${xpi:0:1}" != "/" ]] ; then
 			srcdir="${DISTDIR}/"
 		fi
 

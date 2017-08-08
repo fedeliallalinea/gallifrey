@@ -122,6 +122,7 @@ mozconfig_init() {
 	declare enable_optimize pango_version myext x
 	declare XUL=$([[ ${MOZ_PN} == xulrunner ]] && echo true || echo false)
 	declare FF=$([[ ${MOZ_PN} == firefox ]] && echo true || echo false)
+	declare SM=$([[ ${MOZ_PN} == seamonkey ]] && echo true || echo false)
 	declare TB=$([[ ${MOZ_PN} == thunderbird ]] && echo true || echo false)
 
 	####################################
@@ -138,6 +139,10 @@ mozconfig_init() {
 		*firefox)
 			cp browser/config/mozconfig .mozconfig \
 				|| die "cp browser/config/mozconfig failed" ;;
+		seamonkey)
+			# Must create the initial mozconfig to enable application
+			: >.mozconfig || die "initial mozconfig creation failed"
+			mozconfig_annotate "" --enable-application=suite ;;
 		*thunderbird)
 			# Must create the initial mozconfig to enable application
 			: >.mozconfig || die "initial mozconfig creation failed"
@@ -151,7 +156,9 @@ mozconfig_init() {
 	####################################
 
 	# Set optimization level
-	if [[ ${ARCH} == hppa ]]; then
+	if [[ $(gcc-major-version) -ge 7 ]]; then
+		mozconfig_annotate "Workaround known breakage" --enable-optimize=-O2
+	elif [[ ${ARCH} == hppa ]]; then
 		mozconfig_annotate "more than -O0 causes a segfault on hppa" --enable-optimize=-O0
 	elif [[ ${ARCH} == x86 ]]; then
 		mozconfig_annotate "less then -O2 causes a segfault on x86" --enable-optimize=-O2
