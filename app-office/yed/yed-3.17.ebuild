@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="6"
 
 inherit eutils java-pkg-2
 
@@ -25,11 +25,11 @@ DEPEND="
 pkg_nofetch() {
 	einfo "Please download the ${SRC_URI} from"
 	einfo "${DOWNLOAD_URL}"
-	einfo "and place it in ${DISTDIR}"
+	einfo "and place it in DISTDIR"
 }
 
 src_unpack() {
-	unzip "${DISTDIR}/${A}" -d "${S}"
+	unzip "${DISTDIR}/${A}" -d "${S}" || die "unpack failed"
 }
 
 src_install() {
