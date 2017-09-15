@@ -1,7 +1,7 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 MY_PN="${PN/-drivers/}"
 
@@ -91,6 +91,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	default
 	local d i
 
 	# missing macros directory make aclocal fail
@@ -134,7 +135,7 @@ src_install() {
 	local _libdir_pkg=libs_bin$(use amd64 && echo 64 || echo 32)
 	local _ppddir="${EPREFIX}/usr/share/cups/model"
 
-	_printer_dir_build "emake DESTDIR=${D} install"
+	_printer_dir_build "emake DESTDIR=\"${D}\" install"
 
 	for (( i=0; i<${#PRINTER_USE[@]}; i++ )); do
 		local name="${PRINTER_USE[$i]}"

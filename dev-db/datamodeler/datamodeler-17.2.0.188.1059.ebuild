@@ -7,7 +7,7 @@ inherit eutils rpm
 
 MY_P="${P}-1.noarch"
 
-DESCRIPTION="Oracle SQL Developer Data Modeler is a free graphical tool that enhances productivity and simplifies data modeling tasks"
+DESCRIPTION="Oracle SQL Developer Data Modeler is a graphical data modeling tool"
 HOMEPAGE="http://www.oracle.com/technetwork/developer-tools/datamodeler/downloads/index.html"
 SRC_URI="${MY_P}.rpm"
 RESTRICT="fetch mirror"
@@ -67,7 +67,7 @@ pkg_postinst() {
 	chgrp users /opt/datamodeler/datamodeler/log
 	chmod 774 /opt/datamodeler/datamodeler/log
 
-    test -f /opt/datamodeler/datamodeler/types/defaultdomains.xml \
+	test -f /opt/datamodeler/datamodeler/types/defaultdomains.xml \
 		|| touch /opt/datamodeler/datamodeler/types/defaultdomains.xml
 	chgrp users /opt/datamodeler/datamodeler/types/defaultdomains.xml
 	chmod 664 /opt/datamodeler/datamodeler/types/defaultdomains.xml

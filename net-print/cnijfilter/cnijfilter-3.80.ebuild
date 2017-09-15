@@ -1,7 +1,7 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 
 inherit eutils autotools flag-o-matic multilib
 
@@ -60,6 +60,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	default
 	local d i
 
 	epatch \
@@ -87,7 +88,7 @@ src_install() {
 	local _libdir="${EPREFIX}/usr/$(get_libdir)"
 	local _libdir_pkg=libs_bin$(use amd64 && echo 64 || echo 32)
 
-	_dir_build "${DIRS}" "emake DESTDIR=${D} install"
+	_dir_build "${DIRS}" "emake DESTDIR=\"${D}\" install"
 
 	if use net; then
 		pushd com/${_libdir_pkg} > /dev/null

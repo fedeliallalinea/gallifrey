@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -13,7 +13,7 @@ fi
 
 DESCRIPTION="Download overlay, category or package ebuilds from gpo.zugaina.org"
 HOMEPAGE="https://github.com/fedeliallalinea/gpo-zugaina-downloader"
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 
 RDEPEND="net-misc/curl"

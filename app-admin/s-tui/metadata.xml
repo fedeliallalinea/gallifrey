@@ -3,7 +3,7 @@
 <pkgmetadata>
 <maintainer type="person">
     <email>fedeliallalinea@gmail.com</email>
-    <name>fedeliallalinea</name>
+    <name>Marco Genasci</name>
 </maintainer>
 <use>
    <flag name='stress'>stress support <pkg>app-admin/s-tui</pkg></flag>
