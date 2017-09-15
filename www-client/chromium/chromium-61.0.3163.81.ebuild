@@ -17,7 +17,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
-IUSE="component-build cups gnome-keyring hangouts kerberos neon pic +proprietary-codecs pulseaudio selinux +suid +system-ffmpeg +system-libvpx +tcmalloc widevine +debian +inox iridium ungoogled vaapi"
+IUSE="component-build cups gnome-keyring +hangouts kerberos neon pic +proprietary-codecs pulseaudio selinux +suid +system-ffmpeg +system-icu +system-libvpx +tcmalloc widevine +debian +inox iridium ungoogled vaapi"
 RESTRICT="!system-ffmpeg? ( proprietary-codecs? ( bindist ) )"
 REQUIRED_USE="?? ( inox iridium ungoogled )
 		?? ( ungoogled debian )"
@@ -35,7 +35,7 @@ COMMON_DEPEND="
 	cups? ( >=net-print/cups-1.3.11:= )
 	dev-libs/expat:=
 	dev-libs/glib:2
-	<dev-libs/icu-59:=
+	system-icu? ( <dev-libs/icu-59:= )
 	dev-libs/libxslt:=
 	dev-libs/nspr:=
 	>=dev-libs/nss-3.14.3:=
@@ -50,13 +50,21 @@ COMMON_DEPEND="
 	system-libvpx? ( media-libs/libvpx:=[postproc,svc] )
 	>=media-libs/openh264-1.6.0:=
 	pulseaudio? ( media-sound/pulseaudio:= )
-	system-ffmpeg? ( >=media-video/ffmpeg-3:= media-libs/opus:= )
+	system-ffmpeg? (
+		>=media-video/ffmpeg-3:=
+		|| (
+			media-video/ffmpeg[-samba]
+			>=net-fs/samba-4.5.10-r1[-debug(-)]
+		)
+		!=net-fs/samba-4.5.12
+		media-libs/opus:=
+	)
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	virtual/udev
 	x11-libs/cairo:=
 	x11-libs/gdk-pixbuf:2
-	x11-libs/gtk+:3
+	x11-libs/gtk+:3[X]
 	x11-libs/libX11:=
 	x11-libs/libXcomposite:=
 	x11-libs/libXcursor:=
@@ -95,7 +103,7 @@ DEPEND="${COMMON_DEPEND}
 	)
 	dev-lang/perl
 	>=dev-util/gperf-3.0.3
-	dev-util/ninja
+	>=dev-util/ninja-1.7.2
 	>=net-libs/nodejs-4.6.1
 	sys-apps/hwids[usb(+)]
 	tcmalloc? ( !<sys-apps/sandbox-2.11 )
@@ -143,6 +151,14 @@ theme that covers the appropriate MIME types, and configure this as your
 GTK+ icon theme.
 "
 
+PATCHES=(
+	"${FILESDIR}/${PN}-FORTIFY_SOURCE-r2.patch"
+	"${FILESDIR}/${PN}-gcc-r1.patch"
+	"${FILESDIR}/${PN}-gn-bootstrap-r14.patch"
+	"${FILESDIR}/${PN}-atk-r1.patch"
+	"${FILESDIR}/${PN}-mojo-dep.patch"
+)
+
 pre_build_checks() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		local -x CPP="$(tc-getCXX) -E"
@@ -184,16 +200,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	local PATCHES=(
-		"${FILESDIR}/${PN}-FORTIFY_SOURCE-r1.patch"
-		"${FILESDIR}/${PN}-gn-bootstrap-r8.patch"
-		"${FILESDIR}/${PN}-major-minor.patch"
-	)
-
 	default
 
+	# GCC7 patches
+	eapply "${FILESDIR}/chromium-blink-gcc7.patch"
+
+	# glibc-2.26 patch
+	eapply "${FILESDIR}/breakpad-use-ucontext_t.patch"
+
 	use widevine && eapply "${FILESDIR}/${PN}-widevine-r1.patch"
-	use vaapi && eapply "${FILESDIR}/chromium-vaapi-${MY_MAJORV}.patch"
+	use vaapi && eapply "${FILESDIR}/${PN}-libva-remove-${MY_MAJORV}.patch" && eapply "${FILESDIR}/${PN}-vaapi-${MY_MAJORV}.patch" && myconf_gn+=" use_vaapi=true"
 
 	# Debian patches
 	use debian && for i in $(cat "${FILESDIR}/debian-patchset-${MY_MAJORV}/series");do eapply "${FILESDIR}/debian-patchset-${MY_MAJORV}/$i";done
@@ -231,10 +247,10 @@ src_prepare() {
 		third_party/WebKit
 		third_party/analytics
 		third_party/angle
-		third_party/angle/src/common/third_party/numerics
+		third_party/angle/src/common/third_party/base
+		third_party/angle/src/common/third_party/murmurhash
 		third_party/angle/src/third_party/compiler
 		third_party/angle/src/third_party/libXNVCtrl
-		third_party/angle/src/third_party/murmurhash
 		third_party/angle/src/third_party/trace_event
 		third_party/boringssl
 		third_party/brotli
@@ -313,10 +329,6 @@ src_prepare() {
 		third_party/spirv-headers
 		third_party/spirv-tools-angle
 		third_party/sqlite
-		third_party/swiftshader
-		third_party/swiftshader/third_party/llvm-subzero
-		third_party/swiftshader/third_party/subzero
-		third_party/tcmalloc
 		third_party/usrsctp
 		third_party/vulkan
 		third_party/vulkan-validation-layers
@@ -329,7 +341,6 @@ src_prepare() {
 		url/third_party/mozilla
 		v8/src/third_party/valgrind
 		v8/third_party/inspector_protocol
-		third_party/libva
 
 		# gyp -> gn leftovers
 		base/third_party/libevent
@@ -342,9 +353,15 @@ src_prepare() {
 	if ! use system-ffmpeg; then
 		keeplibs+=( third_party/ffmpeg third_party/opus )
 	fi
+	if ! use system-icu; then
+		keeplibs+=( third_party/icu )
+	fi
 	if ! use system-libvpx; then
 		keeplibs+=( third_party/libvpx )
 		keeplibs+=( third_party/libvpx/source/libvpx/third_party/x86inc )
+	fi
+	if use tcmalloc; then
+		keeplibs+=( third_party/tcmalloc )
 	fi
 
 	# Remove most bundled libraries. Some are still needed.
@@ -391,6 +408,10 @@ src_configure() {
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
 
+	use vaapi && myconf_gn+=" use_vaapi=true"
+	myconf_gn+=" enable_webrtc=true"
+	myconf_gn+=" use_gio=false"
+
 	# Inox
 	myconf_gn+=" symbol_level=0"
 	myconf_gn+=" is_debug=false"
@@ -398,16 +419,14 @@ src_configure() {
 	myconf_gn+=" treat_warnings_as_errors=false"
 	myconf_gn+=" fieldtrial_testing_like_official_build=true"
 	myconf_gn+=" remove_webcore_debug_symbols=true"
+	myconf_gn+=" exclude_unwind_tables=true"
 	myconf_gn+=" link_pulseaudio=$(usex pulseaudio true false)"
 	myconf_gn+=" use_sysroot=false"
 	myconf_gn+=" enable_nacl=false"
 	myconf_gn+=" enable_swiftshader=false"
 	myconf_gn+=" enable_nacl_nonsfi=false"
-	myconf_gn+=" enable_rlz=false"
-	myconf_gn+=" enable_rlz_support=false"
 	myconf_gn+=" enable_remoting=false"
 	myconf_gn+=" enable_google_now=false"
-	myconf_gn+=" enable_webrtc=true"
 	myconf_gn+=" enable_hotwording=false"
 	myconf_gn+=" enable_print_preview=false"
 	if use inox; then
@@ -416,19 +435,22 @@ src_configure() {
 
 	# Ungoogled
 	myconf_gn+=" enable_iterator_debugging=false"
-	myconf_gn+=" use_gio=false"
-	myconf_gn+=" enable_hevc_demuxing=true"
 	myconf_gn+=" enable_mse_mpeg2ts_stream_parser=true"
+	myconf_gn+=" enable_hevc_demuxing=true"
 	if use ungoogled; then
 		myconf_gn+=" enable_one_click_signin=false"
 		myconf_gn+=" safe_browsing_mode=0"
+		myconf_gn+=" enable_mdns=false"
+		myconf_gn+=" enable_service_discovery=false"
 	fi
+
+	# Ubuntu 
+	myconf_gn+=" use_swiftshader_with_subzero=false"
 
 	# libevent: https://bugs.gentoo.org/593458
 	local gn_system_libraries=(
 		flac
 		harfbuzz-ng
-		icu
 		libdrm
 		libjpeg
 		libpng
@@ -443,6 +465,9 @@ src_configure() {
 	if use system-ffmpeg; then
 		gn_system_libraries+=( ffmpeg opus )
 	fi
+	if use system-icu; then
+		gn_system_libraries+=( icu )
+	fi
 	if use system-libvpx; then
 		gn_system_libraries+=( libvpx )
 	fi
@@ -454,7 +479,6 @@ src_configure() {
 	myconf_gn+=" use_cups=$(usex cups true false)"
 	myconf_gn+=" use_gconf=false"
 	myconf_gn+=" use_gnome_keyring=$(usex gnome-keyring true false)"
-	myconf_gn+=" use_gtk3=true"
 	myconf_gn+=" use_kerberos=$(usex kerberos true false)"
 	myconf_gn+=" use_pulseaudio=$(usex pulseaudio true false)"
 
@@ -471,7 +495,7 @@ src_configure() {
 	# Never use bundled gold binary. Disable gold linker flags for now.
 	# Do not use bundled clang.
 	# Trying to use gold results in linker crash.
-	myconf_gn+=" use_gold=true use_sysroot=false linux_use_bundled_binutils=false"
+	myconf_gn+=" use_gold=true use_sysroot=false linux_use_bundled_binutils=false use_custom_libcxx=false"
 
 	ffmpeg_branding="$(usex proprietary-codecs Chrome Chromium)"
 	myconf_gn+=" proprietary_codecs=$(usex proprietary-codecs true false)"
@@ -538,6 +562,7 @@ src_configure() {
 	if tc-is-cross-compiler; then
 		tc-export BUILD_{AR,CC,CXX,NM}
 		myconf_gn+=" host_toolchain=\"${FILESDIR}/toolchain:host\""
+		myconf_gn+=" v8_snapshot_toolchain=\"${FILESDIR}/toolchain:host\""
 	else
 		myconf_gn+=" host_toolchain=\"${FILESDIR}/toolchain:default\""
 	fi
@@ -590,8 +615,13 @@ src_compile() {
 	fi
 
 	# Build mksnapshot and pax-mark it.
-	eninja -C out/Release mksnapshot || die
-	pax-mark m out/Release/mksnapshot
+	if tc-is-cross-compiler; then
+		eninja -C out/Release host/mksnapshot || die
+		pax-mark m out/Release/host/mksnapshot
+	else
+		eninja -C out/Release mksnapshot || die
+		pax-mark m out/Release/mksnapshot
+	fi
 
 	# Even though ninja autodetects number of CPUs, we respect
 	# user's options, for debugging with -j 1 or any other reason.
@@ -649,14 +679,12 @@ src_install() {
 	doins out/Release/*.pak
 	doins out/Release/*.so
 
-	# Needed by bundled icu
-	# doins out/Release/icudtl.dat
+	if ! use system-icu; then
+		doins out/Release/icudtl.dat
+	fi
 
 	doins -r out/Release/locales
 	doins -r out/Release/resources
-
-	insinto "${CHROMIUM_HOME}/swiftshader"
-	doins out/Release/swiftshader/*.so
 
 	newman out/Release/chrome.1 chromium.1
 	newman out/Release/chrome.1 chromium-browser.1
