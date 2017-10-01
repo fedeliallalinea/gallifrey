@@ -57,7 +57,9 @@ RDEPEND="
 	jack? ( virtual/jack )
 	>=dev-libs/nss-3.32.1
 	>=dev-libs/nspr-4.16
-	selinux? ( sec-policy/selinux-mozilla )"
+	selinux? ( sec-policy/selinux-mozilla )
+	kde? ( kde-apps/kdialog:5
+		kde-misc/kmozillahelper )"
 
 DEPEND="${RDEPEND}
 	pgo? ( >=sys-devel/gcc-4.5 )
