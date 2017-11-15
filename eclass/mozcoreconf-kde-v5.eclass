@@ -87,7 +87,7 @@ moz_pkgsetup() {
 	# Ensure we use correct toolchain
 	export HOST_CC="$(tc-getBUILD_CC)"
 	export HOST_CXX="$(tc-getBUILD_CXX)"
-	tc-export CC CXX LD PKG_CONFIG
+	tc-export CC CXX LD PKG_CONFIG AR RANLIB
 
 	# Ensure that we have a sane build enviroment
 	export MOZILLA_CLIENT=1
@@ -96,7 +96,7 @@ moz_pkgsetup() {
 	export USE_PTHREADS=1
 	export ALDFLAGS=${LDFLAGS}
 	# ensure MOZCONFIG is not defined
-	eval unset MOZCONFIG
+	unset MOZCONFIG
 
 	# set MOZILLA_FIVE_HOME
 	export MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${MOZ_PN}"
@@ -122,7 +122,6 @@ mozconfig_init() {
 	declare enable_optimize pango_version myext x
 	declare XUL=$([[ ${MOZ_PN} == xulrunner ]] && echo true || echo false)
 	declare FF=$([[ ${MOZ_PN} == firefox ]] && echo true || echo false)
-	declare SM=$([[ ${MOZ_PN} == seamonkey ]] && echo true || echo false)
 	declare TB=$([[ ${MOZ_PN} == thunderbird ]] && echo true || echo false)
 
 	####################################
@@ -139,10 +138,6 @@ mozconfig_init() {
 		*firefox)
 			cp browser/config/mozconfig .mozconfig \
 				|| die "cp browser/config/mozconfig failed" ;;
-		seamonkey)
-			# Must create the initial mozconfig to enable application
-			: >.mozconfig || die "initial mozconfig creation failed"
-			mozconfig_annotate "" --enable-application=suite ;;
 		*thunderbird)
 			# Must create the initial mozconfig to enable application
 			: >.mozconfig || die "initial mozconfig creation failed"
