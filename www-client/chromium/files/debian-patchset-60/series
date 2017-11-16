@@ -1,8 +1,0 @@
-gn/parallel.patch
-gn/buildflags.patch
-
-disable/promo.patch
-disable/google-api-warning.patch
-
-fixes/ps-print.patch
-fixes/gpu-timeout.patch
