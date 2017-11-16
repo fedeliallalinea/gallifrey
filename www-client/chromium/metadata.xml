@@ -17,9 +17,5 @@
 		<flag name="system-libvpx">Use system libvpx instead of the bundled one</flag>
 		<flag name="tcmalloc">Use bundled tcmalloc instead of system malloc</flag>
 		<flag name="widevine">Unsupported closed-source DRM capability (required by Netflix VOD)</flag>
-		<flag name="debian">Apply debian patch set</flag>
-		<flag name="inox">Apply inox patch set</flag>
-		<flag name="iridium">Apply iridium patch set</flag>
-		<flag name="ungoogled">Apply ungoogled patch set</flag>
 	</use>
 </pkgmetadata>
