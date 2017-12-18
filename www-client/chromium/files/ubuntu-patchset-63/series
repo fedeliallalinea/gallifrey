@@ -1,0 +1,11 @@
+6-passwordless-install-support.patch
+nacl-loosen-fd-check.patch
+gn-fix-for-optional-neon.patch
+gn-nacl-use-gcc-toolchain.patch
+nacl-dont-use-icf.patch
+dont-assume-neon-exists.patch
+fix-clang-compile.patch
+fix-compile-error.patch
+specify-gcc-standard.patch
+fix-gn-bootstrap.patch
+suppress-newer-clang-warning-flags.patch

@@ -2,4 +2,4 @@
 # the chromium launcher.
 
 # Options to pass to chromium.
-CHROMIUM_FLAGS="--enable-native-gpu-memory-buffers --password-store=basic"
+CHROMIUM_FLAGS="--enable-native-gpu-memory-buffers --password-store=basic --enable-features="CheckerImaging""
