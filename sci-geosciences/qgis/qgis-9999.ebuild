@@ -34,7 +34,6 @@ COMMON_DEPEND="
 	dev-db/sqlite:3
 	dev-libs/expat
 	dev-libs/qtkeychain[qt5]
-	dev-python/owslib[${PYTHON_USEDEP}]
 	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
@@ -88,6 +87,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/flex
 "
 RDEPEND="${COMMON_DEPEND}
+	dev-python/owslib[${PYTHON_USEDEP}]
 	sci-geosciences/gpsbabel
 "
 
