@@ -1,3 +1,6 @@
+  03 Jan 2018;  <fat@gentoo.org> -datamodeler-17.2.0.188.1059.ebuild:
+  dev-db/datamodeler: remove old
+
 *datamodeler-17.4.0.355.2121 (03 Jan 2018)
 
   03 Jan 2018;  <fat@gentoo.org> +datamodeler-17.4.0.355.2121.ebuild:
