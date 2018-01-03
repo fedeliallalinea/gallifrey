@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -10,7 +10,7 @@ DESCRIPTION="OWSLib is a Python package for client programming with Open Geospat
 HOMEPAGE="http://geopython.github.io/OWSLib"
 SRC_URI="https://github.com/geopython/${PN}/archive/${PV}.tar.gz"
 
-LICENSE="BSD-2"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
