@@ -1,0 +1,5 @@
+*sqldeveloper-17.4.0.355.2349 (03 Jan 2018)
+
+  03 Jan 2018;  <fat@gentoo.org> +files/sqldeveloper, +files/sqldeveloper-r1,
+  +metadata.xml, +sqldeveloper-17.4.0.355.2349.ebuild:
+  dev-db/sqldeveloper: new package version 17.4.0.355.2349
