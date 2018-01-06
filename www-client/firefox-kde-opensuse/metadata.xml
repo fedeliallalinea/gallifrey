@@ -13,8 +13,6 @@
 		Plasma Desktop file dialog via <pkg>kde-misc/kmozillahelper</pkg>.</flag>
 	<flag name="pgo">Add support for profile-guided optimization using gcc-4.5,
 		for faster binaries. This option will double the compile time.</flag>
-	<flag name="system-cairo">Use the system-wide <pkg>x11-libs/cairo</pkg>
-		instead of bundled.</flag>
 	<flag name="system-harfbuzz">Use the system-wide <pkg>media-libs/harfbuzz</pkg>
 		and <pkg>media-gfx/graphite2</pkg> instead of bundled.</flag>
 	<flag name="system-icu">Use the system-wide <pkg>dev-libs/icu</pkg>
