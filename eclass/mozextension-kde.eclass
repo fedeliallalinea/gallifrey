@@ -70,8 +70,16 @@ xpi_install() {
 	x="${1}"
 	cd ${x}
 	# determine id for extension
-	emid="$(sed -n -e 's/.*"id": "\(.*\)",/\1/p' "${x}"/manifest.json)" \
-		|| die "failed to determine extension id"
+	if [[ -f "${x}"/install.rdf ]]; then
+		emid="$(sed -n -e '/install-manifest/,$ { /em:id/!d; s/.*[\">]\([^\"<>]*\)[\"<].*/\1/; p; q }' "${x}"/install.rdf)" \
+			|| die "failed to determine extension id from install.rdf"
+	elif [[ -f "${x}"/manifest.json ]]; then
+		emid="$( sed -n 's/.*"id": "\(.*\)",/\1/p' "${x}"/manifest.json )" \
+			|| die "failed to determine extension id from manifest.json"
+	else
+		die "failed to determine extension id"
+	fi
+
 	if [[ -n ${MOZEXTENSION_TARGET} ]]; then
 		insinto "${MOZILLA_FIVE_HOME}"/${MOZEXTENSION_TARGET%/}/${emid}
 	elif $(mozversion_extension_location) ; then

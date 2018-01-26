@@ -33,7 +33,7 @@ EHG_REPO_URI="http://www.rosenauer.org/hg/mozilla"
 
 MOZCONFIG_OPTIONAL_WIFI=1
 
-inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-kde-v6.57 \
+inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-kde-v6.58 \
 		pax-utils xdg-utils autotools mozlinguas-kde-v2 mercurial
 
 DESCRIPTION="Firefox Web Browser, with SUSE patchset, to provide better KDE integration"
@@ -264,7 +264,7 @@ src_configure() {
 
 src_compile() {
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" \
-	./mach build
+	./mach build || die "mach build failed"
 }
 
 src_install() {
@@ -321,7 +321,7 @@ src_install() {
 
 	cd "${S}"
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" \
-	DESTDIR="${D}" ./mach install
+	DESTDIR="${D}" ./mach install || die "mach install failed"
 
 	# Install language packs
 	mozlinguas_kde_src_install
