@@ -10,7 +10,7 @@ inherit eutils autotools flag-o-matic multilib
 
 DESCRIPTION="Canon InkJet Printer Driver for Linux (Pixus/Pixma-Series)."
 HOMEPAGE="http://support-sg.canon-asia.com/contents/SG/EN/0100236704.html"
-SRC_URI="http://gdlp01.c-wss.com/gds/3/0100004693/01/${MY_PN}-source-${PV}-1.tar.gz"
+SRC_URI="http://files.canon-europe.com/files/soft40245/software/${MY_PN}-source-${PV}-1.tar.gz"
 
 LICENSE="GPL-2 cnijfilter"
 SLOT="${PV}"
