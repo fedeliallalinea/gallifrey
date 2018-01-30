@@ -63,8 +63,6 @@ RDEPEND="
 		kde-misc/kmozillahelper )"
 
 DEPEND="${RDEPEND}
-	>=virtual/rust-1.21.0
-	>=dev-util/cargo-0.22.0
 	>=sys-devel/llvm-4.0.1
 	>=sys-devel/clang-4.0.1
 	amd64? ( ${ASM_DEPEND} virtual/opengl )
@@ -258,12 +256,12 @@ src_configure() {
 	mozconfig_final
 
 	# workaround for funky/broken upstream configure...
-	SHELL="${SHELL:-${EPREFIX}/bin/bash}" \
+	SHELL="${SHELL:-${EPREFIX}/bin/bash}" MOZ_NOSPAM=1 \
 	./mach configure || die "mach configure failed"
 }
 
 src_compile() {
-	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" \
+	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" MOZ_NOSPAM=1 \
 	./mach build || die "mach build failed"
 }
 
@@ -320,7 +318,7 @@ src_install() {
 	done
 
 	cd "${S}"
-	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" \
+	MOZ_MAKE_FLAGS="${MAKEOPTS}" SHELL="${SHELL:-${EPREFIX}/bin/bash}" MOZ_NOSPAM=1 \
 	DESTDIR="${D}" ./mach install || die "mach install failed"
 
 	# Install language packs
