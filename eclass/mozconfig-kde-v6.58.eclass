@@ -103,8 +103,6 @@ RDEPEND=">=app-text/hunspell-1.5.4:=
 	media-libs/fontconfig
 	>=media-libs/freetype-2.4.10
 	kernel_linux? ( !pulseaudio? ( media-libs/alsa-lib ) )
-	pulseaudio? ( || ( media-sound/pulseaudio
-		>=media-sound/apulse-0.1.9 ) )
 	virtual/freedesktop-icon-theme
 	dbus? ( >=sys-apps/dbus-0.60
 		>=dev-libs/dbus-glib-0.72 )
@@ -167,8 +165,11 @@ DEPEND="app-arch/zip
 	>=sys-devel/binutils-2.16.1
 	sys-apps/findutils
 	pulseaudio? ( media-sound/pulseaudio )
-	>=virtual/rust-1.19.0
-	dev-util/cargo
+	|| (
+		( >=dev-lang/rust-1.21.0 >=dev-util/cargo-0.22.0 )
+		>=dev-lang/rust-1.21.0[extended]
+		( >=dev-lang/rust-bin-1.21.0 >=dev-util/cargo-0.22.0 )
+	)
 	${RDEPEND}"
 
 RDEPEND+="
