@@ -1,0 +1,13 @@
+nacl-loosen-fd-check.patch
+gn-dont-use-git.patch
+gn-nacl-use-gcc-toolchain.patch
+nacl-dont-use-icf.patch
+dont-assume-neon-exists.patch
+fix-clang-compile.patch
+remove-linux-kernel-dependency.patch
+fix-compile-error.patch
+specify-gcc-standard.patch
+fix-gn-bootstrap.patch
+suppress-newer-clang-warning-flags.patch
+fix-build-errors.patch
+fix-ffmpeg-build.patch
