@@ -60,3 +60,10 @@ src_install () {
 	fi
 	dodoc README.md
 }
+
+pkg_postinst() {
+	gnome2_schemas_update
+}
+pkg_postrm() {
+	gnome2_schemas_update
+}
