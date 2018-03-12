@@ -4,7 +4,8 @@
 
 EAPI=6
 
-inherit cmake-utils git-r3 vala versionator 
+inherit cmake-utils git-r3 gnome2-utils vala versionator
+
 EGIT_REPO_URI="https://github.com/rilian-la-te/${PN}.git"
 MAJOR_VER="$(get_version_component_range 1-2)"
 VALA_MIN_API_VERSION="0.24"
@@ -19,7 +20,11 @@ RDEPEND=">=x11-libs/gtk+-3.12.0:3[wayland]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	>=x11-libs/bamf-0.5.0
-	java? ( >=virtual/jdk-1.8.0 )
+    java? ( 
+    	>=virtual/jdk-1.8.0 
+        >=dev-libs/libdbusmenu-16.04.0
+        x11-libs/libxkbcommon
+    )
 	mate? ( mate-base/mate-panel )
 	vala-panel? ( x11-misc/vala-panel )
 	xfce? ( >=xfce-base/xfce4-panel-4.11.2 )
@@ -50,12 +55,8 @@ src_install () {
 	cmake-utils_src_install
 	exeinto /etc/X11/xinit/xinitrc.d
     newexe "${FILESDIR}"/appmenu-gtk-module.sh 80-appmenu-gtk-module
+	if use java ; then 
+		newexe "${FILESDIR}"/appmenu-java-module.sh 80-appmenu-java-module
+	fi
 	dodoc README.md
-}
-
-pkg_postinst() {
-	gnome2_schemas_update
-}
-pkg_postrm() {
-	gnome2_schemas_update
 }
