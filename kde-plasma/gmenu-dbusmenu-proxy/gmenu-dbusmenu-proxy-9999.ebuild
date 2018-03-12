@@ -22,6 +22,7 @@ DEPEND="
 	$(add_plasma_dep plasma-workspace '' '5.12.0')
 "
 RDEPEND="${DEPEND}
+	>=dev-libs/libdbusmenu-16.04.0
 	x11-misc/vala-panel-appmenu
 "
 
