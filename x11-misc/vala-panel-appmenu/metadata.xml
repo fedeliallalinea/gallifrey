@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+    <email>fedeliallalinea@gmail.com</email>
+    <name>Marco Genasci</name>
+</maintainer>
+<use>
+	<flag name="java">
+		enable global menu 
+		for java swing applications
+    </flag>
+	<flag name="mate">
+        Build plugin for 
+        <pkg>mate-panel</pkg>
+    </flag>
+	<flag name="vala-panel">
+		Build plugin for 
+		<pkg>vala-panel</pkg>
+	</flag>
+	<flag name="xfce">
+		Build plugin for 
+		<pkg>xfce4-panel</pkg>
+	</flag>
+	<flag name="wnck">Build 
+		<pkg>libwnck:3</pkg> 
+		support (window switching in application menu).
+	</flag>
+</use>
+</pkgmetadata>
