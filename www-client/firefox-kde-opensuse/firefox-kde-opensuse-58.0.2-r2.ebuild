@@ -149,7 +149,7 @@ src_prepare() {
 			"${EHG_CHECKOUT_DIR}/firefox-kde.patch"
 			"${EHG_CHECKOUT_DIR}/firefox-no-default-ualocale.patch"
 		)
-		PATCHES+=( "${FILESDIR}/unity-menubar.patch" )
+		PATCHES+=( "${FILESDIR}/unity-menubar-${MOZ_PV%%.*}.patch" )
 		# Enable CSD
 		#PATCHES+=(
         #    "${EHG_CHECKOUT_DIR}/mozilla-bmo256180.patch"
