@@ -8,6 +8,8 @@ FRAMEWORKS_MINIMAL="5.44.0"
 
 inherit kde5 git-r3
 EGIT_REPO_URI="https://anongit.kde.org/plasma-workspace.git"
+# not depending on frameworks 5.45
+EGIT_COMMIT="e37156b404bffd4dc6fd0d1b2dbb5dc1ae0ddfa4"
 
 DESCRIPTION="Proxy that allows to display GTK applications menus in Plasma global menu"
 HOMEPAGE="https://www.kde.org/plasma-desktop"
@@ -23,8 +25,11 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	>=dev-libs/libdbusmenu-16.04.0
+	sci-libs/libqalculate
 	x11-misc/vala-panel-appmenu
 "
+
+PATCHES=( "${FILESDIR}/revert-plasma_install_bundled_package.patch" )
 
 src_compile() {
 	cmake-utils_src_compile -C gmenu-dbusmenu-proxy
