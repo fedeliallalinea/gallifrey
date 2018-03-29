@@ -25,11 +25,23 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	>=dev-libs/libdbusmenu-16.04.0
-	sci-libs/libqalculate
 	x11-misc/vala-panel-appmenu
 "
 
 PATCHES=( "${FILESDIR}/revert-plasma_install_bundled_package.patch" )
+
+src_configure() {
+        local mycmakeargs=(
+                -DCMAKE_DISABLE_FIND_PACKAGE_AppStreamQt=OFF
+                -DCMAKE_DISABLE_FIND_PACKAGE_KF5Holidays=OFF
+                -DCMAKE_DISABLE_FIND_PACKAGE_KF5NetworkManagerQt=OFF
+                -DCMAKE_DISABLE_FIND_PACKAGE_KF5Prison=OFF
+                -DCMAKE_DISABLE_FIND_PACKAGE_alculate=OFF
+                -DCMAKE_DISABLE_FIND_PACKAGE_F5Baloo=OFF
+        )
+
+        kde5_src_configure
+}
 
 src_compile() {
 	cmake-utils_src_compile -C gmenu-dbusmenu-proxy
