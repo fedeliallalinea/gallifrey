@@ -5,6 +5,7 @@ EAPI=6
 
 FRAMEWORKS_MINIMAL="5.45.0"
 #PLASMA_MINIMAL="5.12.0" not affects add_plasma_dep, bug?
+KDE_AUTODEPS="false"
 
 inherit kde5 git-r3
 EGIT_REPO_URI="https://anongit.kde.org/plasma-workspace.git"
