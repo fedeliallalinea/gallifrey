@@ -62,7 +62,7 @@ RDEPEND="
 	system-icu? ( >=dev-libs/icu-60.2 )
 	jack? ( virtual/jack )
 	>=dev-libs/nss-3.36.1
-	>=dev-libs/nspr-4.18
+	>=dev-libs/nspr-4.19
 	selinux? ( sec-policy/selinux-mozilla )
 	kde? ( kde-apps/kdialog:5
 		kde-misc/kmozillahelper )"
