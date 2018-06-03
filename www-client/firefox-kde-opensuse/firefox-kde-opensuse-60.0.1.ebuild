@@ -25,7 +25,7 @@ if [[ ${MOZ_ESR} == 1 ]]; then
 fi
 
 # Patch version
-PATCH="${MOZ_PN}-60.0-patches-0"
+PATCH="${MOZ_PN}-60.0-patches-02"
 MOZ_HTTP_URI="https://archive.mozilla.org/pub/${MOZ_PN}/releases"
 MOZ_HG_HTTP_URI="https://hg.mozilla.org/releases/mozilla-release/archive/"
 
