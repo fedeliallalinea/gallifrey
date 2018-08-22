@@ -1,0 +1,22 @@
+diff -Naru kguitar-9999.orig/kguitar/songview.cpp kguitar-9999/kguitar/songview.cpp
+--- kguitar-9999.orig/kguitar/songview.cpp	2018-08-22 12:31:55.510091898 +0200
++++ kguitar-9999/kguitar/songview.cpp	2018-08-22 12:32:15.750092002 +0200
+@@ -37,6 +37,7 @@
+ #include <QApplication>
+ #include <QScrollBar>
+ #include <QMimeData>
++#include <QHeaderView>
+ 
+ #ifdef WITH_TSE3
+ #include <tse3/MidiScheduler.h>
+diff -Naru kguitar-9999.orig/kguitar/trackview.cpp kguitar-9999/kguitar/trackview.cpp
+--- kguitar-9999.orig/kguitar/trackview.cpp	2018-08-22 12:31:55.510091898 +0200
++++ kguitar-9999/kguitar/trackview.cpp	2018-08-22 12:32:36.710092109 +0200
+@@ -33,6 +33,7 @@
+ #include <QUndoStack>
+ #include <QMenu>
+ #include <QFontDatabase>
++#include <QHeaderView>
+ 
+ #include <stdlib.h>		// required for declaration of abs()
+ #include <algorithm>
