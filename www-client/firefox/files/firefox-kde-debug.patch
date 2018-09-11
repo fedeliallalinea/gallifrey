@@ -213,4 +213,4 @@ diff -Naur mozilla-release.old/toolkit/xre/nsKDEUtils.cpp mozilla-release.new/to
 +        fprintf( stderr, "DEBUG_KDE: feedCommand() : command=\"%s\"\n", line.get());
  #endif
          fputs( line.get(), commandFile );
-         fputs( "\n", commandFile );
+fputs( "\n", commandFile );
