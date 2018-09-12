@@ -20,9 +20,9 @@ RDEPEND=">=x11-libs/gtk+-3.12.0:3[wayland]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	>=x11-libs/bamf-0.5.0
+	>=dev-libs/libdbusmenu-16.04.0
     java? ( 
     	>=virtual/jdk-1.8.0 
-        >=dev-libs/libdbusmenu-16.04.0
         x11-libs/libxkbcommon
     )
 	mate? ( mate-base/mate-panel )
