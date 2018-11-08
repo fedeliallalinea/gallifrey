@@ -329,6 +329,8 @@ multilib_src_configure() {
 		myconf+=( --enable-nonfree )
 		myconf+=( --enable-cuvid )
 		myconf+=( --extra-cflags=-I/opt/cuda/include)
+	else
+		myconf+=( --disable-cuvid )
 	fi
 
 	# Encoders
