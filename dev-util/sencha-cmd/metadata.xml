@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fedeliallalinea@gmail.com</email>
+		<name>Marco Genasci</name>
+	</maintainer>
+	<longdescription lang="en">
+		Sencha Cmd provides a collection of powerful, time-saving features 
+		that work together and in conjunction with the Sencha Ext JS and 
+		Sencha Touch frameworks.
+	</longdescription>
+</pkgmetadata>
