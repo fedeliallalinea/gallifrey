@@ -1,0 +1,69 @@
+BubbleUPnP Server End User Licence Agreement
+(c) 2011 - 2015 Michael Pujos. All rights reserved.
+
+1. This End User Licence Agreement ("EULA") is a legal agreement between you 
+   (either an individual or an entity) (hereinafter "You") and copyright holder 
+   or other authorized party (collectively "Company") relating to Your 
+   installation and use of the BubbleUPnP Server software 
+   (the "Software"). 
+
+   By installing, copying, or otherwise using the Software, You agree to be bound 
+   by the terms of this EULA. If You do not agree to the terms of this EULA, 
+   do not install, copy or use the Software. 
+
+2. Permission is granted to You to use this Software, to copy it and 
+   redistribute it freely, subject to the following restrictions:
+
+   a. The origin of the Software must not be misrepresented; You must not 
+      claim that You wrote the Software.
+   b. You may not sell, rent, loan or otherwise encumber the Software in 
+      whole or in part, standalone or as a part of integrated solutions, 
+      to any third party.   
+   c. You may not decompile, reverse engineer, disassemble or modify the Software, 
+      unless this is strictly for personal use or to debug such modifications.  
+      These modifications must not include removing licensing management module.    
+   d. This notice may not be removed or altered from redistributions.
+
+3. The Software includes open source software not owned by
+   the Company. The licence terms in this EULA do not apply to those parts.
+   Instead, the licensing terms listed below apply:
+      
+    a. The Software includes modified Cling library developed by 4thline
+       licensed under LGPL 2.1.
+       modified source is available at: https://github.com/bubbleguuum/cling
+    b. The Software includes modified Seamless library developed by 4thline
+       licensed under LGPL 2.1
+       modified source is available at: https://github.com/bubbleguuum/seamless
+    c. The Software includes Jetty licensed under Apache License 2.0
+    d. The Software includes portions of GWT (Google Web Toolkit) developed by
+       Google licensed under Apache Licence 2.0
+    e. The Software includes GWT-comet licensed under Apache Licence 2.0
+    f. The Software includes various Apache Commons libraries licensed
+       under Apache Licence 2.0
+    g. The Software includes Apache HttpComponents licensed under Apache Licence 2.0
+    h. The Software includes Apache XML-RPC licensed under Apache Licence 2.0
+    i. The Software includes Simple Framework licensed under LGPL
+    j. The Software includes RESTEasy licensed under LGPL
+    k. The Software includes WinRun4J licensed under Eclipse Public Licence (EPL)
+    l. The Software includes args4j licensed under MIT Licence
+    m. The Software includes KXML2 licensed under BSD Licence
+    n. The Software includes SLF4J licensed under MIT Licence
+    o. The Software includes Fast MD5 licensed under LGPL 2.1
+    p. The Software includes imgsclr licensed under Apache Licence 2.0
+    q. The Software includes Bouncy Castle licensed under the MIT X11 License
+    s. The Software includes FFmpeg binaries licensed under the LGPLv2.1
+    t. The Software includes Retrofit licensed under Apache Licence 2.0
+    u. The Software includes OkHttp licensed under Apache Licence 2.0
+    v. The Software includes Spongy Castle Castle licensed under the MIT X11 License
+    w. The Software includes Spongy Castle Castle licensed under the BSD License
+
+THE SOFTWARE IS PROVIDED BY THE COMPANY "AS IS" AND ANY EXPRESS OR IMPLIED 
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE COMPANY BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
