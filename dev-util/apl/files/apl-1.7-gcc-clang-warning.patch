@@ -1,0 +1,646 @@
+diff -Naru apl-1.7/doc/apl.html apl-1.7-gcc7/doc/apl.html
+--- apl-1.7/doc/apl.html	2017-03-14 16:43:02.468193000 +0100
++++ apl-1.7-gcc7/doc/apl.html	2017-03-18 17:20:44.052932000 +0100
+@@ -1511,7 +1511,7 @@
+       ...
+ </pre>
+ <p>Current versions of GNU APL have replaced the native FILE_IO function above by
+-the sustem function ⎕FIO. ⎕FIO need not be ⎕FX&rsquo;ed and is otherwise backward
++the system function ⎕FIO. ⎕FIO need not be ⎕FX&rsquo;ed and is otherwise backward
+ compatible to the native function. New function numbers are, however, only
+ added to ⎕FIO and not to the old native function FILE_IO. The parameters of
+ the functions are described in the man pages for, e.g. strerror, fopen, ...
+@@ -1843,7 +1843,7 @@
+ solutions, the number of backtracks, and the number of
+ link dances is returned as a 3-element numeric vector.
+ </p>
+-<p>A = ¯4: A number of single step in Knuth&rsquo;s Algoritm are performed. Let e.g.
++<p>A = ¯4: A number of single step in Knuth&rsquo;s Algorithm are performed. Let e.g.
+ A←¯4 r1 r2 r3. Then Z←A ⎕DLX B is the matrix B after 3 steps r1, r2, and r3
+ have been performed. r1, r2, and r3 are valid (as per ⎕IO) row numbers of B,
+ and a step with a given row changes B as follows:
+@@ -1851,16 +1851,16 @@
+ <li> the given row is set to 0 (this row becomes part of the final result),
+ </li><li> all other rows that have a 1 or a 2 in the same column as B are set to 0
+ (these 1s or 2s in the other rows conflict with the 1 or 2 in the given row
+-and are therefore reemoved from B), and
+-</li><li> all columns that have no 1s or 2s left are removed from B (these columns habe
++and are therefore removed from B), and
++</li><li> all columns that have no 1s or 2s left are removed from B (these columns have
+ a 1 or 2 in B and the constraint is therefore satisfied).
+ </li></ul>
+-<p>The prupose of ¯4 ⎕DLX is:
++<p>The purpose of ¯4 ⎕DLX is:
+ </p><ul>
+ <li> To demonstrate how Knuth&rsquo;s algorithm works, and/or
+ </li><li> To preset some initial values in B. For example one can first initialize
+-the contraints for an empty Sudoku (which is the same matrix for all Sudokus)
+-and then enter the initial digits of a particular Sudokus using 4 ⎕DLX. If thre are, say, 20 initial digits in the Sudoku then A has 21 elements (¯4 plus the
++the constraints for an empty Sudoku (which is the same matrix for all Sudokus)
++and then enter the initial digits of a particular Sudoku using 4 ⎕DLX. If there are, say, 20 initial digits in the Sudoku then A has 21 elements (¯4 plus the
+ 20 rows representing the 20 initial digits. The result of ¯4 ⎕DLX B has the
+ same number of rows as B (with some rows now cleared), but fewer columns than B.
+ </li></ul>
+@@ -2111,7 +2111,7 @@
+ </pre>
+ <p>Connect to database of type L using connection arguments R.
+ </p>
+-<p>L must be a string indicating the database type. Current supported
++<p>L must be a string indicating the database type. Currently supported
+ values are &rsquo;postgresql&rsquo; and &rsquo;sqlite&rsquo;.
+ </p>
+ <p>R is the connection parameters which depends on the type of
+@@ -2144,7 +2144,7 @@
+ <p>The axis parameter indicates the database handle.
+ </p>
+ <p>L is a select statement to be executed. Positional parameters can
+-be supplied by specifying a question mark &quot;?&quot; in the statemement.
++be supplied by specifying a question mark &quot;?&quot; in the statement.
+ </p>
+ <p>R is an array containing the values for the positional parameters.
+ If the array is of rank 2, the statement will be executed multiple
+@@ -2255,7 +2255,7 @@
+ <p>The reason for comparing complex numbers first by their real parts and then
+ by their imaginary part and not, for example, first by their magnitude and
+ then by their angle is that the chosen order gives more consistent results
+-when comparing near-complex numbers or their true real compagnions. For
++when comparing near-complex numbers or their true real companions. For
+ example, a magnitude first comparison of complex numbers would make ¯1 &lt; ¯2J∈
+ for a near-complex ¯2J∈ but ¯1 &gt; ¯2 for a true real ¯2.
+ </p>
+diff -Naru apl-1.7/doc/apl.info apl-1.7-gcc7/doc/apl.info
+--- apl-1.7/doc/apl.info	2017-03-14 16:43:02.468193000 +0100
++++ apl-1.7-gcc7/doc/apl.info	2017-03-18 17:20:44.052932000 +0100
+@@ -1322,7 +1322,7 @@
+       ...
+ 
+    Current versions of GNU APL have replaced the native FILE_IO function
+-above by the sustem function ⎕FIO. ⎕FIO need not be ⎕FX’ed and is
++above by the system function ⎕FIO. ⎕FIO need not be ⎕FX’ed and is
+ otherwise backward compatible to the native function.  New function
+ numbers are, however, only added to ⎕FIO and not to the old native
+ function FILE_IO. The parameters of the functions are described in the
+@@ -1645,7 +1645,7 @@
+ number of solutions, the number of backtracks, and the number of link
+ dances is returned as a 3-element numeric vector.
+ 
+-   A = ¯4: A number of single step in Knuth’s Algoritm are performed.
++   A = ¯4: A number of single step in Knuth’s Algorithm are performed.
+ Let e.g.  A←¯4 r1 r2 r3.  Then Z←A ⎕DLX B is the matrix B after 3 steps
+ r1, r2, and r3 have been performed.  r1, r2, and r3 are valid (as per
+ ⎕IO) row numbers of B, and a step with a given row changes B as follows:
+@@ -1653,16 +1653,16 @@
+      result),
+    • all other rows that have a 1 or a 2 in the same column as B are set
+      to 0 (these 1s or 2s in the other rows conflict with the 1 or 2 in
+-     the given row and are therefore reemoved from B), and
++     the given row and are therefore removed from B), and
+    • all columns that have no 1s or 2s left are removed from B (these
+-     columns habe a 1 or 2 in B and the constraint is therefore
++     columns have a 1 or 2 in B and the constraint is therefore
+      satisfied).
+-   The prupose of ¯4 ⎕DLX is:
++   The purpose of ¯4 ⎕DLX is:
+    • To demonstrate how Knuth’s algorithm works, and/or
+    • To preset some initial values in B. For example one can first
+-     initialize the contraints for an empty Sudoku (which is the same
++     initialize the constraints for an empty Sudoku (which is the same
+      matrix for all Sudokus) and then enter the initial digits of a
+-     particular Sudokus using 4 ⎕DLX. If thre are, say, 20 initial
++     particular Sudoku using 4 ⎕DLX. If there are, say, 20 initial
+      digits in the Sudoku then A has 21 elements (¯4 plus the 20 rows
+      representing the 20 initial digits.  The result of ¯4 ⎕DLX B has
+      the same number of rows as B (with some rows now cleared), but
+@@ -1908,7 +1908,7 @@
+ 
+    Connect to database of type L using connection arguments R.
+ 
+-   L must be a string indicating the database type.  Current supported
++   L must be a string indicating the database type.  Currently supported
+ values are ’postgresql’ and ’sqlite’.
+ 
+    R is the connection parameters which depends on the type of database:
+@@ -1939,7 +1939,7 @@
+    The axis parameter indicates the database handle.
+ 
+    L is a select statement to be executed.  Positional parameters can be
+-supplied by specifying a question mark "?"  in the statemement.
++supplied by specifying a question mark "?"  in the statement.
+ 
+    R is an array containing the values for the positional parameters.
+ If the array is of rank 2, the statement will be executed multiple times
+@@ -2048,7 +2048,7 @@
+ and then by their imaginary part and not, for example, first by their
+ magnitude and then by their angle is that the chosen order gives more
+ consistent results when comparing near-complex numbers or their true
+-real compagnions.  For example, a magnitude first comparison of complex
++real companions.  For example, a magnitude first comparison of complex
+ numbers would make ¯1 < ¯2J∈ for a near-complex ¯2J∈ but ¯1 > ¯2 for a
+ true real ¯2.
+ 
+@@ -3394,9 +3394,9 @@
+ Node: Section 3.1354667
+ Node: Section 3.1455431
+ Node: Section 3.1557420
+-Node: Section 3.1667331
+-Node: Section 3.1769116
+-Node: Section 3.1872220
++Node: Section 3.1667332
++Node: Section 3.1769117
++Node: Section 3.1872221
+ Node: Chapter 474826
+ Node: Chapter 576574
+ Node: Chapter 677703
+diff -Naru apl-1.7/doc/apl.texi apl-1.7-gcc7/doc/apl.texi
+--- apl-1.7/doc/apl.texi	2017-03-14 16:43:02.468193000 +0100
++++ apl-1.7-gcc7/doc/apl.texi	2017-03-18 17:20:44.052932000 +0100
+@@ -1394,7 +1394,7 @@
+ @end verbatim
+ 
+ Current versions of GNU APL have replaced the native FILE_IO function above by
+-the sustem function ⎕FIO. ⎕FIO need not be ⎕FX'ed and is otherwise backward
++the system function ⎕FIO. ⎕FIO need not be ⎕FX'ed and is otherwise backward
+ compatible to the native function. New function numbers are, however, only
+ added to ⎕FIO and not to the old native function FILE_IO. The parameters of
+ the functions are described in the man pages for, e.g. strerror, fopen, ...
+@@ -1705,7 +1705,7 @@
+ solutions, the number of backtracks, and the number of
+ link dances is returned as a 3-element numeric vector.
+ 
+-A = ¯4: A number of single step in Knuth's Algoritm are performed. Let e.g.
++A = ¯4: A number of single step in Knuth's Algorithm are performed. Let e.g.
+ A←¯4 r1 r2 r3. Then Z←A ⎕DLX B is the matrix B after 3 steps r1, r2, and r3
+ have been performed. r1, r2, and r3 are valid (as per ⎕IO) row numbers of B,
+ and a step with a given row changes B as follows:
+@@ -1715,19 +1715,19 @@
+ @item
+ all other rows that have a 1 or a 2 in the same column as B are set to 0
+ (these 1s or 2s in the other rows conflict with the 1 or 2 in the given row
+-and are therefore reemoved from B), and
++and are therefore removed from B), and
+ @item
+-all columns that have no 1s or 2s left are removed from B (these columns habe
++all columns that have no 1s or 2s left are removed from B (these columns have
+ a 1 or 2 in B and the constraint is therefore satisfied).
+ @end itemize
+-The prupose of ¯4 ⎕DLX is:
++The purpose of ¯4 ⎕DLX is:
+ @itemize
+ @item
+ To demonstrate how Knuth's algorithm works, and/or
+ @item
+ To preset some initial values in B. For example one can first initialize
+-the contraints for an empty Sudoku (which is the same matrix for all Sudokus)
+-and then enter the initial digits of a particular Sudokus using 4 ⎕DLX. If thre are, say, 20 initial digits in the Sudoku then A has 21 elements (¯4 plus the
++the constraints for an empty Sudoku (which is the same matrix for all Sudokus)
++and then enter the initial digits of a particular Sudoku using 4 ⎕DLX. If there are, say, 20 initial digits in the Sudoku then A has 21 elements (¯4 plus the
+ 20 rows representing the 20 initial digits. The result of ¯4 ⎕DLX B has the
+ same number of rows as B (with some rows now cleared), but fewer columns than B.
+ @end itemize
+@@ -1976,7 +1976,7 @@
+ 
+ Connect to database of type L using connection arguments R.
+ 
+-L must be a string indicating the database type. Current supported
++L must be a string indicating the database type. Currently supported
+ values are 'postgresql' and 'sqlite'.
+ 
+ R is the connection parameters which depends on the type of
+@@ -2013,7 +2013,7 @@
+ The axis parameter indicates the database handle.
+ 
+ L is a select statement to be executed. Positional parameters can
+-be supplied by specifying a question mark "?" in the statemement.
++be supplied by specifying a question mark "?" in the statement.
+ 
+ R is an array containing the values for the positional parameters.
+ If the array is of rank 2, the statement will be executed multiple
+@@ -2132,7 +2132,7 @@
+ The reason for comparing complex numbers first by their real parts and then
+ by their imaginary part and not, for example, first by their magnitude and
+ then by their angle is that the chosen order gives more consistent results
+-when comparing near-complex numbers or their true real compagnions. For
++when comparing near-complex numbers or their true real companions. For
+ example, a magnitude first comparison of complex numbers would make ¯1 < ¯2J∈
+ for a near-complex ¯2J∈ but ¯1 > ¯2 for a true real ¯2.
+ 
+diff -Naru apl-1.7/erlang/apl.erl.in apl-1.7-gcc7/erlang/apl.erl.in
+--- apl-1.7/erlang/apl.erl.in	2017-03-16 19:56:29.332176000 +0100
++++ apl-1.7-gcc7/erlang/apl.erl.in	2017-03-18 13:54:27.369569000 +0100
+@@ -1,4 +1,23 @@
+ %% -*- coding: utf-8 -*-
++%%
++%%  This file is part of GNU APL, a free implementation of the
++%%  ISO/IEC Standard 13751, "Programming Language APL, Extended"
++%%
++%%  Copyright (C) 2008-2017  Dr. Jürgen Sauermann
++%%
++%%  This program is free software: you can redistribute it and/or modify
++%%  it under the terms of the GNU General Public License as published
++%%  by the Free Software Foundation, either version 3 of the License, or
++%%  (at your option) any later version.
++%%
++%%  This program is distributed in the hope that it will be useful,
++%%  but WITHOUT ANY WARRANTY; without even the implied warranty of
++%%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++%%  GNU General Public License for more details.
++%%
++%%  You should have received a copy of the GNU General Public License
++%%  along with this program.  If not, see <http://www.gnu.org/licenses/>.
++%%
+ 
+ -module(apl).
+ -export([init/0, command/1, statement/1,
+diff -Naru apl-1.7/erlang/apl_example.erl apl-1.7-gcc7/erlang/apl_example.erl
+--- apl-1.7/erlang/apl_example.erl	2017-03-16 19:56:29.332176000 +0100
++++ apl-1.7-gcc7/erlang/apl_example.erl	2017-03-18 13:54:27.369569000 +0100
+@@ -1,4 +1,23 @@
+ %% -*- coding: utf-8 -*-
++%%
++%%  This file is part of GNU APL, a free implementation of the
++%%  ISO/IEC Standard 13751, "Programming Language APL, Extended"
++%%
++%%  Copyright (C) 2008-2017  Dr. Jürgen Sauermann
++%%
++%%  This program is free software: you can redistribute it and/or modify
++%%  it under the terms of the GNU General Public License as published
++%%  by the Free Software Foundation, either version 3 of the License, or
++%%  (at your option) any later version.
++%%
++%%  This program is distributed in the hope that it will be useful,
++%%  but WITHOUT ANY WARRANTY; without even the implied warranty of
++%%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++%%  GNU General Public License for more details.
++%%
++%%  You should have received a copy of the GNU General Public License
++%%  along with this program.  If not, see <http://www.gnu.org/licenses/>.
++%%
+ 
+ -module(apl_example).
+ -export([start/0]).
+diff -Naru apl-1.7/erlang/erlang_APL_nif.c apl-1.7-gcc7/erlang/erlang_APL_nif.c
+--- apl-1.7/erlang/erlang_APL_nif.c	2017-03-16 19:56:29.332176000 +0100
++++ apl-1.7-gcc7/erlang/erlang_APL_nif.c	2017-03-18 13:54:27.369569000 +0100
+@@ -1,5 +1,26 @@
+ /* erlang_APL_nif.c */
+ 
++/*
++    This file is part of GNU APL, a free implementation of the
++    ISO/IEC Standard 13751, "Programming Language APL, Extended"
++
++    Copyright (C) 2008-2017  Dr. Jürgen Sauermann
++
++    This program is free software: you can redistribute it and/or modify
++    it under the terms of the GNU General Public License as published
++    by the Free Software Foundation, either version 3 of the License, or
++    (at your option) any later version.
++
++    This program is distributed in the hope that it will be useful,
++    but WITHOUT ANY WARRANTY; without even the implied warranty of
++    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++    GNU General Public License for more details.
++
++    You should have received a copy of the GNU General Public License
++    along with this program.  If not, see <http://www.gnu.org/licenses/>.
++*/
++
++
+ #include <semaphore.h>
+ #include <stdio.h>
+ #include <string.h>
+diff -Naru apl-1.7/gnu-apl.d/Makefile.am apl-1.7-gcc7/gnu-apl.d/Makefile.am
+--- apl-1.7/gnu-apl.d/Makefile.am	2014-10-11 18:53:32.115695000 +0200
++++ apl-1.7-gcc7/gnu-apl.d/Makefile.am	2017-03-19 11:40:45.241856000 +0100
+@@ -10,7 +10,7 @@
+ 
+ # update preferences when eg. ./configure --prefix is executed
+ #
+-preferences: preferences.in Makefile
+-	echo ${sedcmd}
+-	cat $< | sed -e ${sedcmd1} | sed -e ${sedcmd2} > $@
++#preferences: preferences.in Makefile
++#	echo ${sedcmd}
++#	cat $< | sed -e ${sedcmd1} | sed -e ${sedcmd2} > $@
+ 
+diff -Naru apl-1.7/gnu-apl.d/Makefile.in apl-1.7-gcc7/gnu-apl.d/Makefile.in
+--- apl-1.7/gnu-apl.d/Makefile.in	2017-03-17 18:33:26.764302000 +0100
++++ apl-1.7-gcc7/gnu-apl.d/Makefile.in	2017-03-19 11:40:45.241856000 +0100
+@@ -512,9 +512,9 @@
+ 
+ # update preferences when eg. ./configure --prefix is executed
+ #
+-preferences: preferences.in Makefile
+-	echo ${sedcmd}
+-	cat $< | sed -e ${sedcmd1} | sed -e ${sedcmd2} > $@
++#preferences: preferences.in Makefile
++#	echo ${sedcmd}
++#	cat $< | sed -e ${sedcmd1} | sed -e ${sedcmd2} > $@
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+diff -Naru apl-1.7/gnu-apl.d/preferences apl-1.7-gcc7/gnu-apl.d/preferences
+--- apl-1.7/gnu-apl.d/preferences	2017-03-17 18:33:26.764302000 +0100
++++ apl-1.7-gcc7/gnu-apl.d/preferences	2017-03-19 11:40:45.241856000 +0100
+@@ -278,9 +278,9 @@
+ # LIBREF-0 /home/xyz/my-own-libs
+ # LIBREF-1 /home/xyz/my-group-libs
+ # LIBREF-2 /group/abc/other-libs
+-  LIBREF-3 @GNU_APL_LIBS@/wslib3
+-  LIBREF-4 @GNU_APL_LIBS@/wslib4
+-  LIBREF-5 @GNU_APL_LIBS@/wslib5
++  LIBREF-3 /usr/local/lib/apl/wslib3
++  LIBREF-4 /usr/local/lib/apl/wslib4
++  LIBREF-5 /usr/local/lib/apl/wslib5
+ # LIBREF-6 /usr/lib/gnu-apl/lib-6
+ # LIBREF-7 /usr/lib/gnu-apl/lib-7
+ # LIBREF-8 /usr/lib/gnu-apl/lib-8
+diff -Naru apl-1.7/gnu-apl.d/preferences.in apl-1.7-gcc7/gnu-apl.d/preferences.in
+--- apl-1.7/gnu-apl.d/preferences.in	2016-12-26 20:08:37.078578000 +0100
++++ apl-1.7-gcc7/gnu-apl.d/preferences.in	2017-03-19 11:40:45.241856000 +0100
+@@ -278,9 +278,9 @@
+ # LIBREF-0 /home/xyz/my-own-libs
+ # LIBREF-1 /home/xyz/my-group-libs
+ # LIBREF-2 /group/abc/other-libs
+-  LIBREF-3 @GNU_APL_LIBS@/wslib3
+-  LIBREF-4 @GNU_APL_LIBS@/wslib4
+-  LIBREF-5 @GNU_APL_LIBS@/wslib5
++  LIBREF-3 @prefix@/lib/apl/wslib3
++  LIBREF-4 @prefix@/lib/apl/wslib4
++  LIBREF-5 @prefix@/lib/apl/wslib5
+ # LIBREF-6 /usr/lib/gnu-apl/lib-6
+ # LIBREF-7 /usr/lib/gnu-apl/lib-7
+ # LIBREF-8 /usr/lib/gnu-apl/lib-8
+diff -Naru apl-1.7/src/ScalarFunction.cc apl-1.7-gcc7/src/ScalarFunction.cc
+--- apl-1.7/src/ScalarFunction.cc	2017-01-28 19:44:50.628291000 +0100
++++ apl-1.7-gcc7/src/ScalarFunction.cc	2017-03-18 12:46:30.742188000 +0100
+@@ -2,7 +2,7 @@
+     This file is part of GNU APL, a free implementation of the
+     ISO/IEC Standard 13751, "Programming Language APL, Extended"
+ 
+-    Copyright (C) 2008-2015  Dr. Jürgen Sauermann
++    Copyright (C) 2008-2017  Dr. Jürgen Sauermann
+ 
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+@@ -94,7 +94,7 @@
+ {
+    /// default constructor
+    PJob_scalar_B()
+-   : value_Z(*(Value *)0),
++   : value_Z(0),
+      len_Z(0),
+      cZ(0),
+      cB(0),
+@@ -108,10 +108,10 @@
+       { memcpy(this, &other, sizeof(*this)); }
+ 
+    /// constructor
+-   PJob_scalar_B(Value & Z, const Value & B)
++   PJob_scalar_B(Value * Z, const Value & B)
+    : value_Z(Z),
+-     len_Z(Z.nz_element_count()),
+-     cZ(&Z.get_ravel(0)),
++     len_Z(Z->nz_element_count()),
++     cZ(&Z->get_ravel(0)),
+      cB(&B.get_ravel(0)),
+      error(E_NO_ERROR),
+      fun(0),
+@@ -119,7 +119,7 @@
+    {}
+ 
+    /// the value being computed
+-   Value & value_Z;
++   Value * value_Z;
+ 
+    /// the length of the result
+    ShapeItem len_Z;
+@@ -156,7 +156,7 @@
+ {
+    /// default constructor
+    PJob_scalar_AB()
+-   : value_Z(*(Value *)0),
++   : value_Z(0),
+      len_Z(0),
+      cZ(0),
+      cA(0),
+@@ -173,10 +173,10 @@
+       { memcpy(this, &other, sizeof(*this)); }
+ 
+    /// constructor
+-   PJob_scalar_AB(Value & Z, const Cell * _cA, int iA, const Cell * _cB, int iB)
++   PJob_scalar_AB(Value * Z, const Cell * _cA, int iA, const Cell * _cB, int iB)
+    : value_Z(Z),
+-     len_Z(Z.nz_element_count()),
+-     cZ(&Z.get_ravel(0)),
++     len_Z(Z->nz_element_count()),
++     cZ(&Z->get_ravel(0)),
+      cA(_cA),
+      inc_A(iA),
+      cB(_cB),
+@@ -187,7 +187,7 @@
+    {}
+ 
+    /// A value (e.g parallel ~Value())
+-   Value & value_Z;
++   Value * value_Z;
+ 
+    /// the length of the result
+    ShapeItem len_Z;
+@@ -249,7 +249,7 @@
+    // copying of worklist items.
+    //
+    {
+-     PJob_scalar_B j(Z.getref(), B.getref());
++     PJob_scalar_B j(Z.get(), B.getref());
+      joblist_B.start(j, LOC);
+    }
+ 
+@@ -288,9 +288,9 @@
+                        POOL_LOCK(joblist_B.parallel_jobs_lock,
+                           Value_P B1 = cell_B.get_pointer_value();
+                           Value_P Z1(B1->get_shape(), LOC);
+-                          new (&cell_Z) PointerCell(Z1, job->value_Z);
++                          new (&cell_Z) PointerCell(Z1, *job->value_Z);
+ 
+-                          PJob_scalar_B j1(Z1.getref(), B1.getref());
++                          PJob_scalar_B j1(Z1.get(), B1.getref());
+                           joblist_B.add_job(j1))
+                      }
+                   else
+@@ -308,7 +308,7 @@
+                      }
+                 }
+            }
+-        job->value_Z.check_value(LOC);
++        job->value_Z->check_value(LOC);
+       }
+ 
+    Z->check_value(LOC);
+@@ -347,16 +347,16 @@
+                       Value_P Z1= B1->clone(LOC);
+                       Z1->to_proto();
+                       Z1->check_value(LOC);
+-                      new (&cell_Z) PointerCell(Z1, job.value_Z))
++                      new (&cell_Z) PointerCell(Z1, *job.value_Z))
+                  }
+               else
+                  {
+                    POOL_LOCK(joblist_B.parallel_jobs_lock,
+                       Value_P B1 = cell_B.get_pointer_value();
+                       Value_P Z1(B1->get_shape(), LOC);
+-                      new (&cell_Z) PointerCell(Z1, job.value_Z);
++                      new (&cell_Z) PointerCell(Z1, *job.value_Z);
+ 
+-                      PJob_scalar_B j1(Z1.getref(), B1.getref());
++                      PJob_scalar_B j1(Z1.get(), B1.getref());
+                       joblist_B.add_job(j1))
+                  }
+             }
+@@ -445,8 +445,8 @@
+    // copying of worklist items.
+    //
+    {
+-     PJob_scalar_AB j(Z.getref(), &A->get_ravel(0), inc_A,
+-                                  &B->get_ravel(0), inc_B);
++     PJob_scalar_AB j(Z.get(), &A->get_ravel(0), inc_A,
++                               &B->get_ravel(0), inc_B);
+      joblist_AB.start(j, LOC);
+    }
+ 
+@@ -513,9 +513,9 @@
+                           POOL_LOCK(joblist_AB.parallel_jobs_lock,
+                              Value_P Z1(*sh_Z1, LOC);
+                              Z1->set_complete();
+-                             new (&cell_Z) PointerCell(Z1, job->value_Z);
++                             new (&cell_Z) PointerCell(Z1, *job->value_Z);
+ 
+-                             PJob_scalar_AB j1(Z1.getref(),
++                             PJob_scalar_AB j1(Z1.get(),
+                                                &A1->get_ravel(0), inc_A1,
+                                                &B1->get_ravel(0), inc_B1);
+                              joblist_AB.add_job(j1))
+@@ -534,16 +534,16 @@
+                                Value_P Z1 = A1->clone(LOC);
+                                Z1->to_proto();
+                                Z1->check_value(LOC);
+-                               new (&cell_Z) PointerCell(Z1, job->value_Z);
++                               new (&cell_Z) PointerCell(Z1, *job->value_Z);
+                              }
+                           else
+                              {
+                                 POOL_LOCK(joblist_AB.parallel_jobs_lock,
+                                   Value_P Z1(A1->get_shape(), LOC);
+                                   Z1->set_complete();
+-                                  new (&cell_Z) PointerCell(Z1, job->value_Z);
++                                  new (&cell_Z) PointerCell(Z1, *job->value_Z);
+ 
+-                                  PJob_scalar_AB j1(Z1.getref(),
++                                  PJob_scalar_AB j1(Z1.get(),
+                                                     &A1->get_ravel(0), inc_A1,
+                                                     &cell_B, 0);
+                                   joblist_AB.add_job(j1))
+@@ -564,16 +564,16 @@
+                                Value_P Z1= B1->clone(LOC);
+                                Z1->to_proto();
+                                Z1->check_value(LOC);
+-                               new (&cell_Z) PointerCell(Z1, job->value_Z);
++                               new (&cell_Z) PointerCell(Z1, *job->value_Z);
+                              }
+                           else
+                              {
+                                POOL_LOCK(joblist_AB.parallel_jobs_lock,
+                                   Value_P Z1(B1->get_shape(), LOC);
+-                                  new (&cell_Z) PointerCell(Z1, job->value_Z);
++                                  new (&cell_Z) PointerCell(Z1, *job->value_Z);
+                                   Z1->set_complete();
+ 
+-                                  PJob_scalar_AB j1(Z1.getref(),
++                                  PJob_scalar_AB j1(Z1.get(),
+                                                     &cell_A, 0,
+                                                     &B1->get_ravel(0), inc_B1);
+                                   joblist_AB.add_job(j1))
+@@ -596,7 +596,7 @@
+                         }
+                 }
+            }
+-        job->value_Z.check_value(LOC);
++        job->value_Z->check_value(LOC);
+       }
+ 
+    joblist_AB.cancel_jobs();
+@@ -660,9 +660,9 @@
+                      POOL_LOCK(joblist_AB.parallel_jobs_lock,
+                         Value_P Z1(*sh_Z1, LOC);
+                         Z1->set_complete();
+-                        new (&cell_Z) PointerCell(Z1, job.value_Z);
++                        new (&cell_Z) PointerCell(Z1, *job.value_Z);
+ 
+-                        PJob_scalar_AB j1(Z1.getref(),
++                        PJob_scalar_AB j1(Z1.get(),
+                                           &A1->get_ravel(0), inc_A1,
+                                           &B1->get_ravel(0), inc_B1);
+                         joblist_AB.add_job(j1))
+@@ -680,16 +680,16 @@
+                           Value_P Z1= A1->clone(LOC);
+                           Z1->to_proto();
+                           Z1->check_value(LOC);
+-                          new (&cell_Z) PointerCell(Z1, job.value_Z);
++                          new (&cell_Z) PointerCell(Z1, *job.value_Z);
+                         }
+                      else
+                         {
+                           POOL_LOCK(joblist_AB.parallel_jobs_lock,
+                              Value_P Z1(A1->get_shape(), LOC);
+-                             new (&cell_Z) PointerCell(Z1, job.value_Z);
++                             new (&cell_Z) PointerCell(Z1, *job.value_Z);
+                              Z1->set_complete();
+ 
+-                             PJob_scalar_AB j1(Z1.getref(),
++                             PJob_scalar_AB j1(Z1.get(),
+                                                &A1->get_ravel(0), inc_A1,
+                                                &cell_B, 0);
+                              joblist_AB.add_job(j1))
+@@ -709,16 +709,16 @@
+                           Value_P Z1= B1->clone(LOC);
+                           Z1->to_proto();
+                           Z1->check_value(LOC);
+-                          new (&cell_Z) PointerCell(Z1, job.value_Z);
++                          new (&cell_Z) PointerCell(Z1, *job.value_Z);
+                         }
+                      else
+                         {
+                           POOL_LOCK(joblist_AB.parallel_jobs_lock,
+                              Value_P Z1(B1->get_shape(), LOC);
+-                             new (&cell_Z) PointerCell(Z1, job.value_Z);
++                             new (&cell_Z) PointerCell(Z1, *job.value_Z);
+                              Z1->set_complete();
+ 
+-                             PJob_scalar_AB j1(Z1.getref(),
++                             PJob_scalar_AB j1(Z1.get(),
+                                                &cell_A, 0,
+                                                &B1->get_ravel(0), inc_B1);
+                              joblist_AB.add_job(j1))
+diff -Naru apl-1.7/src/Symbol.cc apl-1.7-gcc7/src/Symbol.cc
+--- apl-1.7/src/Symbol.cc	2016-12-27 20:39:04.571206000 +0100
++++ apl-1.7-gcc7/src/Symbol.cc	2017-03-19 11:40:45.241856000 +0100
+@@ -885,7 +885,7 @@
+                      (vs.name_class == NC_OPERATOR) ||
+                      (vs.name_class == NC_UNUSED_USER_NAME);
+              
+-   Assert(nc == NC_FUNCTION || NC_OPERATOR || NC_UNUSED_USER_NAME);
++   Assert(nc == NC_FUNCTION || nc == NC_OPERATOR || nc == NC_UNUSED_USER_NAME);
+ 
+    if (!can_set)   DEFN_ERROR;
+    vs.sym_val.function = fun;
+diff -Naru apl-1.7/workspaces/APL_CGI.apl apl-1.7-gcc7/workspaces/APL_CGI.apl
+--- apl-1.7/workspaces/APL_CGI.apl	2017-03-17 18:33:26.764302000 +0100
++++ apl-1.7-gcc7/workspaces/APL_CGI.apl	2017-03-18 17:20:44.052932000 +0100
+@@ -232,7 +232,7 @@
+ <DIV class="c4">
+ <?apl HTML∆H2[''] 'Reporting Bugs' ?>
+ 
+-GNU APL is made up of more than 75,000 lines of C++ code. In a code of that
++GNU APL is made up of more than 80,000 lines of C++ code. In a code of that
+ size, programming mistakes are inevitable. Even though mistakes are hardly
+ avoidable, they can be <B>corrected</B> once they are found. In order to
+ improve the quality of GNU APL, we would like to encourage you to report
