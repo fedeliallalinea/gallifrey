@@ -17,12 +17,16 @@ LICENSE="genymotion"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
+IUSE="libressl"
+
 DEPEND=""
 RDEPEND="|| ( >=app-emulation/virtualbox-5.0.28 >=app-emulation/virtualbox-bin-5.0.28 )
 	virtual/opengl
-	=dev-libs/openssl-1.0*:*
+	libressl? ( dev-libs/libressl )
+	!libressl? ( =dev-libs/openssl-1.0*:* )
 	dev-libs/hiredis
-	sys-apps/util-linux
+	dev-util/patchelf
+	>sys-apps/util-linux-0.8
 "
 # note if you compile protobuf with >=gcc-5.1 you need to disable the new c++11 abi
 # -D_GLIBCXX_USE_CXX11_ABI=0  to your CXXFLAGS for protobuf
@@ -52,6 +56,15 @@ src_prepare() {
 
 	# removed windows line for bashcompletion
 	sed -i -e "s/complete\ -F\ _gmtool\ gmtool.exe//" "${S}/${MY_PN}/completion/bash/gmtool.bash" || die "sed failed"
+
+	# patch to support newer hiredis version (0.14)
+	for i in genymotion genyshell gmtool player libcom.so.1.0.0 librendering.so.1.0.0 ; do
+		patchelf --replace-needed libhiredis.so.0.13 libhiredis.so "${S}/${MY_PN}/$i" || die "Unable to patch $i for hiredis"
+		# patch to support libressl
+		if use libressl ; then
+			patchelf --replace-needed libcrypto.so.1.0.0 libcrypto.so "${S}/${MY_PN}/$i" || die "Unable to patch $i for libressl"
+		fi
+	done
 }
 
 QA_PREBUILT="
@@ -68,6 +81,7 @@ QA_PREBUILT="
 src_install() {
 	insinto /opt/"${MY_PN}"
 
+	# Use qt bundled
 	doins -r "${MY_PN}"/{geoservices,Qt,QtGraphicalEffects,QtLocation,QtPositioning,QtQuick,QtQuick.2}
 	doins -r "${MY_PN}"/{icons,imageformats,platforms,plugins,sqldrivers,translations,xcbglintegrations}
 	doins "${MY_PN}"/libQt*
