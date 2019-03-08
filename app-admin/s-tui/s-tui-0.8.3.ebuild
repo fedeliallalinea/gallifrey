@@ -1,9 +1,9 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_6} )
 PYTHON_REQ_USE="ncurses"
 
 if [[ ${PV} == "9999" ]] ; then
@@ -22,7 +22,14 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="stress"
 
-RDEPEND="dev-python/urwid[${PYTHON_USEDEP}]
-	dev-python/psutil[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}
-	stress? ( app-benchmarks/stress )"
+RDEPEND="
+	dev-python/urwid[${PYTHON_USEDEP}]
+	dev-python/psutil[${PYTHON_USEDEP}]
+	stress? ( app-benchmarks/stress )
+"
+
+DEPEND="${RDEPEND}"
+
+BDEPEND="
+	dev-python/setuptools[${PYTHON_USEDEP}]
+"
