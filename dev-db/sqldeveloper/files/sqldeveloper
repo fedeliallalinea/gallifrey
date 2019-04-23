@@ -4,6 +4,5 @@
 
 # skip their stupid [ -f `which java` ] test, which will always fail on Gentoo
 export APP_SKIP_J2SE_TEST=1
-export JAVA_HOME=$(java-config -o)
 
-cd /opt/sqldeveloper/sqldeveloper/bin && bash sqldeveloper $@
+cd /opt/sqldeveloper/sqldeveloper/bin && exec bash sqldeveloper $@
