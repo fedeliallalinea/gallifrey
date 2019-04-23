@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit eutils rpm
+inherit rpm
 
 MY_P="${P}-1.noarch"
 
@@ -71,16 +71,4 @@ src_install() {
 	doins -r *
 	exeinto /opt/${PN}
 	doexe ${PN}.sh
-}
-
-pkg_postinst() {
-	test -d /opt/${PN}/${PN}/log \
-		|| mkdir /opt/${PN}/${PN}/log
-	chgrp users /opt/${PN}/${PN}/log
-	chmod 774 /opt/${PN}/${PN}/log
-
-	test -f /opt/${PN}/${PN}/types/defaultdomains.xml \
-		|| touch /opt/${PN}/${PN}/types/defaultdomains.xml
-	chgrp users /opt/${PN}/${PN}/types/defaultdomains.xml
-	chmod 664 /opt/${PN}/${PN}/types/defaultdomains.xml
 }
