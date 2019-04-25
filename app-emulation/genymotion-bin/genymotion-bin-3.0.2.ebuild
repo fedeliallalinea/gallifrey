@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit desktop bash-completion-r1 pax-utils
+inherit bash-completion-r1 pax-utils
 
 MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${PV}"
@@ -90,7 +90,12 @@ src_install() {
 	insinto /usr/share/zsh/site-functions
 	doins "${MY_PN}/completion/zsh/_gmtool"
 
-	make_desktop_entry "/opt/${MY_PN}/${MY_PN}" "Genymotion ${PV}" "/opt/${MY_PN}/icons/icon.png" "Development;Emulator;"
+	sed -i "s:Icon.*:Icon=/opt/${MY_PN}/icons/icon.png:" \
+		"${HOME}"/.local/share/applications/genymobile-genymotion.desktop || die "sed failed"
+	sed -i "s:Exec.*:Exec=/opt/${MY_PN}/genymotion:" \
+		"${HOME}"/.local/share/applications/genymobile-genymotion.desktop || die "sed failed"
+	insinto /usr/share/applications
+	doins "${HOME}"/.local/share/applications/genymobile-genymotion.desktop
 }
 
 pkg_postinst() {
