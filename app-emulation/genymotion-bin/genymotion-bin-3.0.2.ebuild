@@ -25,7 +25,7 @@ RDEPEND="|| ( >=app-emulation/virtualbox-5.0.28 >=app-emulation/virtualbox-bin-5
 		dev-libs/openssl:1.0.0
 		=dev-libs/openssl-1.0*:0
 	)
-	dev-libs/hiredis:0=
+	dev-libs/hiredis:0/0.14
 	sys-apps/util-linux
 "
 BDEPEND=">=dev-util/patchelf-0.9_p20180129"
@@ -55,7 +55,7 @@ src_prepare() {
 
 	# patch to support newer hiredis version (0.14)
 	for i in genymotion genyshell gmtool player libcom.so.1.0.0 librendering.so.1.0.0 ; do
-		patchelf --replace-needed libhiredis.so.0.13 libhiredis.so "${S}/${MY_PN}/$i" || die "Unable to patch $i for hiredis"
+		patchelf --replace-needed libhiredis.so.0.13 libhiredis.so.0.14 "${S}/${MY_PN}/$i" || die "Unable to patch $i for hiredis"
 	done
 }
 
