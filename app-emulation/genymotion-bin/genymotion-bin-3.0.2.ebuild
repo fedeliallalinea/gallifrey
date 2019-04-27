@@ -29,8 +29,19 @@ RDEPEND="|| ( >=app-emulation/virtualbox-5.0.28 >=app-emulation/virtualbox-bin-5
 "
 BDEPEND=">=dev-util/patchelf-0.9_p20180129"
 
-RESTRICT="binchecks bindist fetch"
+RESTRICT="bindist fetch"
 S="${WORKDIR}"
+
+QA_PREBUILT="
+	opt/${MY_PN}/*.so*
+	opt/${MY_PN}/imageformats/*.so
+	opt/${MY_PN}/plugins/*.so*
+	opt/${MY_PN}/${MY_PN}
+	opt/${MY_PN}/genyshell
+	opt/${MY_PN}/player
+	opt/${MY_PN}/${MY_PN}adbtunneld
+	opt/${MY_PN}/gmtool
+"
 
 pkg_nofetch() {
 	einfo
@@ -39,7 +50,7 @@ pkg_nofetch() {
 	einfo "  https://www.genymotion.com/download/"
 	einfo
 	einfo "and download "
-	einfo 
+	einfo
 	einfo "  ${BIN_ARCHIVE}"
 	einfo
 	einfo "which must be placed in DISTDIR directory."
