@@ -1,0 +1,16 @@
+diff --git a/vapi/gio-addons-2.0.vapi b/vapi/gio-addons-2.0.vapi
+index 7da943c..c380484 100644
+--- a/vapi/gio-addons-2.0.vapi
++++ b/vapi/gio-addons-2.0.vapi
+@@ -30,11 +30,6 @@ namespace GLib
+ {
+     [CCode (cname = "g_slist_free_full")]
+     public void slist_free_full(SList list, DestroyNotify? free_func);
+-    namespace SignalHandler
+-    {
+-        [CCode (cname = "g_signal_handlers_disconnect_by_data")]
+-        public void disconnect_by_data(Object instance, void* data);
+-    }
+     [CCode (cname = "GSettingsBackend")]
+     public class KeyfileSettingsBackend : GLib.SettingsBackend
+     {

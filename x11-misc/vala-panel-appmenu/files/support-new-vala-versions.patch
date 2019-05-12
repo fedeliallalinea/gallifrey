@@ -1,0 +1,13 @@
+diff --git a/cmake/Vala/FindVala.cmake b/cmake/Vala/FindVala.cmake
+index 3190dad..9a6e5ed 100644
+--- a/cmake/Vala/FindVala.cmake
++++ b/cmake/Vala/FindVala.cmake
+@@ -45,7 +45,7 @@
+ 
+ # Search for the valac executable in the usual system paths.
+ find_program(VALA_EXECUTABLE
+-  NAMES valac valac-0.38 valac-0.36 valac-0.34)
++  NAMES valac valac-0.42 valac-0.40 valac-0.38 valac-0.36 valac-0.34)
+ 
+ execute_process(COMMAND ${VALA_EXECUTABLE} "--version" 
+                 OUTPUT_VARIABLE "VALA_VERSION")

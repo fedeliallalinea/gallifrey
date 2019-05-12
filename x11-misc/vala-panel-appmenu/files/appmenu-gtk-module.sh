@@ -10,3 +10,4 @@ fi
 
 export GTK_MODULES
 export UBUNTU_MENUPROXY
+export SAL_USE_VCLPLUGIN=gtk3
