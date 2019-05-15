@@ -6,7 +6,7 @@ EAPI=7
 inherit cmake-utils gnome2-utils
 
 DESCRIPTION="Application menu module for Java"
-HOMEPAGE="https://github.com/rilian-la-te/vala-panel-appmenu"
+HOMEPAGE="https://gitlab.com/vala-panel-project/vala-panel-appmenu"
 SRC_URI="https://gitlab.com/vala-panel-project/vala-panel-appmenu/uploads/3f19440d0dff20cebe692d7cfce00e10/${P}.tar.xz"
 
 LICENSE="GPL-3"
