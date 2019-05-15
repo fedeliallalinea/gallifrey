@@ -23,26 +23,30 @@ RDEPEND="virtual/jre:1.8
 S="${WORKDIR}"
 
 pkg_nofetch() {
-	eerror "Please go to"
-	eerror "	${HOMEPAGE}"
-	eerror "and download"
-	eerror "	Command Line - SQLcl"
-	eerror "		${SRC_URI}"
-	eerror "and move it to DISTDIR directory."
+	einfo "Please go to"
+	einfo
+	einfo "	${HOMEPAGE}"
+	einfo
+	einfo "and download"
+	einfo
+	einfo "	Command Line - SQLcl"
+	einfo "		${SRC_URI}"
+	einfo
+	einfo "which must be placed in DISTDIR directory."
 }
 
 src_prepare() {
 	default
 	find ./ \( -iname "*.bat" -or -iname "*.exe" \) -exec rm {} + || die "remove files failed"
-	mv sqlcl/bin/sql sqlcl/bin/"${MY_PN}" || die "rename executable failed"
+	mv sqlcl/bin/sql sqlcl/bin/sqlcl || die "rename executable failed"
 }
 
 src_install() {
 	exeinto "/opt/${MY_PN}/bin/"
-	doexe "${S}/${MY_PN}/bin/${MY_PN}"
+	doexe "${MY_PN}"/bin/sqlcl
 
 	insinto "/opt/${MY_PN}/lib/"
-	doins -r "${S}/${MY_PN}/lib/"*
+	doins -r "${MY_PN}"/lib/*
 
-	dosym "${ED%/}/opt/${MY_PN}/bin/${MY_PN}" "/opt/bin/${MY_PN}"
+	dosym "${ED}/opt/${MY_PN}/bin/sqlcl" /opt/bin/sqlcl
 }
