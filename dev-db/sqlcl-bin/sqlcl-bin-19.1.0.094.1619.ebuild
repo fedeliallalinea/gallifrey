@@ -7,7 +7,7 @@ MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Oracle SQLcl is the new SQL*Plus"
-HOMEPAGE="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html"
+HOMEPAGE="https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html"
 SRC_URI="${MY_P}.zip"
 RESTRICT="bindist fetch mirror"
 
