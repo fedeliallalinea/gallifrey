@@ -37,16 +37,15 @@ pkg_nofetch() {
 
 src_prepare() {
 	default
-	find ./ \( -iname "*.bat" -or -iname "*.exe" \) -exec rm {} + || die "remove files failed"
-	mv sqlcl/bin/sql sqlcl/bin/sqlcl || die "rename executable failed"
+	find ./ \( -iname "*.bat" -or -iname "*.exe" \) -delete || die "remove files failed"
 }
 
 src_install() {
 	exeinto "/opt/${MY_PN}/bin/"
-	doexe "${MY_PN}"/bin/sqlcl
+	newexe "${MY_PN}"/bin/sql sqlcl
 
 	insinto "/opt/${MY_PN}/lib/"
-	doins -r "${MY_PN}"/lib/*
+	doins -r "${MY_PN}"/lib/.
 
-	dosym "${ED}/opt/${MY_PN}/bin/sqlcl" /opt/bin/sqlcl
+	dosym "../${MY_PN}/bin/sqlcl" /opt/bin/sqlcl
 }
