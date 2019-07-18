@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/Genymobile/scrcpy"
 SRC_URI="https://github.com/Genymobile/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://github.com/Genymobile/${PN}/releases/download/v${PV}/${PN}-server-v${PV}.jar -> ${PN}-server-${PV}.jar"
 
-LICENSE="Apache-2"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
