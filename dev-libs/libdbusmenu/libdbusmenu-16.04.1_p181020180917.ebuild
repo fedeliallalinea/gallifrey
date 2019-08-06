@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 VALA_MIN_API_VERSION=0.16
 VALA_USE_DEPEND=vapigen
@@ -48,6 +48,8 @@ DEPEND="${RDEPEND}
 		gtk3? ( ${VIRTUALX_DEPEND} )
 	)"
 
+PATCHES=( "${FILESDIR}/${P}-configure-fix.patch" )
+
 S="${WORKDIR}"
 
 pkg_setup() {
@@ -56,14 +58,13 @@ pkg_setup() {
 }
 
 src_prepare() {
+	default
 	if use introspection; then
 		vala_src_prepare
 		export VALA_API_GEN="${VAPIGEN}"
 	fi
 	python_fix_shebang tools
 
-	eapply "${FILESDIR}/${P}-configure-fix.patch"
-	eapply_user
 	eautoreconf
 }
 
