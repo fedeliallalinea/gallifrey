@@ -1,3 +1,0 @@
----- logitechmediaserver-bin-7.8.1_preXXXXX
-
-Initial version.
