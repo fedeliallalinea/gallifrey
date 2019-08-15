@@ -121,7 +121,10 @@ CDEPEND="
 
 RDEPEND="${CDEPEND}
 	jack? ( virtual/jack )
-	kde? ( kde-misc/kmozillahelper:=  )
+	kde? ( 
+		dev-libs/libdbusmenu
+		kde-plasma/xdg-desktop-portal-kde
+	)
 	pulseaudio? ( || ( media-sound/pulseaudio
 		>=media-sound/apulse-0.1.9 ) )
 	selinux? ( sec-policy/selinux-mozilla )"
@@ -752,6 +755,8 @@ PROFILE_EOF
 
 	# Required in order to use plugins and even run firefox on hardened.
 	pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,plugin-container}
+
+	newexe "${FILESDIR}"/firefox-kde-fieldialog.sh 80-firefox-kde-fieldialog
 }
 
 pkg_preinst() {
