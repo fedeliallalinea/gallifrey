@@ -15,19 +15,20 @@ LICENSE="OTN"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="mssql mysql sybase"
+IUSE="mssql mysql postgres sybase"
 
 DEPEND="mssql? ( dev-java/jtds:1.3 )
 	mysql? ( dev-java/jdbc-mysql:0 )
-	sybase? ( dev-java/jtds:1.3 )"
-RDEPEND=">=virtual/jdk-1.8
-	${DEPEND}"
+	postgres? ( dev-java/jdbc-postgresql:0 )
+	sybase? ( dev-java/jtds:1.3 )
+	>=virtual/jdk-1.8:*"
+RDEPEND=">=virtual/jdk-1.8:*"
 
 S="${WORKDIR}/${PN}"
 
 QA_PREBUILT="
-opt/${PN}/netbeans/platform/modules/lib/amd64/linux/*.so
-opt/${PN}/netbeans/platform/modules/lib/i386/linux/*.so
+	opt/${PN}/netbeans/platform/modules/lib/amd64/linux/*.so
+	opt/${PN}/netbeans/platform/modules/lib/i386/linux/*.so
 "
 
 pkg_nofetch() {
@@ -59,14 +60,18 @@ src_prepare() {
 	if use mysql; then
 		echo "AddJavaLibFile $(java-pkg_getjars jdbc-mysql)" >> sqldeveloper/bin/sqldeveloper.conf || die
 	fi
+
+	if use postgres; then
+		echo "AddJavaLibFile $(java-pkg_getjars jdbc-postgresql)" >> sqldeveloper/bin/sqldeveloper.conf || die
+	fi
 }
 
 src_install() {
 	dodir /opt/${PN}
 	# NOTE For future version to get that line (what to copy) go to the unpacked sources dir
 	# using `bash` and press Meta+_ (i.e. Meta+Shift+-) -- that is a builtin bash feature ;-)
-	cp -r {configuration,d{ataminer,ropins,vt},e{quinox,xternal},ide,j{avavm,d{bc,ev},lib,views},modules,netbeans,ords,rdbms,s{leepycat,ql{developer,j},vnkit}} \
-		"${ED%/}"/opt/${PN}/ || die "Install failed"
+	cp -r {configuration,d{ataminer,ropins,vt},e{quinox,xternal},ide,j{avavm,d{bc,ev},lib,views},modules,netbeans,rdbms,s{leepycat,ql{developer,j},vnkit}} \
+		"${ED}"/opt/${PN}/ || die "Install failed"
 
 	dobin "${FILESDIR}"/${PN}
 
