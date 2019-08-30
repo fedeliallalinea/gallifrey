@@ -1,3 +1,6 @@
+  30 Aug 2019;  <fat@gentoo.org> -sqldeveloper-18.3.0.277.2354.ebuild:
+  dev-db/sqldeveloper: removed old
+
   30 Aug 2019;  <fat@gentoo.org> metadata.xml:
   dev-db/sqldeveloper: update metadata.xml
 
