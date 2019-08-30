@@ -1,3 +1,7 @@
+  30 Aug 2019;  <fat@gentoo.org> -jaspersoft-studio-6.4.0.ebuild,
+  -jaspersoft-studio-6.5.1.ebuild:
+  dev-util/jaspersoft-studio: removed old
+
 *jaspersoft-studio-6.9.0 (30 Aug 2019)
 
   30 Aug 2019;  <fat@gentoo.org> +jaspersoft-studio-6.9.0.ebuild:
