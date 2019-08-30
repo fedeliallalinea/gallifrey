@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=dev-libs/glib-2.50[dbus]
-	virtual/jre
+	virtual/jre:*
 	x11-libs/libxkbcommon"
 RDEPEND="${DEPEND}"
 

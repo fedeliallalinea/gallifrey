@@ -1,0 +1,2 @@
+  30 Aug 2019;  <fat@gentoo.org> jayatana-0.7.3.ebuild:
+  x11-misc/jayatana: fixes dependency slot
