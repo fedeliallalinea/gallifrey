@@ -1,0 +1,4 @@
+*scrcpy-1.10 (30 Aug 2019)
+
+  30 Aug 2019;  <fat@gentoo.org> +metadata.xml, +scrcpy-1.10.ebuild:
+  net-misc/scrcpy: bump to version 1.10
