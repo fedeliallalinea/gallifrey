@@ -1,3 +1,7 @@
+  30 Aug 2019;  <fat@gentoo.org> -ffsend-0.2.39.ebuild, -ffsend-0.2.43.ebuild,
+  -ffsend-0.2.49.ebuild:
+  net-misc/ffsend: removed old
+
 *ffsend-0.2.51 (30 Aug 2019)
 
   30 Aug 2019;  <fat@gentoo.org> +ffsend-0.2.51.ebuild:
