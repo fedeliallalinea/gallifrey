@@ -1,0 +1,3 @@
+  30 Aug 2019;  <fat@gentoo.org> find_cruft-5.1.ebuild:
+  app-portage/find_cruft: fixes and cleanup  - update copyright header - update
+  EAPI to 7
