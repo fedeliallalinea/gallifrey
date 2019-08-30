@@ -1,0 +1,2 @@
+  30 Aug 2019;  <fat@gentoo.org> +metadata.xml, qgis-3.6.3.ebuild:
+  sci-geosciences/qgis: fixes and cleanup  - update EAPI to 7 - add metadata.xml

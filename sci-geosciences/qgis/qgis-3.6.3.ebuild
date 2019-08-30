@@ -1,7 +1,7 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 PYTHON_COMPAT=( python3_{5,6} )
 PYTHON_REQ_USE="sqlite"
@@ -23,7 +23,7 @@ HOMEPAGE="https://www.qgis.org/"
 
 LICENSE="GPL-2+ GPL-3+"
 SLOT="0"
-IUSE="3d examples georeferencer grass mapserver opencl oracle polar postgres python qml serialport webkit"
+IUSE="3d examples georeferencer grass mapserver opencl oracle polar postgres python qml webkit"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE} mapserver? ( python )"
 
@@ -41,6 +41,7 @@ COMMON_DEPEND="
 	>=dev-qt/qtnetwork-${QT_MIN_VER}:5[ssl]
 	>=dev-qt/qtpositioning-${QT_MIN_VER}:5
 	>=dev-qt/qtprintsupport-${QT_MIN_VER}:5
+	>=dev-qt/qtserialport-${QT_MIN_VER}:5
 	>=dev-qt/qtsvg-${QT_MIN_VER}:5
 	>=dev-qt/qtsql-${QT_MIN_VER}:5
 	>=dev-qt/qtwidgets-${QT_MIN_VER}:5
@@ -83,7 +84,6 @@ COMMON_DEPEND="
 		postgres? ( dev-python/psycopg:2[${PYTHON_USEDEP}] )
 	)
 	qml? ( >=dev-qt/qtdeclarative-${QT_MIN_VER}:5 )
-	serialport? ( >=dev-qt/qtserialport-${QT_MIN_VER}:5 )
 	webkit? ( >=dev-qt/qtwebkit-5.9.1:5 )
 "
 DEPEND="${COMMON_DEPEND}
@@ -137,6 +137,7 @@ src_configure() {
 		-DWITH_APIDOC=OFF
 		-DWITH_QSPATIALITE=ON
 		-DENABLE_TESTS=OFF
+		-DWITH_QT5SERIALPORT=ON
 		-DWITH_3D=$(usex 3d)
 		-DUSE_OPENCL=$(usex opencl)
 		-DWITH_GEOREFERENCER=$(usex georeferencer)
@@ -149,7 +150,6 @@ src_configure() {
 		-DWITH_CUSTOM_WIDGETS=$(usex python)
 		-DWITH_QUICK=$(usex qml)
 		-DWITH_QTWEBKIT=$(usex webkit)
-		-DWITH_QT5SERIALPORT=$(usex serialport)
 	)
 
 	if use grass; then
@@ -170,7 +170,7 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	domenu ${BUILD_DIR}/org.qgis.qgis.desktop
+	domenu "${BUILD_DIR}"/org.qgis.qgis.desktop
 
 	local size type
 	for size in 16 22 24 32 48 64 96 128 256; do
