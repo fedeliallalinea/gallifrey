@@ -1,0 +1,4 @@
+*apl-1.8 (30 Aug 2019)
+
+  30 Aug 2019;  <fat@gentoo.org> +apl-1.8.ebuild, +metadata.xml:
+  dev-util/apl: bump to 1.8 version
