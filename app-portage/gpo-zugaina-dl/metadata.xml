@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fedeliallalinea@gmail.com</email>
+		<name>Marco Genasci</name>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<email>fedeliallalinea@gmail.com</email>
+			<name>Marco Genasci</name>
+		</maintainer>
+		<bugs-to>mailto:fedeliallalinea@gmail.com</bugs-to>
+		<remote-id type="github">fedeliallalinea/gpo-zugaina-dl</remote-id>
+	</upstream>
+</pkgmetadata>
