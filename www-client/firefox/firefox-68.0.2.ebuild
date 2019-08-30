@@ -58,9 +58,11 @@ IUSE="bindist clang cpu_flags_x86_avx2 dbus debug eme-free geckodriver
 	+system-sqlite +system-libvpx +system-webp test wayland wifi"
 RESTRICT="!bindist? ( bindist )"
 
+KDE_PATCH_URI="https://raw.githubusercontent.com/fedeliallalinea/gentoo-patches/master/ebuild-patches/www-client/${PN}/${PN}-kde-${MOZ_PV%%.*}-unity-menubar.patch"
 PATCH_URIS=( https://dev.gentoo.org/~{anarchy,axs,polynomial-c,whissi}/mozilla/patchsets/${PATCH}.tar.xz )
 SRC_URI="${SRC_URI}
 	${MOZ_SRC_URI}
+	${KDE_PATCH_URI}
 	${PATCH_URIS[@]}"
 
 CDEPEND="
@@ -305,7 +307,7 @@ src_prepare() {
 		"${S}"/build/moz.configure/rust.configure || die
 
 	# OpenSUSE-KDE patchset
-	use kde && eapply "${FILESDIR}/firefox-kde-${MOZ_PV%%.*}-unity-menubar.patch"
+	use kde && eapply "${DISTDIR}/firefox-kde-${MOZ_PV%%.*}-unity-menubar.patch"
 
 	# Autotools configure is now called old-configure.in
 	# This works because there is still a configure.in that happens to be for the

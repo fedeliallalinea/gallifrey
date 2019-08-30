@@ -61,9 +61,11 @@ IUSE="bindist clang cpu_flags_x86_avx2 dbus debug eme-free geckodriver
 		+system-sqlite +system-libvpx +system-webp test wayland wifi"
 RESTRICT="!bindist? ( bindist )"
 
+KDE_PATCH_URI="https://raw.githubusercontent.com/fedeliallalinea/gentoo-patches/master/ebuild-patches/www-client/${PN}/${PN}-kde-${MOZ_PV%%.*}-unity-menubar.patch"
 PATCH_URIS=( https://dev.gentoo.org/~{anarchy,axs,polynomial-c,whissi}/mozilla/patchsets/${PATCH}.tar.xz )
 SRC_URI="${SRC_URI}
 	${MOZ_SRC_URI}
+	${KDE_PATCH_URI}
 	${PATCH_URIS[@]}"
 
 CDEPEND="
@@ -73,6 +75,7 @@ CDEPEND="
 	dev-libs/atk
 	dev-libs/expat
 	dev-libs/libdbusmenu
+	dev-vcs/mercurial
 	>=x11-libs/cairo-1.10[X]
 	>=x11-libs/gtk+-2.18:2
 	>=x11-libs/gtk+-3.4.0:3
@@ -338,7 +341,7 @@ src_prepare() {
 		)
 		# Firefox OpenSUSE KDE global menubar
 		KDE_PATCHES+=(
-			"${FILESDIR}/firefox-kde-${MOZ_PV%%.*}-unity-menubar.patch"
+			"${DISTDIR}/firefox-kde-${MOZ_PV%%.*}-unity-menubar.patch"
 		)
 		# Uncomment the next line to enable KDE support debugging (additional console output)...
 		#KDE_PATCHES+=( "${FILESDIR}/firefox-kde-debug.patch" )

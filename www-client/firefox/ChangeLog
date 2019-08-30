@@ -1,0 +1,9 @@
+  30 Aug 2019;  <fat@gentoo.org> -files/firefox-kde-62-unity-menubar.patch,
+  -files/firefox-kde-63-unity-menubar.patch,
+  -files/firefox-kde-64-unity-menubar.patch,
+  -files/firefox-kde-65-unity-menubar.patch,
+  -files/firefox-kde-66-unity-menubar.patch,
+  -files/firefox-kde-67-unity-menubar.patch,
+  -files/firefox-kde-68-unity-menubar.patch, firefox-66.0.5.ebuild,
+  firefox-67.0.4.ebuild, firefox-68.0.2.ebuild:
+  www-client/firefox: moved too large patch on external url
