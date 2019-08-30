@@ -1,0 +1,4 @@
+  30 Aug 2019;  <fat@gentoo.org> +metadata.xml, -genymotion-bin-2.12.1.ebuild,
+  -genymotion-bin-2.12.2.ebuild:
+  app-emulation/genymotion-bin: fixes and cleanup  - update copyright header -
+  added metadata.xml - removed old
