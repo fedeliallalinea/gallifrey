@@ -1,3 +1,6 @@
+  30 Aug 2019;  <fat@gentoo.org> -yed-3.17.2.ebuild, -yed-3.18.2.ebuild:
+  app-office/yed: removed old
+
 *yed-3.19 (30 Aug 2019)
 
   30 Aug 2019;  <fat@gentoo.org> +yed-3.19.ebuild:
