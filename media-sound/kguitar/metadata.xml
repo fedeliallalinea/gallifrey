@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+	<email>fedeliallalinea@gmail.com</email>
+	<name>Marco Genasci</name>
+</maintainer>
+<longdescription>
+	Guitarist helper program focusing on tabulature editing 
+	and MIDI synthesizers support
+</longdescription>
+<use>
+	<flag name='midi'>Enable MIDI support through media-libs/tse3</flag>
+</use>
+</pkgmetadata>
+

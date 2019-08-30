@@ -1,28 +1,27 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit git-r3 kde5
 
-DESCRIPTION="Guitarist helper program focusing on tabulature editing and MIDI synthesizers support"
+DESCRIPTION="KGuitar is basically a guitar tabulature editor for K Desktop"
 HOMEPAGE="http://kguitar.sf.net/"
 EGIT_REPO_URI="https://github.com/pavelliavonau/${PN}.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="midi"
 
 DEPEND="
-        $(add_frameworks_dep kconfig)
-        $(add_frameworks_dep kdoctools)
-        $(add_frameworks_dep ki18n)
-        $(add_frameworks_dep kparts)
-        $(add_qt_dep qtgui)
-        $(add_qt_dep qtwidgets)
-        $(add_qt_dep qtxml)
-        midi? ( >=media-libs/tse3-0.3.0 )
+	$(add_frameworks_dep kconfig)
+	$(add_frameworks_dep kdoctools)
+	$(add_frameworks_dep ki18n)
+	$(add_frameworks_dep kparts)
+	$(add_qt_dep qtgui)
+	$(add_qt_dep qtwidgets)
+	$(add_qt_dep qtxml)
+	midi? ( >=media-libs/tse3-0.3.0 )
 "
 RDEPEND="${DEPEND}"
 
