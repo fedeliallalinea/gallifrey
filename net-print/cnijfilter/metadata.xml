@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer type="person">
-    <description>Primary maintainer</description>
-    <email>tokiclover@gmail.com</email>
+	<description>Primary maintainer</description>
+	<email>tokiclover@gmail.com</email>
 </maintainer>
 <maintainer type="project">
 	<description>Primary maintainer</description>
@@ -14,7 +14,17 @@
 	Canon(R) Pixma/Pixus CUPS printer backends, filters, utilities, ppd files.
 </longdescription>
 <use>
+	<flag name="cups">Build CUPS printing (Network/USB) backends, filters and printer utilities</flag>
+	<flag name="canon_printers_mp430">Build Canon(R) mp430 CUPS printer command line utility (pull-in propriatary blobs)</flag>
+	<flag name="canon_printers_mg2200">Build Canon(R) mg2200 CUPS printer command line utility (pull-in propriatary blobs)</flag>
+	<flag name="canon_printers_e510">Build Canon(R) e510 CUPS printer command line utility (pull-in propriatary blobs)</flag>
+	<flag name="canon_printers_mg3200">Build Canon(R) mg3200 CUPS printer command line utility (pull-in propriatary blobs)</flag>
+	<flag name="canon_printers_mg4200">Build Canon(R) mg4200 CUPS printer command line utility (pull-in propriatary blobs)</flag>
+	<flag name="canon_printers_ip7200">Build Canon(R) ip7200 CUPS printer command line utility (pull-in propriatary blobs)</flag>
+	<flag name="canon_printers_mg5400">Build Canon(R) mg5400 CUPS printer command line utility (pull-in propriatary blobs)</flag>
+	<flag name="canon_printers_mg6300">Build Canon(R) mg6300 CUPS printer command line utility (pull-in propriatary blobs)</flag>
 	<flag name="servicetools">Build service tools utility, this require very old libs</flag>
 	<flag name="net">Add network backend for CUPS</flag>
+	<flag name="usb">Add usb backend for CUPS</flag>
 </use>
 </pkgmetadata>
