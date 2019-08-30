@@ -1,0 +1,3 @@
+  30 Aug 2019;  <fat@gentoo.org> mbw-1.4.ebuild, mbw-9999.ebuild:
+  app-benchmarks/mbw: fixes and cleanup  - update copyright header - update EAPI
+  to 7 - use dobin instead of exeinto and doexe
