@@ -1,10 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
-EAPI=6
+EAPI=7
 
-inherit eutils
+inherit desktop
 
 DESCRIPTION="eTax per le imposte di persone fisiche"
 HOMEPAGE="http://www4.ti.ch/dfe/dc/dichiarazione/etaxpf/download-scaricare/"
@@ -12,7 +11,6 @@ HOMEPAGE="http://www4.ti.ch/dfe/dc/dichiarazione/etaxpf/download-scaricare/"
 LICENSE="Repubblica-e-Cantone-Ticino"
 SLOT="${PV}"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 MY_PV="eTax_ticino${SLOT}-unix"
 
@@ -49,8 +47,8 @@ src_install() {
 	doexe "eTax.ticino PF ${SLOT}"
 	insinto "/opt/${PN}/${SLOT}"
 	doins -r {help,lib,.install4j}
-	dosym "${ED%/}/opt/${PN}/${SLOT}/.install4j/eTax.ticino PF ${SLOT}.png" "/usr/share/pixmaps/${PN}-${SLOT}.png"
+	dosym "${ED}/opt/${PN}/${SLOT}/.install4j/eTax.ticino PF ${SLOT}.png" "/usr/share/pixmaps/${PN}-${SLOT}.png"
 
 	make_desktop_entry "/bin/sh \"/opt/${PN}/${SLOT}/eTax.ticino PF ${SLOT}\"" "eTax Ticino ${PV}" "${PN}-${SLOT}" "Utility"
-	mv "${ED%/}/usr/share/applications"/*.desktop "${ED%/}/usr/share/applications/${P}.desktop" || die "rename .desktop file failed"
+	mv "${ED}/usr/share/applications"/*.desktop "${ED}/usr/share/applications/${P}.desktop" || die "rename .desktop file failed"
 }

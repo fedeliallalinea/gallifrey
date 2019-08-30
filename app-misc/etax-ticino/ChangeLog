@@ -1,0 +1,5 @@
+  30 Aug 2019;  <fat@gentoo.org> etax-ticino-2014.ebuild,
+  etax-ticino-2015.ebuild, etax-ticino-2016.ebuild, etax-ticino-2017.ebuild,
+  etax-ticino-2018.ebuild:
+  app-misc/etax-ticino: fixes and cleanup  - update copyright header - update
+  EAPI to 7 - update eclass from eutils to desktop
