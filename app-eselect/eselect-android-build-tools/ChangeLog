@@ -1,0 +1,4 @@
+  30 Aug 2019;  <fat@gentoo.org> eselect-android-build-tools-20170829.ebuild,
+  eselect-android-build-tools-99999999.ebuild:
+  app-eselect/eselect-android-build-tools: fixes and cleanup  - update copyright
+  header - update EAPI to 7
