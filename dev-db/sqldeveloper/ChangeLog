@@ -1,3 +1,6 @@
+  30 Aug 2019;  <fat@gentoo.org> metadata.xml:
+  dev-db/sqldeveloper: update metadata.xml
+
 *sqldeveloper-17.4.0.355.2349 (03 Jan 2018)
 
   03 Jan 2018;  <fat@gentoo.org> +files/sqldeveloper, +files/sqldeveloper-r1,

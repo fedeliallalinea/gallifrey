@@ -5,4 +5,7 @@
     <email>fedeliallalinea@gmail.com</email>
     <name>Marco Genasci</name>
 </maintainer>
+<use>
+	<flag name="sybase">Add support for the Sybase SQL Database Server</flag>
+</use>
 </pkgmetadata>
