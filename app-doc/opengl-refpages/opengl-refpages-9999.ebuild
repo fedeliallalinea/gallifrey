@@ -1,7 +1,7 @@
-# Copyright 2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit git-r3
 
@@ -11,14 +11,10 @@ EGIT_REPO_URI="https://github.com/KhronosGroup/OpenGL-Refpages"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
 BDEPEND="
- 	dev-libs/libxslt
- 	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt
+	app-text/docbook-xsl-stylesheets
 "
 
 # gl2.1 = OpenGL 2.1 (including fixed functionality)
