@@ -1,3 +1,7 @@
+  30 Aug 2019;  <fat@gentoo.org> -apl-1.7.ebuild,
+  -files/apl-1.7-gcc-clang-warning.patch:
+  dev-util/apl: removed old
+
 *apl-1.8 (30 Aug 2019)
 
   30 Aug 2019;  <fat@gentoo.org> +apl-1.8.ebuild, +metadata.xml:
