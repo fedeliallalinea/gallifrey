@@ -1,0 +1,4 @@
+*sqlcl-bin-19.2.1.206.1649 (30 Aug 2019)
+
+  30 Aug 2019;  <fat@gentoo.org> +sqlcl-bin-19.2.1.206.1649.ebuild:
+  dev-db/sqlcl-bin: bump to version 19.2.1.206.1649
