@@ -1,3 +1,7 @@
+  30 Aug 2019;  <fat@gentoo.org> -files/scrcpy-1.9-spelling.patch,
+  -scrcpy-1.9.ebuild:
+  net-misc/scrcpy: removed old
+
 *scrcpy-1.10 (30 Aug 2019)
 
   30 Aug 2019;  <fat@gentoo.org> +metadata.xml, +scrcpy-1.10.ebuild:
