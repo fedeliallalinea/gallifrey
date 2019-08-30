@@ -1,0 +1,4 @@
+*yed-3.19 (30 Aug 2019)
+
+  30 Aug 2019;  <fat@gentoo.org> +yed-3.19.ebuild:
+  app-office/yed: bump to version 3.19
