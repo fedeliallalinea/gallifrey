@@ -6,7 +6,7 @@ EAPI=7
 MULTILIB_COMPAT=( abi_x86_{32,64} )
 
 PRINTER_MODEL=( "mp430" "mg2200" "e510" "mg3200" "mg4200" "ip7200" "mg5400" "mg6300" )
-PRINTER_ID=( "401" "402" "403" "405" "405" "406" "407" "408" )
+PRINTER_ID=( "401" "402" "403" "404" "405" "406" "407" "408" )
 
 inherit ecnij
 

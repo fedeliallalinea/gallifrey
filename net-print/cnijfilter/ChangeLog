@@ -1,4 +1,7 @@
   02 Sep 2019;  <fat@gentoo.org> cnijfilter-3.80.ebuild:
+  net-print/cnijfilter: fixed PRINTER_ID from mg3200
+
+  02 Sep 2019;  <fat@gentoo.org> cnijfilter-3.80.ebuild:
   net-print/cnijfilter: fixed PRINTER_ID from mg4200
 
   30 Aug 2019;  <fat@gentoo.org> +files/cnijfilter-3.20-4-libpng15.patch,
