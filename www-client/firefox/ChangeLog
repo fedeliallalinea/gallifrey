@@ -1,3 +1,8 @@
+*firefox-69.0 (03 Sep 2019)
+
+  03 Sep 2019;  <fat@gentoo.org> +firefox-69.0.ebuild:
+  www-client/firefox: bump to 69.0 version
+
   30 Aug 2019;  <fat@gentoo.org> -files/firefox-kde-62-unity-menubar.patch,
   -files/firefox-kde-63-unity-menubar.patch,
   -files/firefox-kde-64-unity-menubar.patch,
