@@ -4,6 +4,7 @@
 EAPI=7
 
 # get CRATES cmd line: grep checksum Cargo.lock | awk -F' ' '{print $2"-"$3}'
+# get licenses cmd find -name 'Cargo.toml' -exec grep -h license {} + | sort -u
 CRATES="
 adler32-1.0.3
 aho-corasick-0.7.6
@@ -280,7 +281,18 @@ HOMEPAGE="https://github.com/timvisee/ffsend"
 SRC_URI="https://github.com/timvisee/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	$(cargo_crate_uris ${CRATES})"
 
-LICENSE="MPL-2.0"
+LICENSE="Apache-2.0
+	|| ( Apache-2.0 MIT )
+	|| ( Apache-2.0 Boost-1.0 )
+	Apache-2.0-with-LLVM-exceptions
+	BSD-2
+	BSD
+	ZLIB
+	CC0-1.0
+	GPL-3
+	MIT
+	MPL-2.0
+	|| ( Unlicense MIT )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="libressl"

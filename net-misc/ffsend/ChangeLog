@@ -1,3 +1,6 @@
+  20 Sep 2019;  <fat@gentoo.org> ffsend-0.2.51.ebuild:
+  net-misc/ffsend: add correct license (see #694790)
+
   30 Aug 2019;  <fat@gentoo.org> -ffsend-0.2.39.ebuild, -ffsend-0.2.43.ebuild,
   -ffsend-0.2.49.ebuild:
   net-misc/ffsend: removed old
