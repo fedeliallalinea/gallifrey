@@ -1,3 +1,8 @@
+*ffsend-0.2.52 (08 Oct 2019)
+
+  08 Oct 2019;  <fat@gentoo.org> +ffsend-0.2.52.ebuild:
+  net-misc/ffsend: bump to version 0.2.52
+
   20 Sep 2019;  <fat@gentoo.org> ffsend-0.2.51.ebuild:
   net-misc/ffsend: add correct license (see #694790)
 
