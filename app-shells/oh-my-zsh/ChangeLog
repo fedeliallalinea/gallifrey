@@ -1,0 +1,4 @@
+*oh-my-zsh-99999999 (15 Oct 2019)
+
+  15 Oct 2019;  <fat@gentoo.org> +metadata.xml, +oh-my-zsh-99999999.ebuild:
+  app-shells/oh-my-zsh: new package
