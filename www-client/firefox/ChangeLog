@@ -1,3 +1,9 @@
+*firefox-70.0 (23 Oct 2019)
+
+  23 Oct 2019;  <fat@gentoo.org> +files/gentoo-default-prefs.js-3,
+  +firefox-70.0.ebuild:
+  www-client/firefox: bump to version 70.0
+
   09 Oct 2019;  <fat@gentoo.org> -firefox-69.0.1.ebuild, -firefox-69.0.ebuild:
   www-client/firefox: removed old
 
