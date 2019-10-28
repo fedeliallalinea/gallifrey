@@ -1,3 +1,9 @@
+*qgis-3.10.0 (28 Oct 2019)
+
+  28 Oct 2019;  <fat@gentoo.org> +files/qgis-3.10.0-cmake-lib-suffix.patch,
+  +qgis-3.10.0.ebuild:
+  sci-geosciences/qgis: bump to 3.10.0 version
+
   28 Oct 2019;  <fat@gentoo.org> qgis-3.8.3.ebuild:
   sci-geosciences/qgis: fixes
 
