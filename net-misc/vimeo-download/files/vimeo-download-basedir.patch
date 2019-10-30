@@ -1,0 +1,12 @@
+diff -Naru a/vimeo-download.py b/vimeo-download.py
+--- a/vimeo-download.py	2019-10-30 07:27:34.759242020 +0100
++++ b/vimeo-download.py	2019-10-30 07:27:59.779242158 +0100
+@@ -23,7 +23,7 @@
+ OUT_PREFIX = TIMESTAMP + '-' + SALT
+ 
+ # Create temp and output paths based on where the executable is located
+-BASE_DIR = os.path.dirname(os.path.realpath(__file__))
++BASE_DIR = os.path.dirname(os.getcwd())
+ TEMP_DIR = os.path.join(BASE_DIR, "temp")
+ OUTPUT_DIR = os.path.join(BASE_DIR, "output")
+ 

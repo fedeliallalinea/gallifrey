@@ -1,0 +1,25 @@
+From a989020e4e0ae874eddd10a30c4e587cf9dca4ba Mon Sep 17 00:00:00 2001
+From: Duberney Lopez Piza <duberney.lopez@sofka.com.co>
+Date: Thu, 3 Oct 2019 01:07:15 -0500
+Subject: [PATCH] (fix) import urlparse compatibility with Python 3.6.6
+
+---
+ vimeo-download.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/vimeo-download.py b/vimeo-download.py
+index b6f481a..2033725 100755
+--- a/vimeo-download.py
++++ b/vimeo-download.py
+@@ -10,7 +10,10 @@
+ import os
+ import distutils.core
+ import argparse
+-import urlparse
++try:
++    import urlparse
++except ImportError:
++    import urllib.parse as urlparse
+ import datetime
+ 
+ import random
