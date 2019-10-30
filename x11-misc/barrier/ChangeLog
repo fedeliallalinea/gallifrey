@@ -1,0 +1,4 @@
+*barrier-2.3.2 (30 Oct 2019)
+
+  30 Oct 2019;  <fat@gentoo.org> +barrier-2.3.2.ebuild, +metadata.xml:
+  x11-misc/barrier: new package
