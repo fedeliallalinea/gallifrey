@@ -26,9 +26,9 @@ src_install() {
 	doins -r {lib,plugins,templates,progress.jpg,splashscreen.png,tmm.jar,tmm.png}
 
 	exeinto /opt/tinyMediaManager
-	newexe "${FILESDIR}/${MY_P}-r1.sh" tinymediamanager
+	newexe "${FILESDIR}/${MY_P}.sh" tinymediamanager
 	dosym ../tinyMediaManager/tinymediamanager /opt/bin/tinymediamanager
-	newexe "${FILESDIR}/${MY_P}-cli-r1.sh" tinymediamanager-cli
+	newexe "${FILESDIR}/${MY_P}-cli.sh" tinymediamanager-cli
 	dosym ../tinyMediaManager/tinymediamanager-cli /opt/bin/tinymediamanager-cli
 
 	domenu "${FILESDIR}"/tinymediamanager.desktop
