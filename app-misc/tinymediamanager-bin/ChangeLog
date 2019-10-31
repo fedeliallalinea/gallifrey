@@ -1,3 +1,8 @@
+  31 Oct 2019;  <fat@gentoo.org> -files/tinymediamanager-3.0-cli.sh,
+  -files/tinymediamanager-3.0.sh, -tinymediamanager-bin-3.0.1.ebuild,
+  -tinymediamanager-bin-3.0.2.ebuild:
+  pp-misc/tinymediamanager-bin: removed old
+
 *tinymediamanager-bin-3.0.5 (08 Oct 2019)
 
   08 Oct 2019;  <fat@gentoo.org> +tinymediamanager-bin-3.0.5.ebuild:
