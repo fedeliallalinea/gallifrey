@@ -8,7 +8,9 @@ inherit meson
 DESCRIPTION="Display and control your Android device"
 HOMEPAGE="https://github.com/Genymobile/scrcpy"
 SRC_URI="https://github.com/Genymobile/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/Genymobile/${PN}/releases/download/v${PV}/${PN}-server-v${PV}.jar -> ${PN}-server-${PV}.jar"
+	https://tmp.rom1v.com/scrcpy/issue921/2/${PN}-server.jar -> ${PN}-server-${PV}.jar"
+# Cause bug can't get server from default link, see https://github.com/Genymobile/scrcpy/issues/921#issuecomment-552100939
+#	https://github.com/Genymobile/${PN}/releases/download/v${PV}/${PN}-server-v${PV} -> ${PN}-server-${PV}.jar"
 
 LICENSE="Apache-2.0"
 SLOT="0"
