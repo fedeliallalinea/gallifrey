@@ -1,0 +1,5 @@
+*plasma-active-window-control-9999 (13 Dec 2019)
+
+  13 Dec 2019;  <fat@gentoo.org> +metadata.xml,
+  +plasma-active-window-control-9999.ebuild:
+  kde-misc/plasma-active-window-control: new package
