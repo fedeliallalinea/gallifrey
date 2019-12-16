@@ -11,10 +11,9 @@ https://github.com/KDE/plasma-active-window-control"
 EGIT_REPO_URI="https://github.com/KDE/${PN}"
 
 LICENSE="GPL-2+"
-KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
-        $(add_frameworks_dep plasma)
+	$(add_frameworks_dep plasma)
 "
 RDEPEND="${DEPEND}"

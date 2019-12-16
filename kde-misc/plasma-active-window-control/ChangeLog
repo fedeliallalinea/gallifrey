@@ -1,3 +1,6 @@
+  16 Dec 2019;  <fat@gentoo.org> plasma-active-window-control-9999.ebuild:
+  kde-misc/plasma-active-window-control: fix keywords
+
 *plasma-active-window-control-9999 (13 Dec 2019)
 
   13 Dec 2019;  <fat@gentoo.org> +metadata.xml,
