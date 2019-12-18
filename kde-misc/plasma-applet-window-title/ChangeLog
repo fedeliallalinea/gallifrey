@@ -1,0 +1,7 @@
+*plasma-applet-window-title-0.5.2 (18 Dec 2019)
+*plasma-applet-window-title-9999 (18 Dec 2019)
+
+  18 Dec 2019;  <fat@gentoo.org> +metadata.xml,
+  +plasma-applet-window-title-0.5.2.ebuild,
+  +plasma-applet-window-title-9999.ebuild:
+  kde-misc/plasma-applet-window-title: new package
