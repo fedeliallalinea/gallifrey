@@ -1,0 +1,7 @@
+*plasma-applet-eventcalendar-65 (19 Dec 2019)
+*plasma-applet-eventcalendar-9999 (19 Dec 2019)
+
+  19 Dec 2019;  <fat@gentoo.org> +metadata.xml,
+  +plasma-applet-eventcalendar-65.ebuild,
+  +plasma-applet-eventcalendar-9999.ebuild:
+  kde-misc/plasma-applet-eventcalendar: new package
