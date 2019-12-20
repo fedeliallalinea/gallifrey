@@ -1,0 +1,7 @@
+*plasma-applet-window-buttons-0.7.0 (18 Dec 2019)
+*plasma-applet-window-buttons-9999 (18 Dec 2019)
+
+  18 Dec 2019;  <fat@gentoo.org> +metadata.xml,
+  +plasma-applet-window-buttons-0.7.0.ebuild,
+  +plasma-applet-window-buttons-9999.ebuild:
+  kde-misc/plasma-applet-window-buttons: new package
