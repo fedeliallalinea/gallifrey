@@ -1,0 +1,26 @@
+diff --git a/package/contents/ui/DateSelector.qml b/package/contents/ui/DateSelector.qml
+index 410d4d0..071370f 100644
+--- a/package/contents/ui/DateSelector.qml
++++ b/package/contents/ui/DateSelector.qml
+@@ -60,7 +60,7 @@ PlasmaComponents3.TextField {
+ 	onEditingFinished: updateText()
+ 	Component.onCompleted: updateText()
+ 
+-	property Controls.Popup popup: T.Popup {
++	property T.Popup popup: T.Popup {
+ 		x: control.mirrored ? control.width - width : 0
+ 		y: control.height
+ 
+diff --git a/package/contents/ui/TimeSelector.qml b/package/contents/ui/TimeSelector.qml
+index 536e2dc..dbd33c9 100644
+--- a/package/contents/ui/TimeSelector.qml
++++ b/package/contents/ui/TimeSelector.qml
+@@ -109,7 +109,7 @@ PlasmaComponents3.TextField {
+ 		}
+ 	}
+ 
+-	property Controls.Popup popup: T.Popup {
++	property T.Popup popup: T.Popup {
+ 		x: control.mirrored ? control.width - width : 0
+ 		y: control.height
+ 		property int minWidth: 120 * units.devicePixelRatio

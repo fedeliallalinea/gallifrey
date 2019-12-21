@@ -1,3 +1,9 @@
+  21 Dec 2019;  <fat@gentoo.org>
+  +files/plasma-applet-eventcalendar_qt-5.14.patch,
+  plasma-applet-eventcalendar-65.ebuild,
+  plasma-applet-eventcalendar-9999.ebuild:
+  kde-misc/plasma-applet-eventcalendar: add patch for qt-5.14
+
 *plasma-applet-eventcalendar-65 (19 Dec 2019)
 *plasma-applet-eventcalendar-9999 (19 Dec 2019)
 

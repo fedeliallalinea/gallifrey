@@ -26,6 +26,8 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=( "${FILESDIR}/${PN}_qt-5.14.patch" )
+
 DOCS=( Changelog.md ReadMe.md )
 
 src_install() {
