@@ -1,3 +1,8 @@
+*plasma-applet-eventcalendar-66 (23 Dec 2019)
+
+  23 Dec 2019;  <fat@gentoo.org> +plasma-applet-eventcalendar-66.ebuild:
+  kde-misc/plasma-applet-eventcalendar: bump to 66 version
+
   21 Dec 2019;  <fat@gentoo.org>
   +files/plasma-applet-eventcalendar_qt-5.14.patch,
   plasma-applet-eventcalendar-65.ebuild,
