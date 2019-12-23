@@ -12,7 +12,7 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-DESCRIPTION="Plasma 5 applet that shows the application title and icon for active window"
+DESCRIPTION="Plasma 5 applet for a calendar+agenda with weather that syncs to Google Calendar"
 HOMEPAGE="https://store.kde.org/p/998901/
 	https://github.com/Zren/plasma-applet-eventcalendar"
 
@@ -26,8 +26,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${PN}_qt-5.14.patch" )
-
 DOCS=( Changelog.md ReadMe.md )
 
 src_install() {
@@ -35,4 +33,4 @@ src_install() {
 	insinto /usr/share/plasma/plasmoids/org.kde.plasma.eventcalendar
 	doins package/metadata.desktop
 	doins -r package/{contents,translate}
-}	
+}
