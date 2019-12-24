@@ -4,10 +4,10 @@
 EAPI=7
 
 if [[ ${PV} == "9999" ]] ; then
-	inherit git-r3 kde5
+	inherit git-r3 ecm
 	EGIT_REPO_URI="https://github.com/MakG10/${PN}"
 else
-	inherit kde5
+	inherit ecm
 	SRC_URI="https://github.com/MakG10/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
@@ -17,10 +17,11 @@ HOMEPAGE="https://store.kde.org/p/1190292/
 	https://github.com/MakG10/plasma-applet-server-status"
 
 LICENSE="GPL-2+"
+SLOT="0"
 IUSE=""
 
 DEPEND="
-	$(add_frameworks_dep plasma)
+	kde-plasma/plasma-workspace:5
 "
 RDEPEND="${DEPEND}"
 

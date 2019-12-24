@@ -1,3 +1,7 @@
+  24 Dec 2019;  <fat@gentoo.org> plasma-applet-server-status-1.0.ebuild,
+  plasma-applet-server-status-9999.ebuild:
+  kde-misc/plasma-applet-server-status: removed old eclass kde5-functions
+
 *plasma-applet-window-buttons-0.7.0 (18 Dec 2019)
 *plasma-applet-window-buttons-9999 (18 Dec 2019)
 
