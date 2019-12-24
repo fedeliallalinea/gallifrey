@@ -6,10 +6,9 @@ EAPI=7
 MY_PN="${PN/plasma-/}"
 
 if [[ ${PV} == "9999" ]] ; then
-	inherit git-r3 kde5-functions
+	inherit git-r3
 	EGIT_REPO_URI="https://github.com/psifidotos/${MY_PN}"
 else
-	inherit kde5-functions
 	SRC_URI="https://github.com/psifidotos/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 	S="${WORKDIR}/${MY_PN}-${PV}"
@@ -19,12 +18,12 @@ DESCRIPTION="Plasma 5 applet that shows the application title and icon for activ
 HOMEPAGE="https://github.com/psifidotos/applet-window-title"
 
 LICENSE="GPL-2+"
-IUSE=""
 SLOT="0"
+IUSE=""
 
 DEPEND="
-	$(add_frameworks_dep kdeclarative)
-	$(add_frameworks_dep plasma)
+	kde-frameworks/kdeclarative:5
+	kde-plasma/plasma-workspace:5
 "
 RDEPEND="${DEPEND}"
 
@@ -35,4 +34,4 @@ src_install() {
 	insinto /usr/share/plasma/plasmoids/org.kde.windowtitle
 	doins metadata.desktop
 	doins -r contents
-}	
+}
