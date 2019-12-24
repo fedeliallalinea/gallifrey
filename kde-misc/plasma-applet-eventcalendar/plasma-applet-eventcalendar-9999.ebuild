@@ -4,10 +4,9 @@
 EAPI=7
 
 if [[ ${PV} == "9999" ]] ; then
-	inherit git-r3 kde5-functions
+	inherit git-r3
 	EGIT_REPO_URI="https://github.com/Zren/${PN}"
 else
-	inherit kde5-functions
 	SRC_URI="https://github.com/Zren/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
@@ -17,12 +16,12 @@ HOMEPAGE="https://store.kde.org/p/998901/
 	https://github.com/Zren/plasma-applet-eventcalendar"
 
 LICENSE="GPL-2+"
-IUSE=""
 SLOT="0"
+IUSE=""
 
 DEPEND="
-	$(add_frameworks_dep kdeclarative)
-	$(add_frameworks_dep plasma)
+	dev-qt/qtgraphicaleffects:5
+	kde-plasma/plasma-workspace:5
 "
 RDEPEND="${DEPEND}"
 

@@ -1,3 +1,7 @@
+  24 Dec 2019;  <fat@gentoo.org> plasma-applet-eventcalendar-66.ebuild,
+  plasma-applet-eventcalendar-9999.ebuild:
+  kde-misc/plasma-applet-eventcalendar: removed old eclass kde5-functions
+
   23 Dec 2019;  <fat@gentoo.org>
   -files/plasma-applet-eventcalendar_qt-5.14.patch,
   -plasma-applet-eventcalendar-65.ebuild:
