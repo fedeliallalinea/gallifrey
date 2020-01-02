@@ -287,7 +287,7 @@ IUSE="libressl"
 DEPEND=""
 RDEPEND=""
 BDEPEND="
-	>=virtual/rust-1.32.0
+	>=virtual/rust-1.37.0
 	libressl? ( dev-libs/libressl )
 	!libressl? ( dev-libs/openssl )
 "
