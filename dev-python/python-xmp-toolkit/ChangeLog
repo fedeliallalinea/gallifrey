@@ -1,0 +1,10 @@
+  09 Jan 2020;  <fat@gentoo.org> python-xmp-toolkit-2.0.1.ebuild,
+  python-xmp-toolkit-9999.ebuild:
+  dev-python/python-xmp-toolkit: aaa
+
+*python-xmp-toolkit-2.0.1 (09 Jan 2020)
+*python-xmp-toolkit-9999 (09 Jan 2020)
+
+  09 Jan 2020;  <fat@gentoo.org> +metadata.xml,
+  +python-xmp-toolkit-2.0.1.ebuild, +python-xmp-toolkit-9999.ebuild:
+  dev-python/python-xmp-toolkit: new package (v2.0.1)
