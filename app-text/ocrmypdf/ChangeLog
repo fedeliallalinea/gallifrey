@@ -1,0 +1,6 @@
+*ocrmypdf-9.4.0 (09 Jan 2020)
+*ocrmypdf-9999 (09 Jan 2020)
+
+  09 Jan 2020;  <fat@gentoo.org> +metadata.xml, +ocrmypdf-9.4.0.ebuild,
+  +ocrmypdf-9999.ebuild:
+  app-text/ocrmypdf: new package (v9.4.0)
