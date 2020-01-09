@@ -1,3 +1,8 @@
+*firefox-72.0.1 (09 Jan 2020)
+
+  09 Jan 2020;  <fat@gentoo.org> +firefox-72.0.1.ebuild:
+  www-client/firefox: bump to version 72.0.1
+
 *firefox-70.0.1 (01 Nov 2019)
 
   01 Nov 2019;  <fat@gentoo.org> +firefox-70.0.1.ebuild:
