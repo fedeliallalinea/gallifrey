@@ -1,0 +1,6 @@
+*pikepdf-1.8.3 (09 Jan 2020)
+*pikepdf-9999 (09 Jan 2020)
+
+  09 Jan 2020;  <fat@gentoo.org> +metadata.xml, +pikepdf-1.8.3.ebuild,
+  +pikepdf-9999.ebuild:
+  dev-python/pikepdf: new package (v1.8.3)
