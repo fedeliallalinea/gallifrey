@@ -1,3 +1,9 @@
+*tinymediamanager-bin-3.1.1 (14 Jan 2020)
+
+  14 Jan 2020;  <fat@gentoo.org> +files/tinymediamanager-3-cli.sh,
+  +files/tinymediamanager-3.sh, +tinymediamanager-bin-3.1.1.ebuild:
+  app-misc/tinymediamanager-bin: bump to version 3.1.1
+
   31 Oct 2019;  <fat@gentoo.org> +files/tinymediamanager-3.0-cli.sh,
   +files/tinymediamanager-3.0.sh, -files/tinymediamanager-3.0-cli-r1.sh,
   -files/tinymediamanager-3.0-r1.sh, tinymediamanager-bin-3.0.3.ebuild,
