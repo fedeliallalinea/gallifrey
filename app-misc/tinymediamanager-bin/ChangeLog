@@ -1,3 +1,8 @@
+  14 Jan 2020;  <fat@gentoo.org> -files/tinymediamanager-3.0-cli.sh,
+  -files/tinymediamanager-3.0.sh, tinymediamanager-bin-3.0.3.ebuild,
+  tinymediamanager-bin-3.0.4.ebuild, tinymediamanager-bin-3.0.5.ebuild:
+  app-misc/tinymediamanager-bin: changed file name in files
+
 *tinymediamanager-bin-3.1.1 (14 Jan 2020)
 
   14 Jan 2020;  <fat@gentoo.org> +files/tinymediamanager-3-cli.sh,
