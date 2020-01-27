@@ -1,3 +1,14 @@
+  27 Jan 2020;  <fat@gentoo.org> plasma-applet-window-title-0.6.0.ebuild,
+  plasma-applet-window-title-9999.ebuild:
+  kde-misc/plasma-applet-window-title: aaa
+
+*plasma-applet-window-title-0.6.0 (27 Jan 2020)
+
+  27 Jan 2020;  <fat@gentoo.org> +plasma-applet-window-title-0.6.0.ebuild,
+  -plasma-applet-window-title-0.5.2.ebuild,
+  plasma-applet-window-title-9999.ebuild:
+  kde-misc/plasma-applet-window-title: bump to version 0.6.0
+
   24 Dec 2019;  <fat@gentoo.org> plasma-applet-window-title-0.5.2.ebuild,
   plasma-applet-window-title-9999.ebuild:
   kde-misc/plasma-applet-window-title: removed old eclass kde5-functions
