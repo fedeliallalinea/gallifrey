@@ -1,3 +1,8 @@
+*sqlcl-bin-19.4.0.354.0937 (27 Jan 2020)
+
+  27 Jan 2020;  <fat@gentoo.org> +sqlcl-bin-19.4.0.354.0937.ebuild:
+  dev-db/sqlcl-bin: bump to verison 19.4.0.354.0937
+
   30 Aug 2019;  <fat@gentoo.org> -sqlcl-bin-19.1.0.094.1619.ebuild:
   dev-db/sqlcl-bin: removed old
 
