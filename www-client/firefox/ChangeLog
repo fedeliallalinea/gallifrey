@@ -1,3 +1,10 @@
+*firefox-73.0 (11 Feb 2020)
+
+  11 Feb 2020;  <fat@gentoo.org> +firefox-73.0.ebuild, -firefox-66.0.5.ebuild,
+  -firefox-67.0.4.ebuild, -firefox-68.0.2.ebuild, -firefox-70.0.ebuild,
+  -firefox-71.0.ebuild, -firefox-72.0.1.ebuild, -firefox-72.0.ebuild:
+  www-client/firefox: version bump to 73.0 (remove old)
+
 *firefox-72.0.2 (21 Jan 2020)
 
   21 Jan 2020;  <fat@gentoo.org> +firefox-72.0.2.ebuild:
