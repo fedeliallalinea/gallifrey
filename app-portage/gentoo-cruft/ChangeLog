@@ -1,0 +1,4 @@
+*gentoo-cruft-9999 (12 Feb 2020)
+
+  12 Feb 2020;  <fat@gentoo.org> +gentoo-cruft-9999.ebuild, +metadata.xml:
+  app-portage/gentoo-cruft: new package
