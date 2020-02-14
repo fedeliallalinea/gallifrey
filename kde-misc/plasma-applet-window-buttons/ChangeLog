@@ -1,3 +1,8 @@
+*plasma-applet-window-buttons-0.8.1 (14 Feb 2020)
+
+  14 Feb 2020;  <fat@gentoo.org> +plasma-applet-window-buttons-0.8.1.ebuild:
+  kde-misc/plasma-applet-window-buttons: bump to version 0.8.1
+
 *plasma-applet-window-buttons-0.8.0 (27 Jan 2020)
 
   27 Jan 2020;  <fat@gentoo.org> +plasma-applet-window-buttons-0.8.0.ebuild,
