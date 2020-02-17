@@ -1,3 +1,8 @@
+*sqldeveloper-19.4.0.354.1759 (17 Feb 2020)
+
+  17 Feb 2020;  <fat@gentoo.org> +sqldeveloper-19.4.0.354.1759.ebuild:
+  dev-db/sqldeveloper: bump version to 19.4.0.354.1759
+
   10 Oct 2019;  <fat@gentoo.org> -sqldeveloper-19.2.0.206.2117.ebuild:
   dev-db/sqldeveloper: removed old
 
