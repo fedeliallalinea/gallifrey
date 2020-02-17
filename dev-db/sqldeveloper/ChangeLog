@@ -1,3 +1,6 @@
+  17 Feb 2020;  <fat@gentoo.org> -sqldeveloper-19.2.1.247.2212.ebuild:
+  dev-db/sqldeveloper: removed old
+
 *sqldeveloper-19.4.0.354.1759 (17 Feb 2020)
 
   17 Feb 2020;  <fat@gentoo.org> +sqldeveloper-19.4.0.354.1759.ebuild:
