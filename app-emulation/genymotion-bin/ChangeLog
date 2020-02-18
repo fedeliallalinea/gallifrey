@@ -1,3 +1,6 @@
+  18 Feb 2020;  <fat@gentoo.org> genymotion-bin-3.0.4.ebuild:
+  app-emulation/genymotion-bin: QA fix
+
 *genymotion-bin-3.0.4 (18 Dec 2019)
 
   18 Dec 2019;  <fat@gentoo.org> +genymotion-bin-3.0.4.ebuild:
