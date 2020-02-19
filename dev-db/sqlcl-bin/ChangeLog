@@ -1,3 +1,6 @@
+  19 Feb 2020;  <fat@gentoo.org> -sqlcl-bin-19.2.1.206.1649.ebuild:
+  dev-db/sqlcl-bin: removed old
+
   19 Feb 2020;  <fat@gentoo.org> sqlcl-bin-19.4.0.354.0937.ebuild:
   dev-db/sqlcl-bin: some QA fixes
 
