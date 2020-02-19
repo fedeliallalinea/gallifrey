@@ -15,10 +15,9 @@ LICENSE="OTN"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=""
-RDEPEND="virtual/jre:1.8
+RDEPEND="dev-db/oracle-instantclient
 	dev-java/java-config:2
-	dev-db/oracle-instantclient"
+	virtual/jre:1.8"
 
 S="${WORKDIR}"
 
