@@ -1,3 +1,10 @@
+  01 Mar 2020;  <fat@gentoo.org> -files/firefox-60.0-blessings-TERM.patch,
+  -files/firefox-60.0-do-not-force-lld.patch,
+  -files/firefox-60.0-missing-errno_h-in-SandboxOpenedFiles_cpp.patch,
+  -files/firefox-60.0-sandbox-lto.patch, -files/firefox-clang.patch,
+  -files/firefox-force-qt-dialog.patch, -files/firefox-kde-debug.patch:
+  www-client/firefox: removed old patches
+
 *firefox-73.0.1 (01 Mar 2020)
 
   01 Mar 2020;  <fat@gentoo.org> +files/firefox-73.0_fix_llvm9.patch,
