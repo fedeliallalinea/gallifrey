@@ -1,3 +1,9 @@
+*firefox-73.0.1 (01 Mar 2020)
+
+  01 Mar 2020;  <fat@gentoo.org> +files/firefox-73.0_fix_llvm9.patch,
+  +files/firefox-73.0_fix_lto_pgo_builds.patch, +firefox-73.0.1.ebuild:
+  www-client/firefox: bump version to 73.0.1
+
 *firefox-73.0 (11 Feb 2020)
 
   11 Feb 2020;  <fat@gentoo.org> +firefox-73.0.ebuild, -firefox-66.0.5.ebuild,
