@@ -1,3 +1,8 @@
+*etax-ticino-2019 (08 Mar 2020)
+
+  08 Mar 2020;  <fat@gentoo.org> +etax-ticino-2019.ebuild:
+  app-misc/etax-ticino: bump version to 2019
+
   30 Aug 2019;  <fat@gentoo.org> etax-ticino-2014.ebuild,
   etax-ticino-2015.ebuild, etax-ticino-2016.ebuild, etax-ticino-2017.ebuild,
   etax-ticino-2018.ebuild:
