@@ -1,3 +1,10 @@
+*firefox-74.0-r1 (12 Mar 2020)
+
+  12 Mar 2020;  <fat@gentoo.org>
+  +files/firefox-74.0-bug1607052-font-selection-regression.patch,
+  +firefox-74.0-r1.ebuild:
+  www-client/firefox: fix localization
+
   01 Mar 2020;  <fat@gentoo.org> -files/firefox-60.0-blessings-TERM.patch,
   -files/firefox-60.0-do-not-force-lld.patch,
   -files/firefox-60.0-missing-errno_h-in-SandboxOpenedFiles_cpp.patch,
