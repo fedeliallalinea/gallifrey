@@ -1,2 +1,7 @@
+*s-tui-1.0.0 (19 Mar 2020)
+
+  19 Mar 2020;  <fat@gentoo.org> +s-tui-1.0.0.ebuild:
+  app-admin/s-tui: bump version to 1.0.0
+
   30 Aug 2019;  <fat@gentoo.org> s-tui-0.8.3.ebuild, s-tui-9999.ebuild:
   app-admin/s-tui: update copyright header
