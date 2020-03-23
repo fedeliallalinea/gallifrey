@@ -1,0 +1,37 @@
+diff --git a/ide/core.browser.webview/src/org/netbeans/core/browser/webview/ext/WebKitDebuggingTransport.java b/ide/core.browser.webview/src/org/netbeans/core/browser/webview/ext/WebKitDebuggingTransport.java
+index d0b5f485e1..512700ddd0 100644
+--- a/ide/core.browser.webview/src/org/netbeans/core/browser/webview/ext/WebKitDebuggingTransport.java
++++ b/ide/core.browser.webview/src/org/netbeans/core/browser/webview/ext/WebKitDebuggingTransport.java
+@@ -19,6 +19,7 @@
+ package org.netbeans.core.browser.webview.ext;
+ 
+ import com.sun.javafx.scene.web.Debugger;
++import java.lang.reflect.Field;
+ import java.net.MalformedURLException;
+ import java.net.URL;
+ import java.util.logging.Level;
+@@ -54,7 +55,23 @@ public class WebKitDebuggingTransport implements TransportImplementationWithURLT
+     @Override
+     @SuppressWarnings("deprecation")
+     public boolean attach() {
+-        this.debugger = browserImpl.getEngine().impl_getDebugger();
++        Class webEngineClass = browserImpl.getClass();
++        Field debuggerField;
++
++        try {
++            debuggerField = webEngineClass.getDeclaredField("debugger");
++        } catch (Throwable t) {
++            throw new RuntimeException("cannot retrieve debugger field");
++        }
++
++        debuggerField.setAccessible(true);
++
++        try {
++            this.debugger = (Debugger) debuggerField.get(browserImpl.getEngine());
++        } catch (Throwable t) {
++            throw new RuntimeException("cannot retrieve debugger");
++        }
++
+         this.fxCallback = new FXCallback(callback);
+         Platform.runLater(new Runnable() {
+             @Override
