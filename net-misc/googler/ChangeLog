@@ -1,0 +1,6 @@
+*googler-4.0 (01 Apr 2020)
+*googler-9999 (01 Apr 2020)
+
+  01 Apr 2020;  <fat@gentoo.org> +googler-4.0.ebuild, +googler-9999.ebuild,
+  +metadata.xml:
+  net-misc/googler: new package
