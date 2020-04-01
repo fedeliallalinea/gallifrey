@@ -1,3 +1,9 @@
+*firefox-74.0-r2 (01 Apr 2020)
+
+  01 Apr 2020;  <fat@gentoo.org> +files/firefox.sh,
+  +files/icon/firefox-r1.desktop, +firefox-74.0-r2.ebuild:
+  www-client/firefox: update to 74.0-r2
+
 *firefox-74.0-r1 (12 Mar 2020)
 
   12 Mar 2020;  <fat@gentoo.org>
