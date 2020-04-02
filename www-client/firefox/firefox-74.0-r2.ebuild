@@ -839,6 +839,9 @@ PROFILE_EOF
 
 	# Required in order to use plugins and even run firefox on hardened.
 	pax-mark m "${ED%/}"${MOZILLA_FIVE_HOME}/{firefox,plugin-container}
+
+	exeinto /etc/X11/xinit/xinitrc.d
+	newexe "${FILESDIR}"/firefox-kde-fieldialog.sh 80-firefox-kde-fieldialog
 }
 
 pkg_preinst() {

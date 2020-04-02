@@ -1,3 +1,6 @@
+  02 Apr 2020;  <fat@gentoo.org> firefox-74.0-r2.ebuild:
+  www-client/firefox: fix missing install file
+
 *firefox-74.0-r2 (01 Apr 2020)
 
   01 Apr 2020;  <fat@gentoo.org> +files/firefox.sh,
