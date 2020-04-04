@@ -1,3 +1,13 @@
+  04 Apr 2020;  <fat@gentoo.org> -files/firefox-69.0-lto-gcc-fix.patch,
+  -files/firefox-73.0_fix_llvm9.patch,
+  -files/firefox-73.0_fix_lto_pgo_builds.patch,
+  -files/gentoo-default-prefs.js-2, -files/gentoo-hwaccel-prefs.js-1,
+  -files/icon/firefox.desktop, -files/mozilla-bug1601707-gcc-fixup-72.patch,
+  -firefox-69.0.2.ebuild, -firefox-70.0.1.ebuild, -firefox-72.0.2.ebuild,
+  -firefox-73.0.1.ebuild, -firefox-73.0.ebuild, -firefox-74.0-r1.ebuild,
+  -firefox-74.0-r2.ebuild, -firefox-74.0-r3.ebuild:
+  www-client/firefox: remove old
+
 *firefox-74.0.1 (04 Apr 2020)
 
   04 Apr 2020;  <fat@gentoo.org> +firefox-74.0.1.ebuild:
