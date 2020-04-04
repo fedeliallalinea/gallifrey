@@ -1,3 +1,8 @@
+*firefox-74.0.1 (04 Apr 2020)
+
+  04 Apr 2020;  <fat@gentoo.org> +firefox-74.0.1.ebuild:
+  www-client/firefox: bump version to 74.0.1
+
 *firefox-74.0-r3 (03 Apr 2020)
 
   03 Apr 2020;  <fat@gentoo.org> +files/firefox-wayland.sh,
