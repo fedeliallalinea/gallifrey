@@ -1,3 +1,9 @@
+*firefox-75.0 (07 Apr 2020)
+
+  07 Apr 2020;  <fat@gentoo.org> +files/gentoo-hwaccel-prefs.js-1,
+  +firefox-75.0.ebuild:
+  www-client/firefox: bump version to 75.0
+
   04 Apr 2020;  <fat@gentoo.org> -files/firefox-69.0-lto-gcc-fix.patch,
   -files/firefox-73.0_fix_llvm9.patch,
   -files/firefox-73.0_fix_lto_pgo_builds.patch,
