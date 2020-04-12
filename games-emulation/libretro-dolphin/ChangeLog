@@ -1,0 +1,4 @@
+*libretro-dolphin-9999 (12 Apr 2020)
+
+  12 Apr 2020;  <fat@gentoo.org> +libretro-dolphin-9999.ebuild, +metadata.xml:
+  games-emulation/libretro-dolphin: new package
