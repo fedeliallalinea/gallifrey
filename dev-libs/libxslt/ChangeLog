@@ -1,0 +1,7 @@
+*libxslt-1.1.34 (13 Apr 2020)
+
+  13 Apr 2020;  <fat@gentoo.org> +files/libxslt-1.1.34-configure.patch,
+  +files/libxslt-1.1.34-generator.patch, +files/libxslt-1.1.34-libxslt.patch,
+  +files/libxslt-1.1.34-tests.patch, +files/libxslt-1.1.34-types.patch,
+  +libxslt-1.1.34.ebuild, +metadata.xml:
+  dev-libs/libxslt: version with python3 support
