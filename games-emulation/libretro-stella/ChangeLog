@@ -1,0 +1,6 @@
+*libretro-stella-6.1 (13 Apr 2020)
+*libretro-stella-9999 (13 Apr 2020)
+
+  13 Apr 2020;  <fat@gentoo.org> +libretro-stella-6.1.ebuild,
+  +libretro-stella-9999.ebuild, +metadata.xml:
+  games-emulation/libretro-stella: new package
