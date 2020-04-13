@@ -1,0 +1,4 @@
+*libretro-prosystem-9999 (13 Apr 2020)
+
+  13 Apr 2020;  <fat@gentoo.org> +libretro-prosystem-9999.ebuild, +metadata.xml:
+  games-emulation/libretro-prosystem: new package
