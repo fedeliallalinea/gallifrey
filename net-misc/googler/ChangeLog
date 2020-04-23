@@ -1,3 +1,6 @@
+  23 Apr 2020;  <fat@gentoo.org> googler-4.0.ebuild, googler-9999.ebuild:
+  net-misc/googler: removed python3_{4,5} support
+
 *googler-4.0 (01 Apr 2020)
 *googler-9999 (01 Apr 2020)
 
