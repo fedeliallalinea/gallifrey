@@ -1,3 +1,6 @@
+  23 Apr 2020;  <fat@gentoo.org> s-tui-1.0.0.ebuild, s-tui-9999.ebuild:
+  app-admin/s-tui: removed python2_7, added python3_{7,8}
+
 *s-tui-1.0.0 (19 Mar 2020)
 
   19 Mar 2020;  <fat@gentoo.org> +s-tui-1.0.0.ebuild:

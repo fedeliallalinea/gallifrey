@@ -3,7 +3,7 @@
 
 EAPI=7
 
-PYTHON_COMPAT=( python{2_7,3_6} )
+PYTHON_COMPAT=( python3_{6,7,8} )
 PYTHON_REQ_USE="ncurses"
 
 if [[ ${PV} == "9999" ]] ; then
