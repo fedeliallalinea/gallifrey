@@ -1,3 +1,7 @@
+  23 Apr 2020;  <fat@gentoo.org> gpo-zugaina-dl-0.0.2.ebuild,
+  gpo-zugaina-dl-9999.ebuild:
+  app-portage/gpo-zugaina-dl: added python3_{7,8}
+
   30 Aug 2019;  <fat@gentoo.org> +metadata.xml, gpo-zugaina-dl-0.0.2.ebuild,
   gpo-zugaina-dl-9999.ebuild:
   app-portage/gpo-zugaina-dl: fixes and cleanup  - update copyright header -
