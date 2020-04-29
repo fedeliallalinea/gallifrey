@@ -1,0 +1,5 @@
+*pikepdf-1.11.1 (29 Apr 2020)
+
+  29 Apr 2020;  <fat@gentoo.org> +files/pikepdf-1.11.1-test.patch,
+  +metadata.xml, +pikepdf-1.11.1.ebuild:
+  dev-python/pikepdf: bump version to 1.11.1
