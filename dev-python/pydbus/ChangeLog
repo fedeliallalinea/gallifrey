@@ -1,0 +1,6 @@
+*pydbus-0.6.0 (10 May 2020)
+*pydbus-9999 (10 May 2020)
+
+  10 May 2020;  <fat@gentoo.org> +metadata.xml, +pydbus-0.6.0.ebuild,
+  +pydbus-9999.ebuild:
+  dev-python/pydbus: new package
