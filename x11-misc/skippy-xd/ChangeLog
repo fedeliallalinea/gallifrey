@@ -1,0 +1,4 @@
+*skippy-xd-9999 (10 May 2020)
+
+  10 May 2020;  <fat@gentoo.org> +metadata.xml, +skippy-xd-9999.ebuild:
+  x11-misc/skippy-xd: new package
