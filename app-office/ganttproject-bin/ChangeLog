@@ -1,7 +1,0 @@
-  30 Aug 2019;  <fat@gentoo.org> -ganttproject-bin-2.8.5.ebuild:
-  app-office/ganttproject-bin: removed old
-
-*ganttproject-bin-2.8.10 (30 Aug 2019)
-
-  30 Aug 2019;  <fat@gentoo.org> +ganttproject-bin-2.8.10.ebuild, +metadata.xml:
-  app-office/ganttproject-bin: bump to version 2.8.10
