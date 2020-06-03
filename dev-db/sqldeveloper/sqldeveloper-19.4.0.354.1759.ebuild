@@ -42,8 +42,14 @@ pkg_nofetch() {
 
 src_prepare() {
 	default
-	# we don't need these, do we?
-	find ./ \( -iname "*.exe" -or -iname "*.dll" -or -iname "*.bat" \) -exec rm {} +
+	find ./ \( -iname "*.exe" -or -iname "*.dll" -or -iname "*.bat" \) -exec rm {} + || die
+	sed -i 's|"`dirname $0`"|/opt/sqldeveloper|' sqldeveloper.sh || die
+
+	if use amd64; then
+		rm -r netbeans/platform/modules/lib/i386 || die
+	else
+		rm -r netbeans/platform/modules/lib/amd64 || die
+	fi
 
 	# they both use jtds, enabling one of them also enables the other one
 	if use mssql && ! use sybase; then
@@ -66,14 +72,18 @@ src_prepare() {
 	fi
 }
 
-src_install() {
-	dodir /opt/${PN}
-	# NOTE For future version to get that line (what to copy) go to the unpacked sources dir
-	# using `bash` and press Meta+_ (i.e. Meta+Shift+-) -- that is a builtin bash feature ;-)
-	cp -r {configuration,d{ataminer,ropins,vt},e{quinox,xternal},ide,j{avavm,d{bc,ev},lib,views},modules,netbeans,rdbms,s{leepycat,ql{developer,j},vnkit}} \
-		"${ED}"/opt/${PN}/ || die "Install failed"
+QA_PREBUILT="
+	opt/${PN}/netbeans/platform/modules/lib/i386/linux/libjnidispatch-422.so
+	opt/${PN}/netbeans/platform/modules/lib/amd64/linux/libjnidispatch-422.so
+"
 
-	dobin "${FILESDIR}"/${PN}
+src_install() {
+	insinto /opt/${PN}
+	doins -r {configuration,d{ataminer,ropins,vt},e{quinox,xternal},ide,j{avavm,d{bc,ev},lib,views},modules,netbeans,rdbms,s{leepycat,ql{developer,j},vnkit}}
+
+	exeinto /opt/${PN}
+	doexe sqldeveloper.sh
+	dosym ../${PN}/sqldeveloper.sh /opt/bin/sqldeveloper
 
 	newicon icon.png ${PN}-32x32.png
 	make_desktop_entry ${PN} "Oracle SQL Developer" ${PN}-32x32
