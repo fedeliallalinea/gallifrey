@@ -1,0 +1,5 @@
+*pikepdf-1.14.0 (14 Jun 2020)
+
+  14 Jun 2020;  <fat@gentoo.org> +files/pikepdf-1.8.3-test.patch, +metadata.xml,
+  +pikepdf-1.14.0.ebuild:
+  dev-python/pikepdf: new version 0.14.0
