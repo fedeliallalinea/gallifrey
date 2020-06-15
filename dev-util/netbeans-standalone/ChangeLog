@@ -1,3 +1,9 @@
+*netbeans-standalone-12.0 (15 Jun 2020)
+
+  15 Jun 2020;  <fat@gentoo.org> +logs/hazmatsuisse.log,
+  +netbeans-standalone-12.0.ebuild:
+  dev-util/netbeans-standalone: version bump to 12.0
+
 *netbeans-standalone-11.3 (23 Mar 2020)
 
   23 Mar 2020;  <fat@gentoo.org> +files/fix-private-debugger-access.patch,
