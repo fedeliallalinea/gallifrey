@@ -1,4 +1,0 @@
-*qt5ct-1.0 (14 Jun 2020)
-
-  14 Jun 2020;  <fat@gentoo.org> +metadata.xml, +qt5ct-1.0.ebuild:
-  x11-misc/qt5ct: new package
