@@ -1,3 +1,8 @@
+*ocrmypdf-10.0.1 (15 Jun 2020)
+
+  15 Jun 2020;  <fat@gentoo.org> +ocrmypdf-10.0.1.ebuild, ocrmypdf-9999.ebuild:
+  app-text/ocrmypdf: version bump to 10.0.1
+
 *ocrmypdf-9.8.2 (04 Jun 2020)
 
   04 Jun 2020;  <fat@gentoo.org> +ocrmypdf-9.8.2.ebuild:
