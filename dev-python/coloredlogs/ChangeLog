@@ -1,0 +1,5 @@
+*coloredlogs-14.0 (15 Jun 2020)
+
+  15 Jun 2020;  <fat@gentoo.org> +coloredlogs-14.0.ebuild,
+  +files/coloredlogs-14.0-skip-sandbox-violation-tests.patch, +metadata.xml:
+  dev-python/coloredlogs: new package
