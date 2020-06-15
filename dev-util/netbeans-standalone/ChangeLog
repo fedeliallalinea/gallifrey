@@ -1,3 +1,6 @@
+  15 Jun 2020;  <fat@gentoo.org> -netbeans-standalone-11.1.ebuild:
+  dev-util/netbeans-standalone: removed old
+
 *netbeans-standalone-12.0 (15 Jun 2020)
 
   15 Jun 2020;  <fat@gentoo.org> +logs/hazmatsuisse.log,
