@@ -1,3 +1,0 @@
-  30 Aug 2019;  <fat@gentoo.org> +metadata.xml, wds-1.1.0.ebuild:
-  net-wireless/wds: fixes and cleanup  - update copyright header - update EAPI
-  to 7 - add metadata.xml
