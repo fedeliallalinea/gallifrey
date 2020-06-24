@@ -1,3 +1,6 @@
+  24 Jun 2020;  <fat@gentoo.org> googler-4.1.ebuild, googler-9999.ebuild:
+  net-misc/googler: fixed QA issues
+
   23 Apr 2020;  <fat@gentoo.org> googler-4.0.ebuild, googler-9999.ebuild:
   net-misc/googler: removed python3_{4,5} support
 

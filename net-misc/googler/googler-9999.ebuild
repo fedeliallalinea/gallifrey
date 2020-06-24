@@ -15,7 +15,7 @@ if [[ ${PV} == 9999 ]];then
 	EGIT_REPO_URI="https://github.com/jarun/${PN}"
 else
 	SRC_URI="https://github.com/jarun/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~x86 ~amd64"
+	KEYWORDS=" ~amd64 ~x86"
 fi
 
 LICENSE="GPL-3"
@@ -33,7 +33,7 @@ src_install(){
 
 	dobin googler
 	doman googler.1
-	dodoc README.md 
+	dodoc README.md
 
 	newbashcomp auto-completion/bash/${PN}-completion.bash ${PN}
 	insinto /usr/share/fish/vendor_completions.d/
