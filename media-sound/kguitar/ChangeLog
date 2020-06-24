@@ -1,3 +1,0 @@
-  30 Aug 2019;  <fat@gentoo.org> +metadata.xml, kguitar-9999.ebuild:
-  media-sound/kguitar: fixes and cleanup  - update copyright header - update
-  EAPI to 7 - add metadata.xml
