@@ -1,4 +1,4 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -47,7 +47,10 @@ src_install() {
 	doexe "eTax.ticino PF ${SLOT}"
 	insinto "/opt/${PN}/${SLOT}"
 	doins -r {help,lib,.install4j}
-	dosym "${ED}/opt/${PN}/${SLOT}/.install4j/eTax.ticino PF ${SLOT}.png" "/usr/share/pixmaps/${PN}-${SLOT}.png"
+	insinto /usr/share/pixmaps
+	newins .install4j/"eTax.ticino PF ${SLOT}.png" ${PN}-${SLOT}.png
+
+	dosym ../${PN}/${SLOT}/"eTax.ticino PF ${SLOT}" /opt/bin/"eTax-ticino-${SLOT}"
 
 	make_desktop_entry "/bin/sh \"/opt/${PN}/${SLOT}/eTax.ticino PF ${SLOT}\"" "eTax Ticino ${PV}" "${PN}-${SLOT}" "Utility"
 	mv "${ED}/usr/share/applications"/*.desktop "${ED}/usr/share/applications/${P}.desktop" || die "rename .desktop file failed"
