@@ -1,0 +1,4 @@
+*sencha-0 (26 Jun 2020)
+
+  26 Jun 2020;  <fat@gentoo.org> +metadata.xml, +sencha-0.ebuild:
+  acct-group/sencha: new GLEP-81 package
