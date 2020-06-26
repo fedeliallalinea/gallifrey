@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}"
 src_configure() {
 	local emesonargs=(
 		-Db_lto=true
-		-Dprebuilt_server=${DISTDIR}/${PN}-server-${PV}
+		-Dprebuilt_server="${DISTDIR}/${PN}-server-${PV}"
 	)
 	meson_src_configure
 }

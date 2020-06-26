@@ -1,3 +1,6 @@
+  26 Jun 2020;  <fat@gentoo.org> scrcpy-1.14.ebuild:
+  app-mobilephone/scrcpy: fix QA issues
+
   31 May 2020;  <fat@gentoo.org> -scrcpy-1.11.ebuild:
   net-misc/scrcpy: removed old
 
