@@ -1,3 +1,6 @@
+  26 Jun 2020;  <fat@gentoo.org> metadata.xml:
+  dev-db/sqldeveloper: fix QA issues
+
   03 Jun 2020;  <fat@gentoo.org> sqldeveloper-19.4.0.354.1759.ebuild:
   dev-db/sqldeveloper: fix some stuff in ebuild
 
