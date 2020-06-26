@@ -1,9 +1,0 @@
-  23 Apr 2020;  <fat@gentoo.org> vimeo-download-9999.ebuild:
-  net-misc/vimeo-download: removed python{2_7,3_5}, added python3_{7,8}
-
-*vimeo-download-9999 (30 Oct 2019)
-
-  30 Oct 2019;  <fat@gentoo.org> +files/vimeo-download-basedir.patch,
-  +files/vimeo-download-python3_6-support.patch, +metadata.xml,
-  +vimeo-download-9999.ebuild:
-  net-misc/vimeo-download: new live package
