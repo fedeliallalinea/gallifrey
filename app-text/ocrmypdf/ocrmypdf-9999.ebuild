@@ -47,13 +47,13 @@ RDEPEND="
 	>=app-text/tesseract-4.0.0[-opencl]
 	dev-python/chardet[${PYTHON_USEDEP}]
 	>=dev-python/coloredlogs-14.0[${PYTHON_USEDEP}]
-	>=dev-python/pikepdf-1.14.0[${PYTHON_USEDEP}]
+	>=dev-python/pikepdf-1.15.1[${PYTHON_USEDEP}]
 	>=dev-python/pillow-7.1.1[${PYTHON_USEDEP}]
 	>=dev-python/pluggy-0.13.1[${PYTHON_USEDEP}]
 	>=dev-python/reportlab-3.5.42[${PYTHON_USEDEP}]
 	dev-python/sortedcontainers[${PYTHON_USEDEP}]
 	>=dev-python/tqdm-4.45.0[${PYTHON_USEDEP}]
-	>=media-gfx/img2pdf-0.3.4
+	>=media-gfx/img2pdf-0.3.6[${PYTHON_USEDEP}]
 "
 
 S="${WORKDIR}/OCRmyPDF-${PV}"
