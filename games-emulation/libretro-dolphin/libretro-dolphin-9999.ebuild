@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils git-r3
+inherit cmake git-r3
 
 DESCRIPTION="Libretro for GameCube/Wii Emulator"
 HOMEPAGE="https://github.com/libretro/dolphin"
@@ -40,7 +40,7 @@ src_configure() {
 		-DENABLE_ANALYTICS=OFF
 		-DENABLE_EGL=$(usex egl)
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 src_install() {
