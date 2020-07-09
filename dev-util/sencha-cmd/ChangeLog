@@ -1,3 +1,8 @@
+*sencha-cmd-7.2.0.84 (09 Jul 2020)
+
+  09 Jul 2020;  <fat@gentoo.org> +sencha-cmd-7.2.0.84.ebuild:
+  dev-util/sencha-cmd: new slot version 7.2
+
 *sencha-cmd-7.1.0.15 (09 Jul 2020)
 
   09 Jul 2020;  <fat@gentoo.org> +sencha-cmd-7.1.0.15.ebuild:
