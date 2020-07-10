@@ -1,3 +1,8 @@
+*ffsend-0.2.65 (10 Jul 2020)
+
+  10 Jul 2020;  <fat@gentoo.org> +ffsend-0.2.65.ebuild:
+  net-misc/ffsend: bump version to 0.2.65
+
   24 Jun 2020;  <fat@gentoo.org> -ffsend-0.2.58.ebuild:
   net-misc/ffsend: removed old
 
