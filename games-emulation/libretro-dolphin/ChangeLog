@@ -1,3 +1,6 @@
+  18 Jul 2020;  <fat@gentoo.org> libretro-dolphin-9999.ebuild:
+  app-mobilephone/scrcpy: fix dependency problem
+
   01 Jul 2020;  <fat@gentoo.org> libretro-dolphin-9999.ebuild:
   games-emulation/libretro-dolphin: migrated from 'cmake-utils' to 'cmake'
 

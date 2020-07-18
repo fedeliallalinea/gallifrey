@@ -19,7 +19,7 @@ RDEPEND="
 	media-libs/libpng:0=
 	media-libs/libsfml
 	net-libs/enet:1.3
-	net-libs/mbedtls
+	net-libs/mbedtls:=
 	sys-libs/readline:0=
 	sys-libs/zlib:=
 	x11-libs/libXext
