@@ -1,3 +1,8 @@
+*pdfminer_six-20200720 (27 Jul 2020)
+
+  27 Jul 2020;  <fat@gentoo.org> +pdfminer_six-20200720.ebuild:
+  app-text/pdfminer_six: version bump to 20200720
+
 *pdfminer_six-20200517 (15 Jun 2020)
 
   15 Jun 2020;  <fat@gentoo.org> +pdfminer_six-20200517.ebuild:
