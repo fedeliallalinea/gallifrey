@@ -1,3 +1,6 @@
+  10 Aug 2020;  <fat@gentoo.org> -genymotion-bin-3.1.0.ebuild:
+  app-emulation/genymotion-bin: removed old
+
 *genymotion-bin-3.1.1 (10 Aug 2020)
 
   10 Aug 2020;  <fat@gentoo.org> +genymotion-bin-3.1.1.ebuild:
