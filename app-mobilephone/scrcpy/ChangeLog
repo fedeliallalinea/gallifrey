@@ -1,3 +1,6 @@
+  11 Aug 2020;  <fat@gentoo.org> -scrcpy-1.15.1.ebuild:
+  app-mobilephone/scrcpy: removed old
+
 *scrcpy-1.16 (11 Aug 2020)
 
   11 Aug 2020;  <fat@gentoo.org> +scrcpy-1.16.ebuild:
