@@ -1,0 +1,5 @@
+*wikiman-gentoo-wiki-20200831 (03 Sep 2020)
+
+  03 Sep 2020;  <fat@gentoo.org> +metadata.xml,
+  +wikiman-gentoo-wiki-20200831.ebuild:
+  app-text/wikiman-gentoo-wiki: new package
