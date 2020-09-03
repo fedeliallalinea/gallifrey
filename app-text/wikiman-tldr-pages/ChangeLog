@@ -1,0 +1,5 @@
+*wikiman-tldr-pages-20200903 (03 Sep 2020)
+
+  03 Sep 2020;  <fat@gentoo.org> +metadata.xml,
+  +wikiman-tldr-pages-20200903.ebuild:
+  app-text/wikiman-tldr-pages: new package
