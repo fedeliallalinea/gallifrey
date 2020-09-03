@@ -1,3 +1,8 @@
+*wikiman-2.10 (03 Sep 2020)
+
+  03 Sep 2020;  <fat@gentoo.org> +wikiman-2.10.ebuild:
+  app-text/wikiman: version bump to 2.10
+
 *wikiman-2.9 (03 Sep 2020)
 
   03 Sep 2020;  <fat@gentoo.org> +metadata.xml, +wikiman-2.9.ebuild:
