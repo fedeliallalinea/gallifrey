@@ -1,3 +1,8 @@
+*wikiman-2.11.1 (04 Sep 2020)
+
+  04 Sep 2020;  <fat@gentoo.org> +wikiman-2.11.1.ebuild:
+  app-text/wikiman: version bump to 2.11.1
+
   03 Sep 2020;  <fat@gentoo.org> -wikiman-2.9.ebuild:
   app-text/wikiman: removed old
 
