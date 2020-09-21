@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+    <email>fedeliallalinea@gmail.com</email>
+    <name>Marco Genasci</name>
+</maintainer>
+<upstream>
+	<bugs-to>https://github.com/linuxmint/webapp-manager/issues</bugs-to>
+	<remote-id type="github">linuxmint/webapp-manager</remote-id>
+</upstream>
+<use>
+   <flag name='chromium'>use <pkg>www-client/chromium</pkg> or <pkg>www-client/google-chrome</pkg> as viewer</flag>
+   <flag name='epiphany'>use <pkg>www-client/epiphany</pkg> as viewer</flag>
+   <flag name='firefox'>use <pkg>www-client/firefox</pkg> or <pkg>www-client/firefox-bin</pkg> as viewer</flag>
+   <flag name='vivaldi'>use <pkg>www-client/vivaldi</pkg> as viewer</flag>
+</use>
+</pkgmetadata>
+
