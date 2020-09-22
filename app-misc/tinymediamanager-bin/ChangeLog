@@ -1,3 +1,6 @@
+  22 Sep 2020;  <fat@gentoo.org> -tinymediamanager-bin-3.1.8.ebuild:
+  app-misc/tinymediamanager-bin: removed old
+
 *tinymediamanager-bin-3.1.9 (22 Sep 2020)
 
   22 Sep 2020;  <fat@gentoo.org> +tinymediamanager-bin-3.1.9.ebuild:
