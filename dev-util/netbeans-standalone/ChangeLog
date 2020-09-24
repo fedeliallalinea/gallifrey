@@ -1,3 +1,9 @@
+*netbeans-standalone-12.1 (24 Sep 2020)
+
+  24 Sep 2020;  <fat@gentoo.org> +netbeans-standalone-12.1.ebuild,
+  netbeans-standalone-9999.ebuild:
+  dev-util/netbeans-standalone: bump version to 12.1
+
   15 Jun 2020;  <fat@gentoo.org> -netbeans-standalone-11.1.ebuild:
   dev-util/netbeans-standalone: removed old
 
