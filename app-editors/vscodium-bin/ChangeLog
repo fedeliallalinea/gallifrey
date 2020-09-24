@@ -1,0 +1,5 @@
+*vscodium-bin-1.49.1 (24 Sep 2020)
+
+  24 Sep 2020;  <fat@gentoo.org> +files/vscodium-bin.desktop, +metadata.xml,
+  +vscodium-bin-1.49.1.ebuild:
+  app-editors/vscodium-bin: new package
