@@ -42,13 +42,8 @@ QA_PREBUILT="opt/${MY_PN}/codium"
 S="${WORKDIR}"
 
 src_install() {
-	insinto /opt/${MY_PN}
-	doins -r .
-	find "${ED}/opt/${MY_PN}" -name "*.so*" -exec chmod 655 {} \; || die
-	exeinto /opt/${MY_PN}/bin
-	doexe bin/codium
-	exeinto /opt/${MY_PN}/
-	doexe codium
+dodir /opt/${MY_PN}
+	cp -r . "${ED%/}/opt/${MY_PN}/" || die
 	dosym ../../opt/${MY_PN}/bin/codium /opt/bin/${MY_PN}
 	dosym ../../opt/${MY_PN}/bin/codium /opt/bin/codium
 	domenu "${FILESDIR}/${PN}.desktop"

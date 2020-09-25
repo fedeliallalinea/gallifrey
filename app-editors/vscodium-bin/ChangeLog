@@ -1,3 +1,7 @@
+  25 Sep 2020;  <fat@gentoo.org> vscodium-bin-1.49.1.ebuild,
+  vscodium-bin-1.49.2.ebuild:
+  app-editors/vscodium-bin: fixes
+
 *vscodium-bin-1.49.2 (25 Sep 2020)
 
   25 Sep 2020;  <fat@gentoo.org> +vscodium-bin-1.49.2.ebuild:
