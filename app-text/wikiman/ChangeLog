@@ -1,3 +1,6 @@
+  30 Sep 2020;  <fat@gentoo.org> -wikiman-2.12.ebuild:
+  app-text/wikiman: removed old
+
 *wikiman-2.12.1 (30 Sep 2020)
 
   30 Sep 2020;  <fat@gentoo.org> +wikiman-2.12.1.ebuild:
