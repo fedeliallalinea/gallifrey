@@ -1,3 +1,8 @@
+*tinymediamanager-bin-4.0.2 (30 Sep 2020)
+
+  30 Sep 2020;  <fat@gentoo.org> +tinymediamanager-bin-4.0.2.ebuild:
+  app-misc/tinymediamanager-bin: bump version to 4.0.2
+
 *tinymediamanager-bin-4.0.1 (28 Sep 2020)
 
   28 Sep 2020;  <fat@gentoo.org> +files/tinymediamanager-4-cli.sh,
