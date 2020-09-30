@@ -13,16 +13,16 @@ RESTRICT="fetch"
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 IUSE="mssql mysql postgres sybase"
 
-DEPEND="mssql? ( dev-java/jtds:1.3 )
+RDEPEND="mssql? ( dev-java/jtds:1.3 )
 	mysql? ( dev-java/jdbc-mysql:0 )
 	postgres? ( dev-java/jdbc-postgresql:0 )
 	sybase? ( dev-java/jtds:1.3 )
-	>=virtual/jdk-1.8:*"
-RDEPEND=">=virtual/jdk-1.8:*"
+	>=dev-java/openjdk-8:*[javafx]
+	>=virtual/jre-1.8:*"
 
 S="${WORKDIR}/${PN}"
 
@@ -81,9 +81,7 @@ src_install() {
 	insinto /opt/${PN}
 	doins -r {configuration,d{ataminer,ropins},e{quinox,xternal},ide,j{avavm,d{bc,ev},lib,views},module{,s},netbeans,orakafka,rdbms,s{leepycat,ql{developer,j},vnkit}}
 
-	exeinto /opt/${PN}
-	doexe sqldeveloper.sh
-	dosym ../${PN}/sqldeveloper.sh /opt/bin/sqldeveloper
+	newbin "${FILESDIR}"/${PN}-r1 ${PN}
 
 	newicon icon.png ${PN}-32x32.png
 	make_desktop_entry ${PN} "Oracle SQL Developer" ${PN}-32x32
