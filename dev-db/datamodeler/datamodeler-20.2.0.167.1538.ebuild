@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit rpm
+inherit rpm java-pkg-2
 
 MY_P="${P}-noarch"
 
@@ -14,10 +14,10 @@ RESTRICT="fetch mirror"
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
-DEPEND=">=virtual/jdk-1.8:*"
-RDEPEND=">=virtual/jdk-1.8:*"
+RDEPEND="dev-java/openjdk:8[javafx]
+	virtual/jre:1.8"
 
 S="${WORKDIR}"
 
@@ -53,11 +53,14 @@ src_install() {
 	doins opt/${PN}/datamodeler.desktop
 	rm "${S}"/opt/${PN}/datamodeler.desktop || die "rm failed"
 
-	dobin usr/local/bin/datamodeler
 	rm "${S}"/usr/local/bin/datamodeler || die "rm failed"
 
 	insinto /opt/${PN}
 	doins -r opt/${PN}/*
-	exeinto /opt/${PN}
-	doexe opt/${PN}/datamodeler.sh
+	dobin "${FILESDIR}"/${PN}
+
+	# This is normally called automatically by java-pkg_dojar, which
+	# hasn't been used above. We need to create package.env to help the
+	# launcher select the correct VM.
+	java-pkg_do_write_
 }
