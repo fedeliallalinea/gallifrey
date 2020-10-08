@@ -1,3 +1,6 @@
+  08 Oct 2020;  <fat@gentoo.org> sqldeveloper-20.2.0.175.1842.ebuild:
+  dev-db/sqldeveloper: added missing BDEPEND
+
   30 Sep 2020;  <fat@gentoo.org> +files/sqldeveloper-r1, -files/sqldeveloper,
   sqldeveloper-20.2.0.175.1842.ebuild:
   dev-db/sqldeveloper: fixed launcher

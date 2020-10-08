@@ -23,6 +23,7 @@ RDEPEND="mssql? ( dev-java/jtds:1.3 )
 	sybase? ( dev-java/jtds:1.3 )
 	>=dev-java/openjdk-8:*[javafx]
 	>=virtual/jre-1.8:*"
+BDEPEND="app-arch/unzip"
 
 S="${WORKDIR}/${PN}"
 
