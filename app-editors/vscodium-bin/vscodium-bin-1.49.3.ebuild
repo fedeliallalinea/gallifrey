@@ -10,13 +10,16 @@ MY_PN="${PN/-bin}"
 DESCRIPTION="Free/Libre Open Source Software Binaries of VSCode (binary version)"
 HOMEPAGE="https://vscodium.com"
 
-SRC_URI="https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-x64-${PV}.tar.gz"
+SRC_URI="
+	amd64? ( https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-x64-${PV}.tar.gz )
+	arm? ( https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-arm-${PV}.tar.gz )
+	arm64? ( https://github.com/VSCodium/vscodium/releases/download/${PV}/VSCodium-linux-arm64-${PV}.tar.gz )"
 
 RESTRICT="mirror strip bindist"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* ~amd64 ~arm ~arm64"
 
 DEPEND="
 	>=media-libs/libpng-1.2.46
@@ -39,7 +42,7 @@ QA_PREBUILT="opt/${MY_PN}/codium"
 S="${WORKDIR}"
 
 src_install() {
-	dodir /opt/${MY_PN}
+dodir /opt/${MY_PN}
 	cp -r . "${ED%/}/opt/${MY_PN}/" || die
 	dosym ../../opt/${MY_PN}/bin/codium /opt/bin/${MY_PN}
 	dosym ../../opt/${MY_PN}/bin/codium /opt/bin/codium
