@@ -6,14 +6,14 @@ EAPI=7
 inherit desktop java-pkg-2
 
 DESCRIPTION="Oracle SQL Developer is a graphical tool for database development"
-HOMEPAGE="http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html"
+HOMEPAGE="https://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html"
 SRC_URI="${P}-no-jre.zip"
 
 RESTRICT="fetch"
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="-* ~amd64"
 
 IUSE="mssql mysql postgres sybase"
 
@@ -28,8 +28,7 @@ BDEPEND="app-arch/unzip"
 S="${WORKDIR}/${PN}"
 
 QA_PREBUILT="
-	opt/${PN}/netbeans/platform/modules/lib/amd64/linux/*.so
-	opt/${PN}/netbeans/platform/modules/lib/i386/linux/*.so
+	opt/${PN}/netbeans/platform/modules/lib/amd64/linux/libjnidispatch-422.so
 "
 
 pkg_nofetch() {
@@ -46,11 +45,7 @@ src_prepare() {
 	find ./ \( -iname "*.exe" -or -iname "*.dll" -or -iname "*.bat" \) -exec rm {} + || die
 	sed -i 's|"`dirname $0`"|/opt/sqldeveloper|' sqldeveloper.sh || die
 
-	if use amd64; then
-		rm -r netbeans/platform/modules/lib/i386 || die
-	else
-		rm -r netbeans/platform/modules/lib/amd64 || die
-	fi
+	rm -r netbeans/platform/modules/lib/i386 || die
 
 	# they both use jtds, enabling one of them also enables the other one
 	if use mssql && ! use sybase; then
@@ -72,11 +67,6 @@ src_prepare() {
 		echo "AddJavaLibFile $(java-pkg_getjars jdbc-postgresql)" >> sqldeveloper/bin/sqldeveloper.conf || die
 	fi
 }
-
-QA_PREBUILT="
-	opt/${PN}/netbeans/platform/modules/lib/i386/linux/libjnidispatch-422.so
-	opt/${PN}/netbeans/platform/modules/lib/amd64/linux/libjnidispatch-422.so
-"
 
 src_install() {
 	insinto /opt/${PN}
