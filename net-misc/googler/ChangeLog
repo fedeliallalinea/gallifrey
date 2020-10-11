@@ -1,3 +1,8 @@
+*googler-4.3.1 (11 Oct 2020)
+
+  11 Oct 2020;  <fat@gentoo.org> +googler-4.3.1.ebuild:
+  net-misc/googler: version bump to 4.3.1
+
   24 Jun 2020;  <fat@gentoo.org> googler-4.1.ebuild, googler-9999.ebuild:
   net-misc/googler: fixed QA issues
 
