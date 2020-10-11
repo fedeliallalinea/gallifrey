@@ -14,12 +14,16 @@ RESTRICT="fetch mirror"
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="-* ~amd64"
 
 RDEPEND="dev-java/openjdk:8[javafx]
 	virtual/jre:1.8"
 
 S="${WORKDIR}"
+
+QA_PREBUILT="
+	opt/${PN}/netbeans/platform/modules/lib/amd64/linux/libjnidispatch-422.so
+"
 
 pkg_nofetch() {
 	eerror "Please go to"
@@ -36,24 +40,14 @@ src_prepare() {
 	sed -i 's/Exec=/Exec=sh\ /' opt/${PN}/datamodeler.desktop || die
 	sed -i 's/SetJavaHome/#SetJavaHome/' opt/${PN}/datamodeler/bin/datamodeler.conf || die
 
-	if use amd64; then
-		rm -r opt/${PN}/netbeans/platform/modules/lib/i386 || die
-	else
-		rm -r opt/${PN}/netbeans/platform/modules/lib/amd64 || die
-	fi
+	rm -r opt/${PN}/netbeans/platform/modules/lib/i386 || die
+	rm -r usr || die
 }
-
-QA_PREBUILT="
-	opt/${PN}/netbeans/platform/modules/lib/i386/linux/libjnidispatch-422.so
-	opt/${PN}/netbeans/platform/modules/lib/amd64/linux/libjnidispatch-422.so
-"
 
 src_install() {
 	insinto /usr/share/applications/
 	doins opt/${PN}/datamodeler.desktop
 	rm "${S}"/opt/${PN}/datamodeler.desktop || die "rm failed"
-
-	rm "${S}"/usr/local/bin/datamodeler || die "rm failed"
 
 	insinto /opt/${PN}
 	doins -r opt/${PN}/*

@@ -1,3 +1,6 @@
+  11 Oct 2020;  <fat@gentoo.org> datamodeler-20.2.0.167.1538.ebuild:
+  dev-db/datamodeler: fixed some QA
+
   30 Sep 2020;  <fat@gentoo.org> +files/datamodeler,
   datamodeler-20.2.0.167.1538.ebuild:
   dev-db/datamodeler: fixed launcher
