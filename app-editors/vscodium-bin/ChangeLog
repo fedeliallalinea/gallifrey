@@ -1,3 +1,8 @@
+*vscodium-bin-1.50.1 (15 Oct 2020)
+
+  15 Oct 2020;  <fat@gentoo.org> +vscodium-bin-1.50.1.ebuild:
+  app-editors/vscodium-bin: bump verion to 1.50.1
+
 *vscodium-bin-1.50.0 (11 Oct 2020)
 
   11 Oct 2020;  <fat@gentoo.org> +vscodium-bin-1.50.0.ebuild:
