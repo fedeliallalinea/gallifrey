@@ -1,3 +1,8 @@
+*sddm-sugar-candy-1.6 (27 Oct 2020)
+
+  27 Oct 2020;  <fat@gentoo.org> +sddm-sugar-candy-1.6.ebuild:
+  x11-themes/sddm-sugar-candy: version bump to 1.6
+
 *sddm-sugar-candy-1.5 (06 May 2020)
 
   06 May 2020;  <fat@gentoo.org> +metadata.xml, +sddm-sugar-candy-1.5.ebuild:
