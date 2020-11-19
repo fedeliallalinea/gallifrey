@@ -9,7 +9,7 @@ MY_P="${MY_PN}-${PV}"
 inherit java-pkg-2
 
 DESCRIPTION="Oracle SQLcl is the new SQL*Plus"
-HOMEPAGE="https://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html"
+HOMEPAGE="https://www.oracle.com/database/technologies/appdev/sqlcl.html"
 SRC_URI="${MY_P}.zip"
 RESTRICT="bindist fetch mirror"
 

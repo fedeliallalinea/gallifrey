@@ -1,3 +1,6 @@
+  19 Nov 2020;  <fat@gentoo.org> sqlcl-bin-20.3.0.274.1916.ebuild:
+  dev-db/sqlcl-bin: fixed homepage
+
 *sqlcl-bin-20.3.0.274.1916 (18 Nov 2020)
 
   18 Nov 2020;  <fat@gentoo.org> +sqlcl-bin-20.3.0.274.1916.ebuild:
