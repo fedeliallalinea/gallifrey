@@ -1,3 +1,6 @@
+  04 Dec 2020;  <fat@gentoo.org> -reportlab-3.5.55.ebuild:
+  dev-python/reportlab: removed old
+
 *reportlab-3.5.56 (04 Dec 2020)
 
   04 Dec 2020;  <fat@gentoo.org> +reportlab-3.5.56.ebuild:
