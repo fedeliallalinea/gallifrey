@@ -1,3 +1,6 @@
+  04 Dec 2020;  <fat@gentoo.org> -cffi-1.14.3.ebuild:
+  dev-python/cffi: removed old
+
 *cffi-1.14.4 (04 Dec 2020)
 
   04 Dec 2020;  <fat@gentoo.org> +cffi-1.14.4.ebuild:
