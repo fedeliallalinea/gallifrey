@@ -16,7 +16,4 @@ LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-BDEPEND="test? ( dev-python/pillow[${PYTHON_USEDEP},tiff,zlib] )"
 RDEPEND="dev-python/pillow[${PYTHON_USEDEP}]"
-
-distutils_enable_tests setup.py

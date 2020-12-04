@@ -1,3 +1,6 @@
+  04 Dec 2020;  <fat@gentoo.org> img2pdf-0.4.0.ebuild:
+  media-gfx/img2pdf:
+
 *img2pdf-0.4.0 (04 Dec 2020)
 
   04 Dec 2020;  <fat@gentoo.org> +img2pdf-0.4.0.ebuild, +metadata.xml:
