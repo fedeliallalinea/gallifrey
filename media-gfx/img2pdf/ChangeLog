@@ -1,0 +1,4 @@
+*img2pdf-0.4.0 (04 Dec 2020)
+
+  04 Dec 2020;  <fat@gentoo.org> +img2pdf-0.4.0.ebuild, +metadata.xml:
+  media-gfx/img2pdf: version bump to 0.4.0
