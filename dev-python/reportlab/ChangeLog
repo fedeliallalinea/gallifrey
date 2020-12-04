@@ -1,0 +1,5 @@
+*reportlab-3.5.55 (04 Dec 2020)
+
+  04 Dec 2020;  <fat@gentoo.org> +files/reportlab-3.5.48-usr-lib-LLD.patch,
+  +metadata.xml, +reportlab-3.5.55.ebuild:
+  dev-python/reportlab: bump version to 3.5.55
