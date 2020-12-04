@@ -1,3 +1,6 @@
+  04 Dec 2020;  <fat@gentoo.org> -ocrmypdf-11.3.1.ebuild:
+  app-text/ocrmypdf: removed old
+
 *ocrmypdf-11.3.4 (04 Dec 2020)
 
   04 Dec 2020;  <fat@gentoo.org> +ocrmypdf-11.3.4.ebuild:
