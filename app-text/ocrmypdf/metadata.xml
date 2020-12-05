@@ -2,7 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer type="person">
-    <email>fedeliallalinea@gmail.com</email>
-    <name>Marco Genasci</name>
+	<email>fedeliallalinea@gmail.com</email>
+	<name>Marco Genasci</name>
 </maintainer>
+<use>
+	<flag name="jbig">
+		Uses
+		<pkg>media-libs/jbig2enc</pkg>
+		for better compression algorithm
+	</flag>
+</use>
 </pkgmetadata>
