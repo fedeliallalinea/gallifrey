@@ -1,4 +1,0 @@
-*humanfriendly-8.2 (15 Jun 2020)
-
-  15 Jun 2020;  <fat@gentoo.org> +humanfriendly-8.2.ebuild, +metadata.xml:
-  dev-python/humanfriendly: new package
