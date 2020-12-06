@@ -5,7 +5,7 @@ EAPI=7
 
 MY_PN="${PN/_/.}"
 
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python3_{7..9} )
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3 distutils-r1

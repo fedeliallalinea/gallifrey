@@ -1,3 +1,7 @@
+  06 Dec 2020;  <fat@gentoo.org> pdfminer_six-20191020.ebuild,
+  pdfminer_six-20200517.ebuild, pdfminer_six-20201018.ebuild:
+  app-text/pdfminer_six: fix python targets
+
   26 Oct 2020;  <fat@gentoo.org> -pdfminer_six-20200726.ebuild:
   app-text/pdfminer_six: removed old
 
