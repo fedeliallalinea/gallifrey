@@ -1,3 +1,6 @@
+  13 Jan 2021;  <fat@gentoo.org> -wikiman-tldr-pages-20200903.ebuild:
+  app-text/wikiman-tldr-pages: removed old
+
 *wikiman-tldr-pages-20210107 (13 Jan 2021)
 
   13 Jan 2021;  <fat@gentoo.org> +wikiman-tldr-pages-20210107.ebuild:
