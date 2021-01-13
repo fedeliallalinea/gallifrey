@@ -1,3 +1,8 @@
+*wikiman-arch-wiki-20210107 (13 Jan 2021)
+
+  13 Jan 2021;  <fat@gentoo.org> +wikiman-arch-wiki-20210107.ebuild:
+  app-text/wikiman-arch-wiki: bump version to 20210107
+
 *wikiman-arch-wiki-20200903 (03 Sep 2020)
 
   03 Sep 2020;  <fat@gentoo.org> +metadata.xml,
