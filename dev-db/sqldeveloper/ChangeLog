@@ -1,3 +1,8 @@
+*sqldeveloper-20.4.0.379.2205 (25 Jan 2021)
+
+  25 Jan 2021;  <fat@gentoo.org> +sqldeveloper-20.4.0.379.2205.ebuild:
+  dev-db/sqldeveloper: version bump to 20.4.0.379.2205
+
   10 Oct 2020;  <fat@gentoo.org> sqldeveloper-20.2.0.175.1842.ebuild:
   dev-db/sqldeveloper: fixed some QA issue
 
