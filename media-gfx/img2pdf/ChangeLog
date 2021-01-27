@@ -1,3 +1,7 @@
+  27 Jan 2021;  <fat@gentoo.org> -files/img2pdf-0.4.0_disable-error-tests.patch,
+  -files/img2pdf-0.4.0_endianness.patch, img2pdf-0.4.0.ebuild:
+  media-gfx/img2pdf: restrict test because missing dep
+
   09 Dec 2020;  <fat@gentoo.org> +files/img2pdf-0.4.0_disable-error-tests.patch,
   +files/img2pdf-0.4.0_endianness.patch, img2pdf-0.4.0.ebuild:
   media-gfx/img2pdf: add tests

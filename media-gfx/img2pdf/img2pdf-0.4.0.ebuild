@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -16,20 +16,20 @@ LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
 
-BDEPEND="test? (
-	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/pdfrw[${PYTHON_USEDEP}]
-	dev-python/pikepdf[${PYTHON_USEDEP}]
-	dev-python/pytest[${PYTHON_USEDEP}]
-	dev-python/scipy[${PYTHON_USEDEP}]
-	<media-gfx/imagemagick-7.0.0[jpeg,jpeg2k,png,q8,q32,tiff]
-)"
-RDEPEND="dev-python/pillow[${PYTHON_USEDEP}]"
+# missing dev-python/pdfrw dependency and
+# require old version of imagemagick
+# waiting new version
+RESTRICT="test"
 
-PATCHES=(
-	"${FILESDIR}/${P}_endianness.patch"
-	"${FILESDIR}/${P}_disable-error-tests.patch" # see https://gitlab.mister-muffin.de/josch/img2pdf/issues/85
-)
+#BDEPEND="test? (
+#	dev-python/numpy[${PYTHON_USEDEP}]
+#	dev-python/pdfrw[${PYTHON_USEDEP}]
+#	dev-python/pikepdf[${PYTHON_USEDEP}]
+#	dev-python/pytest[${PYTHON_USEDEP}]
+#	dev-python/scipy[${PYTHON_USEDEP}]
+#	<media-gfx/imagemagick-7.0.0[jpeg,jpeg2k,png,q8,q32,tiff]
+#)"
+RDEPEND="dev-python/pillow[${PYTHON_USEDEP}]"
 
 distutils_enable_tests pytest
 
