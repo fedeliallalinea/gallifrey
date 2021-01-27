@@ -15,6 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="LGPL-3+"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="gui"
 
 # missing dev-python/pdfrw dependency and
 # require old version of imagemagick
@@ -29,9 +30,16 @@ RESTRICT="test"
 #	dev-python/scipy[${PYTHON_USEDEP}]
 #	<media-gfx/imagemagick-7.0.0[jpeg,jpeg2k,png,q8,q32,tiff]
 #)"
-RDEPEND="dev-python/pillow[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/pikepdf[${PYTHON_USEDEP}]
+	dev-python/pillow[${PYTHON_USEDEP}]
+	gui? ( $(python_gen_impl_dep tk) )"
 
 distutils_enable_tests pytest
+
+src_prepare() {
+	default
+	use !gui && sed -i '/gui_scripts/d' setup.py 
+}
 
 python_test() {
 	pytest -vv src/img2pdf_test.py || die "Tests fail with ${EPYTHON}"
