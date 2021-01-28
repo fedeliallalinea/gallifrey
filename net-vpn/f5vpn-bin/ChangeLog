@@ -1,3 +1,6 @@
+  28 Jan 2021;  <fat@gentoo.org> -f5vpn-bin-7180.2019.0118.1.ebuild:
+  net-vpn/f5vpn-bin: removed old
+
 *f5vpn-bin-7184.2020.909.1 (28 Jan 2021)
 
   28 Jan 2021;  <fat@gentoo.org> +f5vpn-bin-7184.2020.909.1.ebuild:
