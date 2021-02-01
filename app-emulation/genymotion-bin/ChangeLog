@@ -1,3 +1,8 @@
+*genymotion-bin-3.2.0 (01 Feb 2021)
+
+  01 Feb 2021;  <fat@gentoo.org> +genymotion-bin-3.2.0.ebuild:
+  app-emulation/genymotion-bin: version bump to 3.2.0
+
 *genymotion-bin-3.1.2 (27 Oct 2020)
 
   27 Oct 2020;  <fat@gentoo.org> +genymotion-bin-3.1.2.ebuild:
