@@ -17,10 +17,7 @@ LICENSE="genymotion"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-RDEPEND="|| (
-		app-emulation/virtualbox
-		app-emulation/virtualbox-bin
-	)
+RDEPEND="app-emulation/virtualbox
 	|| (
 		dev-libs/openssl-compat:1.0.0
 		=dev-libs/openssl-1.0*:0
