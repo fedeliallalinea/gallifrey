@@ -1,3 +1,8 @@
+*googler-4.3.2 (05 Feb 2021)
+
+  05 Feb 2021;  <fat@gentoo.org> +googler-4.3.2.ebuild:
+  net-misc/googler: bump version to 4.3.2
+
   11 Oct 2020;  <fat@gentoo.org> -googler-4.2.ebuild:
   net-misc/googler: removed old
 
