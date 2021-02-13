@@ -1,0 +1,4 @@
+*abricotine-bin-1.0.0 (13 Feb 2021)
+
+  13 Feb 2021;  <fat@gentoo.org> +abricotine-bin-1.0.0.ebuild, +metadata.xml:
+  app-editors/abricotine-bin: new package
