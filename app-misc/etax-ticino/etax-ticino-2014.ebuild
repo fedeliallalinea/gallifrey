@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit desktop
+inherit desktop java-pkg-2
 
 DESCRIPTION="eTax per le imposte di persone fisiche"
 HOMEPAGE="http://www4.ti.ch/dfe/dc/dichiarazione/etaxpf/download-scaricare/"
@@ -19,7 +19,7 @@ SRC_URI="
 	x86? ( https://www3.ti.ch/DFE/sw/struttura/dfe/dc/etax/${SLOT}/${MY_PV}-32bit.sh )
 "
 
-DEPEND="virtual/jre:*"
+DEPEND="virtual/jre:1.8"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
@@ -39,6 +39,7 @@ src_prepare() {
 		-e "s@/bin/java\" -Dinstall4j.jvmDir=\"\$app_java_home\"@/bin/java\" -Duser.home="${TMPDIR}" -Dinstall4j.jvmDir="${TMPDIR}" -Djava.util.prefs.systemRoot="${TMPDIR}"@" \
 		-i "${MY_PV}.sh" \
 		|| die "failed to set userHome and jvmDir where JAVA .systemPrefs can be found"
+	sed -e "s/ETAX_SLOT=/ETAX_SLOT=${SLOT}/g" "${FILESDIR}/etax-ticino" > "etax-ticino-${SLOT}" || die "failed to set slot in exec file"
 	sh "${S}/${MY_PV}".sh -q -dir "${S}" > /dev/null || die "unpack failed"
 }
 
@@ -50,8 +51,12 @@ src_install() {
 	insinto /usr/share/pixmaps
 	newins .install4j/"eTax.ticino PF ${SLOT}.png" ${PN}-${SLOT}.png
 
-	dosym ../${PN}/${SLOT}/"eTax.ticino PF ${SLOT}" /opt/bin/"eTax-ticino-${SLOT}"
+	# This is normally called automatically by java-pkg_dojar, which
+	# hasn't been used above. We need to create package.env to help the
+	# launcher select the correct VM.
+	java-pkg_do_write_
 
-	make_desktop_entry "/bin/sh \"/opt/${PN}/${SLOT}/eTax.ticino PF ${SLOT}\"" "eTax Ticino ${PV}" "${PN}-${SLOT}" "Utility"
-	mv "${ED}/usr/share/applications"/*.desktop "${ED}/usr/share/applications/${P}.desktop" || die "rename .desktop file failed"
+	dobin "etax-ticino-${SLOT}"
+
+	make_desktop_entry "/bin/sh \"/usr/bin/etax-ticino-${SLOT}\"" "eTax Ticino ${PV}" "${PN}-${SLOT}" "Utility"
 }
