@@ -1,0 +1,9 @@
+#!/bin/bash
+# Copyright 1999-2021 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+ETAX_SLOT=
+export GENTOO_VM=$( eval $(gjl --get-vm -p etax-ticino-${ETAX_SLOT}) && echo ${gjl_vm} )
+export INSTALL4J_JAVA_HOME_OVERRIDE=$(java-config -o)
+
+cd /opt/etax-ticino/${ETAX_SLOT} && exec bash "eTax.ticino PF ${ETAX_SLOT}"
