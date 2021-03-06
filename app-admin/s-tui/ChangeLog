@@ -1,3 +1,8 @@
+*s-tui-1.1.1 (06 Mar 2021)
+
+  06 Mar 2021;  <fat@gentoo.org> +s-tui-1.1.1.ebuild:
+  app-admin/s-tui: bump version to 1.1.1
+
   11 Jul 2020;  <fat@gentoo.org> -s-tui-1.0.1.ebuild:
   app-admin/s-tui: removed old
 
