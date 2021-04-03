@@ -1,0 +1,4 @@
+*davmail-0 (03 Apr 2021)
+
+  03 Apr 2021;  <fat@gentoo.org> +davmail-0.ebuild, +metadata.xml:
+  acct-group/davmail: new package
