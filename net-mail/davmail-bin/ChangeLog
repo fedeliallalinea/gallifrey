@@ -1,0 +1,6 @@
+*davmail-bin-5.5.1 (03 Apr 2021)
+
+  03 Apr 2021;  <fat@gentoo.org> +davmail-bin-5.5.1.ebuild, +files/davmail.conf,
+  +files/davmail.init, +files/davmail.png, +files/davmail.properties,
+  +metadata.xml:
+  net-mail/davmail-bin: new package
