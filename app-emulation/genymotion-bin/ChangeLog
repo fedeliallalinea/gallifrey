@@ -1,3 +1,9 @@
+*genymotion-bin-3.2.1 (22 Apr 2021)
+
+  22 Apr 2021;  <fat@gentoo.org> +genymotion-bin-3.2.1.ebuild,
+  -genymotion-bin-3.2.0.ebuild:
+  app-emulation/genymotion-bin: bump version to 3.2.1
+
   01 Feb 2021;  <fat@gentoo.org> genymotion-bin-3.2.0.ebuild:
   app-emulation/genymotion-bin: removed virtualbox-bin dependency
 
