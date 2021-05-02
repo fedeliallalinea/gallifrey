@@ -1,4 +1,0 @@
-*mconnect-9999 (10 May 2020)
-
-  10 May 2020;  <fat@gentoo.org> +mconnect-9999.ebuild, +metadata.xml:
-  net-misc/mconnect: new package
