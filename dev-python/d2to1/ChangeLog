@@ -1,0 +1,4 @@
+*d2to1-0.2.12_p1 (02 May 2021)
+
+  02 May 2021;  <fat@gentoo.org> +d2to1-0.2.12_p1.ebuild, +metadata.xml:
+  dev-python/d2to1: new package
