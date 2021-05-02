@@ -9,5 +9,8 @@
 		<bugs-to>https://github.com/linuxmint/warpinator/issues</bugs-to>
 		<remote-id type="github">linuxmint/warpinator</remote-id>
 	</upstream>
+	<use>
+		<flag name="ufw">Install net-firewall/ufw rule set</flag>
+	</use>
 </pkgmetadata>
 

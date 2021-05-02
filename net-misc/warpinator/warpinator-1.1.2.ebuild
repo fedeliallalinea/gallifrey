@@ -13,6 +13,7 @@ SRC_URI="https://github.com/linuxmint/${PN}/archive/refs/tags/${PV}.tar.gz -> ${
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="ufw"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
@@ -39,6 +40,13 @@ DEPEND="
 src_prepare() {
 	default
 	python_fix_shebang install-scripts src
+}
+
+src_configure() {
+	local emesonargs=(
+		$(meson_use ufw include-firewall-mod)
+	)
+	meson_src_configure
 }
 
 src_install() {

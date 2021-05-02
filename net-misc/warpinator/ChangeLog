@@ -1,3 +1,6 @@
+  02 May 2021;  <fat@gentoo.org> metadata.xml, warpinator-1.1.2.ebuild:
+  net-misc/warpinator: add ufw use flag
+
 *warpinator-1.1.2 (02 May 2021)
 
   02 May 2021;  <fat@gentoo.org> +metadata.xml, +warpinator-1.1.2.ebuild:
