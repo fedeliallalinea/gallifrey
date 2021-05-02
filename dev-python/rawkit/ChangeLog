@@ -1,0 +1,4 @@
+*rawkit-0.6.0 (02 May 2021)
+
+  02 May 2021;  <fat@gentoo.org> +metadata.xml, +rawkit-0.6.0.ebuild:
+  dev-python/rawkit: new package
