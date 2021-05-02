@@ -1,0 +1,4 @@
+*colour-0.1.5 (02 May 2021)
+
+  02 May 2021;  <fat@gentoo.org> +colour-0.1.5.ebuild, +metadata.xml:
+  dev-python/colour: new package
