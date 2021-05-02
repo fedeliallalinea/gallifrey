@@ -1,0 +1,4 @@
+*easygui-0.98.1 (02 May 2021)
+
+  02 May 2021;  <fat@gentoo.org> +easygui-0.98.1.ebuild, +metadata.xml:
+  dev-python/easygui: new package
