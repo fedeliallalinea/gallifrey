@@ -1,3 +1,8 @@
+*tinymediamanager-bin-4.1.4 (04 May 2021)
+
+  04 May 2021;  <fat@gentoo.org> +tinymediamanager-bin-4.1.4.ebuild:
+  app-misc/tinymediamanager-bin: version bump to 4.1.4
+
   25 Apr 2021;  <fat@gentoo.org> -tinymediamanager-bin-3.1.13.ebuild:
   app-misc/tinymediamanager-bin: removed old
 
