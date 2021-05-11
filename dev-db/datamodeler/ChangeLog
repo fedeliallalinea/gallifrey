@@ -1,3 +1,7 @@
+  11 May 2021;  <fat@gentoo.org> -datamodeler-20.4.0.374.0801.ebuild,
+  -datamodeler-20.4.1.406.0906.ebuild:
+  dev-db/datamodeler: removed old
+
 *datamodeler-21.1.0.092.1221 (11 May 2021)
 
   11 May 2021;  <fat@gentoo.org> +datamodeler-21.1.0.092.1221.ebuild:
