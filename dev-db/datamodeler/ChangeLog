@@ -1,3 +1,8 @@
+*datamodeler-21.1.0.092.1221 (11 May 2021)
+
+  11 May 2021;  <fat@gentoo.org> +datamodeler-21.1.0.092.1221.ebuild:
+  dev-db/datamodeler: bump version to 21.1.0.092.1221
+
 *datamodeler-20.4.1.406.0906 (28 Mar 2021)
 
   28 Mar 2021;  <fat@gentoo.org> +datamodeler-20.4.1.406.0906.ebuild:
