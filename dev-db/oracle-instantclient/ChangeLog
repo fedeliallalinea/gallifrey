@@ -1,0 +1,6 @@
+*oracle-instantclient-19.10.0.0 (12 May 2021)
+
+  12 May 2021;  <fat@gentoo.org> +files/18.3.0.0-makefile.patch,
+  +files/18.3.0.0-proc-makefile.patch, +files/tnsnames.ora.sample,
+  +metadata.xml, +oracle-instantclient-19.10.0.0.ebuild:
+  dev-db/oracle-instantclient: new package
