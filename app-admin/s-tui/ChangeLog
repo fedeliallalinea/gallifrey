@@ -1,3 +1,6 @@
+  24 May 2021;  <fat@gentoo.org> s-tui-1.1.1.ebuild, s-tui-9999.ebuild:
+  app-admin/s-tui: add python3_9 target
+
   06 Mar 2021;  <fat@gentoo.org> -s-tui-1.0.2.ebuild:
   app-admin/s-tui: removed old
 
