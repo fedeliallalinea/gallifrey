@@ -1,3 +1,7 @@
+  24 May 2021;  <fat@gentoo.org> gpo-zugaina-dl-0.0.2.ebuild,
+  gpo-zugaina-dl-9999.ebuild:
+  app-portage/gpo-zugaina-dl: add python3_9 target
+
   23 Apr 2020;  <fat@gentoo.org> gpo-zugaina-dl-0.0.2.ebuild,
   gpo-zugaina-dl-9999.ebuild:
   app-portage/gpo-zugaina-dl: added python3_{7,8}
