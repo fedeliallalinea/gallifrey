@@ -21,6 +21,7 @@ RDEPEND="
 	$(python_gen_cond_dep '
 		dev-python/cryptography[${PYTHON_USEDEP}]
 		dev-python/grpcio[${PYTHON_USEDEP}]
+		dev-python/netifaces[${PYTHON_USEDEP}]
 		dev-python/packaging[${PYTHON_USEDEP}]
 		dev-python/pynacl[${PYTHON_USEDEP}]
 		dev-python/setproctitle[${PYTHON_USEDEP}]

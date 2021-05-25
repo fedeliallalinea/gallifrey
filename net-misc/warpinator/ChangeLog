@@ -1,3 +1,6 @@
+  25 May 2021;  <fat@gentoo.org> warpinator-1.1.2.ebuild:
+  net-misc/warpinator: added missing dependency
+
   02 May 2021;  <fat@gentoo.org> metadata.xml, warpinator-1.1.2.ebuild:
   net-misc/warpinator: add ufw use flag
 
