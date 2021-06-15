@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+	<email>fedeliallalinea@gmail.com</email>
+	<name>Marco Genasci</name>
+</maintainer>
+<upstream>
+	<remote-id type="gitlab">scarpetta/pdfmixtool</remote-id>
+	<bugs-to>https://gitlab.com/scarpetta/pdfmixtool/-/issues</bugs-to>
+	<maintainer>
+		<name>Marco Scarpetta</name>
+		<email>marcoscarpetta02@gmail.com</email>
+	</maintainer>
+</upstream>
+</pkgmetadata>

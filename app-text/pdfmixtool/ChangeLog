@@ -1,0 +1,4 @@
+*pdfmixtool-1.0.1 (15 Jun 2021)
+
+  15 Jun 2021;  <fat@gentoo.org> +metadata.xml, +pdfmixtool-1.0.1.ebuild:
+  app-text/pdfmixtool: new package
