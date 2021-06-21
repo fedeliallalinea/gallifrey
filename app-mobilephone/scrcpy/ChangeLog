@@ -1,3 +1,8 @@
+*scrcpy-1.18 (21 Jun 2021)
+
+  21 Jun 2021;  <fat@gentoo.org> +scrcpy-1.18.ebuild:
+  app-mobilephone/scrcpy: bump version to 1.18
+
   04 Jan 2021;  <fat@gentoo.org> -scrcpy-1.16.ebuild:
   app-mobilephone/scrcpy: remove old
 
