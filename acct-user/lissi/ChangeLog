@@ -1,0 +1,4 @@
+*lissi-0 (11 Jul 2021)
+
+  11 Jul 2021;  <fat@gentoo.org> +lissi-0.ebuild, +metadata.xml:
+  acct-user/lissi: new package
