@@ -1,0 +1,4 @@
+*lissi-0.0.1_beta1 (11 Jul 2021)
+
+  11 Jul 2021;  <fat@gentoo.org> +lissi-0.0.1_beta1.ebuild, +metadata.xml:
+  net-irc/lissi: new package version 0.0.1_beta1
