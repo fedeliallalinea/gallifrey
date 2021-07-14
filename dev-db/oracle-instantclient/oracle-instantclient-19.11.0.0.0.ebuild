@@ -82,6 +82,7 @@ RDEPEND="
 	!<dev-db/oracle-instantclient-odbc-12
 	!<dev-db/oracle-instantclient-jdbc-12
 	!<dev-db/oracle-instantclient-sqlplus-12
+	odbc? ( dev-db/unixODBC )
 "
 
 S="${WORKDIR}/${MY_P}"
