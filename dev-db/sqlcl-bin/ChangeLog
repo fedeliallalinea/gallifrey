@@ -1,3 +1,6 @@
+  15 Jul 2021;  <fat@gentoo.org> -sqlcl-bin-21.1.1.113.1704.ebuild:
+  dev-db/sqlcl-bin: removed old
+
 *sqlcl-bin-21.2.0.174.2245 (15 Jul 2021)
 
   15 Jul 2021;  <fat@gentoo.org> +sqlcl-bin-21.2.0.174.2245.ebuild:
