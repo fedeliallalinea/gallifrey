@@ -1,5 +1,0 @@
-*showbuild-0.9.1 (01 Feb 2021)
-
-  01 Feb 2021;  <fat@gentoo.org> +files/showbuild-0.9.1, +metadata.xml,
-  +showbuild-0.9.1.ebuild:
-  app-portage/showbuild: new package
