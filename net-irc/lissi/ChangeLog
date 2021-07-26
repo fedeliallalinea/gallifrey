@@ -1,3 +1,8 @@
+*lissi-0.0.2 (26 Jul 2021)
+
+  26 Jul 2021;  <fat@gentoo.org> +lissi-0.0.2.ebuild:
+  net-irc/lissi: version bump to 0.0.2
+
 *lissi-0.0.1_beta2 (15 Jul 2021)
 
   15 Jul 2021;  <fat@gentoo.org> +lissi-0.0.1_beta2.ebuild:
