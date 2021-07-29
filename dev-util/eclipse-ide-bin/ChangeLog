@@ -1,0 +1,5 @@
+*eclipse-ide-bin-4.20.0 (29 Jul 2021)
+
+  29 Jul 2021;  <fat@gentoo.org> +eclipse-ide-bin-4.20.0.ebuild,
+  +files/eclipse-bin, +files/eclipserc-bin, +metadata.xml:
+  dev-util/eclipse-ide-bin: new package

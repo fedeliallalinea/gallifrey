@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer type="person">
+	<email>fedeliallalinea@gmail.com</email>
+	<name>Marco Genasci</name>
+</maintainer>
+<use>
+	<flag name="committers">
+		Package suited for development of Eclipse itself at Eclipse.org; based
+		on the Eclipse Platform adding PDE, Git, Marketplace Client, source
+		code and developer documentation.
+	</flag>
+	<flag name="cpp">
+		An IDE for C/C++ developers.
+	</flag>
+	<flag name="computing">
+		Tools for C, C++, Fortran, and UPC, including MPI, OpenMP, OpenACC, a
+		parallel debugger, and remotely building, running and monitoring 
+		applications.
+	</flag>
+	<flag name="dsl">
+		The essential tools for Java and DSL developers, including a Java and
+		Xtend IDE, a DSL Framework (Xtext), a Git client, XML Editor, and Maven
+		integration.
+	</flag>
+	<flag name="embedcpp">
+		An IDE for Embedded C/C++ developers. It includes managed cross build
+		plug-ins (Arm and RISC-V) and debug plug-ins (SEGGER J-Link, OpenOCD,
+		pyocd, and QEMU), plus a number of templates to create ready to run
+		blinky projects. 
+	</flag>
+	<flag name="php">
+		The essential tools for any PHP developer, including PHP language
+		support, Git client, Mylyn and editors for JavaScript, TypeScript,
+		HTML, CSS and XML.
+	</flag>
+	<flag name="java">
+		The essential tools for any Java developer, including a Java IDE, 
+		a Git client, XML Editor, Maven and Gradle integration
+	</flag>
+	<flag name="javaee">
+		Tools for developers working with Java and Web applications, 
+		including a Java IDE, tools for JavaScript, TypeScript, JavaServer 
+		Pages and Faces, Yaml, Markdown, Web Services, JPA and Data Tools, 
+		Maven and Gradle, Git, and more.
+	</flag>
+	<flag name="modeling">
+		The Modeling package provides tools and runtimes for building
+		model-based applications. You can use it to graphically design domain
+		models, to leverage those models at design time by creating and editing
+		dynamic instances, to collaborate via Eclipse's team support with
+		facilities for comparing and merging models and model instances
+		structurally, and finally to generate Java code from those models to
+		produce complete applications. In addition, via the package's discover
+		catalog, you can easily install a wide range of additional powerful,
+		model-based tools and runtimes to suit your specific needs.
+	</flag>
+	<flag name="rcp">
+		A complete set of tools for developers who want to create Eclipse
+		plug-ins, Rich Client Applications or Remote Application Platform
+		(RCP+RAP), plus Maven and Gradle tooling, and an XML editor. It
+		contains the EGit tooling for accessing Git version control systems,
+		and Eclipse Passage which helps with license management for 
+		Eclipse-based products.
+	</flag>
+	<flag name="scout">
+		Eclipse Scout is a Java/HTML5 framework to develop business
+		applications that run on the desktop, on tablets and mobile devices.
+		This package includes Eclipse IDE support for Scout developers and
+		source code.
+	</flag>
+</use>
+</pkgmetadata>
