@@ -13,4 +13,7 @@
 		<bugs-to>https://github.com/fedeliallalinea/lissi/issues</bugs-to>
 		<remote-id type="github">fedeliallalinea/lissi</remote-id>
 	</upstream>
+	<use>
+		<flag name='fortune'>enable fortune plugin using data from <pkg>games-misc/fortune-mod</pkg></flag>
+	</use>
 </pkgmetadata>
