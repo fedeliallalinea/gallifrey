@@ -1,0 +1,8 @@
+#!/bin/bash
+# Copyright 1999-2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+export GENTOO_VM=$( eval $(gjl --get-vm -p dbeaver-ce-bin) && echo ${gjl_vm} )
+export JAVA_HOME=$(java-config -o)
+
+/opt/dbeaver-ce/dbeaver $@

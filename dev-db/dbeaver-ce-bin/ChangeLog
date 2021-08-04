@@ -1,0 +1,5 @@
+*dbeaver-ce-bin-21.1.4 (04 Aug 2021)
+
+  04 Aug 2021;  <fat@gentoo.org> +dbeaver-ce-bin-21.1.4.ebuild,
+  +files/dbeaver-ce, +metadata.xml:
+  dev-db/dbeaver-ce-bin: new package version 21.1.4
