@@ -1,0 +1,5 @@
+*PyQtWebEngine-5.15.5_pre2108100905 (14 Aug 2021)
+
+  14 Aug 2021;  <fat@gentoo.org> +PyQtWebEngine-5.15.5_pre2108100905.ebuild,
+  +metadata.xml:
+  dev-python/PyQtWebEngine: new package
