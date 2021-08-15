@@ -1,0 +1,7 @@
+*calibre-5.24.0 (15 Aug 2021)
+
+  15 Aug 2021;  <fat@gentoo.org> +calibre-5.24.0.ebuild,
+  +files/calibre-2.9.0-no_updates_dialog.patch,
+  +files/calibre-disable_plugins.patch, +files/calibre-server-3.conf,
+  +files/calibre-server-3.init, +metadata.xml:
+  app-text/calibre: bump version to 5.24.0
