@@ -1,3 +1,6 @@
+  23 Aug 2021;  <fat@gentoo.org> sqldeveloper-21.2.1.204.1703.ebuild:
+  dev-db/sqldeveloper: fixed some QA issue
+
   22 Aug 2021;  <fat@gentoo.org> -sqldeveloper-20.4.1.407.0006.ebuild,
   -sqldeveloper-21.2.0.187.1842.ebuild:
   dev-db/sqldeveloper: removed old
