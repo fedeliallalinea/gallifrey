@@ -1,3 +1,6 @@
+  24 Aug 2021;  <fat@gentoo.org> sqldeveloper-21.2.1.204.1703.ebuild:
+  dev-db/sqldeveloper: fix log directory permissions
+
   23 Aug 2021;  <fat@gentoo.org> sqldeveloper-21.2.1.204.1703.ebuild:
   dev-db/sqldeveloper: fixed some QA issue
 
