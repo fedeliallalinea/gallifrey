@@ -55,6 +55,7 @@ src_install() {
 	dobin "${FILESDIR}"/${PN}
 
 	fperms +x /opt/${PN}/netbeans/platform/modules/lib/amd64/linux/libjnidispatch-422.so
+	fperms 1777 /opt/datamodeler/datamodeler/log
 
 	# This is normally called automatically by java-pkg_dojar, which
 	# hasn't been used above. We need to create package.env to help the
