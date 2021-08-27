@@ -74,15 +74,15 @@ SLOT="0/${MY_SOVER}"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror splitdebug test"
 
-DEPEND="app-arch/unzip"
 RDEPEND="
 	>=dev-libs/libaio-0.3.109-r5[${MULTILIB_USEDEP}]
 	!<dev-db/oracle-instantclient-basic-12
 	!<dev-db/oracle-instantclient-odbc-12
 	!<dev-db/oracle-instantclient-jdbc-12
 	!<dev-db/oracle-instantclient-sqlplus-12
-	odbc? ( dev-db/unixODBC )
+	odbc? ( dev-db/unixODBC[${MULTILIB_USEDEP}] )
 "
+BDEPEND="app-arch/unzip"
 
 S="${WORKDIR}/${MY_P}"
 

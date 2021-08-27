@@ -1,3 +1,6 @@
+  27 Aug 2021;  <fat@gentoo.org> oracle-instantclient-21.3.0.0.0.ebuild:
+  dev-db/oracle-instantclient: fixed some QA issue
+
 *oracle-instantclient-21.3.0.0.0 (22 Aug 2021)
 
   22 Aug 2021;  <fat@gentoo.org> +files/21.3.0.0.0-makefile.patch,
