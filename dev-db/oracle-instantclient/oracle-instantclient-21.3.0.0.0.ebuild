@@ -8,7 +8,7 @@ inherit pax-utils multilib-minimal
 DESCRIPTION="Oracle 18c Instant Client with SDK"
 HOMEPAGE="https://www.oracle.com/database/technologies/instant-client.html"
 
-MY_SOVER=19.1 # the library soname found in the zip files
+MY_SOVER=21.1 # the library soname found in the zip files
 
 IUSE="jdbc odbc precomp +sdk +sqlplus tools"
 REQUIRED_USE="precomp? ( sdk )"
