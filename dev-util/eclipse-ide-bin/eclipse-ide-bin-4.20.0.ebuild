@@ -33,6 +33,7 @@ IUSE="committers cpp computing dsl embedcpp php +java javaee modeling rcp scout"
 REQUIRED_USE="^^ ( committers cpp computing dsl embedcpp php java javaee modeling rcp scout )"
 
 RDEPEND="
+	net-libs/webkit-gtk
 	x11-libs/gtk+:3
 	virtual/jre:11"
 
