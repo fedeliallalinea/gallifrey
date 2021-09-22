@@ -21,7 +21,7 @@ SLOT="0"
 
 RDEPEND="
 	acct-user/lissi
-	dev-python/beautifulsoup[${PYTHON_USEDEP}]
+	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 "
 

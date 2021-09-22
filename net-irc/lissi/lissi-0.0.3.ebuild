@@ -20,7 +20,7 @@ IUSE="+fortune"
 
 RDEPEND="
 	acct-user/lissi
-	dev-python/beautifulsoup[${PYTHON_USEDEP}]
+	dev-python/beautifulsoup4[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	fortune? ( games-misc/fortune-mod )
 "
