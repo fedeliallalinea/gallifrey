@@ -1,0 +1,77 @@
+From 83fa3aea20c2636d0ce91852c884c2dcbe07d53d Mon Sep 17 00:00:00 2001
+From: Marco Genasci <fedeliallalinea@gmail.com>
+Date: Sun, 3 Oct 2021 18:17:40 +0200
+Subject: [PATCH] fixs importlib.{metadata,resource} for new python version
+
+---
+ setup.cfg                | 6 +++---
+ src/ocrmypdf/_version.py | 5 ++++-
+ src/ocrmypdf/pdfa.py     | 7 +++++--
+ 3 files changed, 12 insertions(+), 6 deletions(-)
+
+diff --git a/setup.cfg b/setup.cfg
+index a23304f7..aa10f2ef 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -49,8 +49,8 @@ install_requires =
+     cffi>=1.9.1  # must be a setup and install requirement
+     coloredlogs>=14.0  # strictly optional
+     img2pdf>=0.3.0,<0.5  # pure Python
+-    importlib-metadata>=4  # until Python 3.8
+-    importlib-resources>=5  # until Python 3.9
++    importlib-metadata>=4;python_version<'3.8'  # until Python 3.8
++    importlib-resources>=5;python_version<'3.9'  # until Python 3.9
+     pdfminer.six!=20200720,>=20191110,<=20201018
+     pikepdf>=2.10.0
+     pikepdf<3;implementation_name=="pypy" and python_version=='3.6'
+@@ -112,4 +112,4 @@ ignore =
+ ignore = D203,F401,W503,E501,E203,F841
+ exclude = .git,__pycache__,docs/conf.py,build,dist,.venv,.venvpp,.eggs,tmp,src/ocrmypdf/lib/
+ max-complexity = 10
+-max-line-length = 100
+\ No newline at end of file
++max-line-length = 100
+diff --git a/src/ocrmypdf/_version.py b/src/ocrmypdf/_version.py
+index 091eacf9..3cf5ff8b 100644
+--- a/src/ocrmypdf/_version.py
++++ b/src/ocrmypdf/_version.py
+@@ -5,7 +5,10 @@
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ 
+ 
+-from importlib_metadata import version as _package_version
++try:
++    from importlib_metadata import version as _package_version
++except ImportError:
++    from importlib.metadata import version as _package_version
+ 
+ PROGRAM_NAME = 'ocrmypdf'
+ 
+diff --git a/src/ocrmypdf/pdfa.py b/src/ocrmypdf/pdfa.py
+index cc34f906..b17eb213 100644
+--- a/src/ocrmypdf/pdfa.py
++++ b/src/ocrmypdf/pdfa.py
+@@ -13,7 +13,10 @@ import base64
+ from pathlib import Path
+ from typing import Dict, Iterator, Union
+ 
+-import importlib_resources
++try:
++    from importlib_resources import read_binary
++except ImportError:
++    from importlib.resources import read_binary
+ import pikepdf
+ import pkg_resources  # deprecated
+ 
+@@ -104,7 +107,7 @@ def generate_pdfa_ps(target_filename: Path, icc: str = 'sRGB'):
+     if icc != 'sRGB':
+         raise NotImplementedError("Only supporting sRGB")
+ 
+-    bytes_icc_profile = importlib_resources.read_binary(
++    bytes_icc_profile = read_binary(
+         'ocrmypdf.data', SRGB_ICC_PROFILE_NAME
+     )
+     ps = '\n'.join(_make_postscript(icc, bytes_icc_profile, 3))
+-- 
+2.32.0
+
