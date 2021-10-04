@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{8..9} )
 
 inherit bash-completion-r1 distutils-r1
 
-SRC_URI="https://github.com/jbarlow83/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://files.pythonhosted.org/packages/source/${PN::1}/${PN}/${P}.tar.gz"
 KEYWORDS="~amd64"
 
 DESCRIPTION="OCRmyPDF adds an OCR text layer to scanned PDF files"
