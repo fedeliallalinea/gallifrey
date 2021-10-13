@@ -1,3 +1,8 @@
+*wikiman-freebsd-docs-20211009 (13 Oct 2021)
+
+  13 Oct 2021;  <fat@gentoo.org> +wikiman-freebsd-docs-20211009.ebuild:
+  app-text/wikiman-freebsd-docs: version bump to 20211009
+
   13 Jan 2021;  <fat@gentoo.org> -wikiman-freebsd-docs-20200903.ebuild:
   app-text/wikiman-freebsd-docs: removed old
 
