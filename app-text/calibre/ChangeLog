@@ -1,7 +1,0 @@
-*calibre-5.28.0 (03 Oct 2021)
-
-  03 Oct 2021;  <fat@gentoo.org> +calibre-5.28.0.ebuild,
-  +files/calibre-2.9.0-no_updates_dialog.patch,
-  +files/calibre-disable_plugins.patch, +files/calibre-server-3.conf,
-  +files/calibre-server-3.init, +metadata.xml:
-  app-text/calibre: bump version to 5.28.0
