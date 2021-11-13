@@ -1,3 +1,8 @@
+*ocrmypdf-12.7.2 (13 Nov 2021)
+
+  13 Nov 2021;  <fat@gentoo.org> +ocrmypdf-12.7.2.ebuild:
+  app-text/ocrmypdf: bump version to 12.7.2
+
   13 Oct 2021;  <fat@gentoo.org> -files/ocrmypdf-12.6.0_fix-importlib.patch,
   -ocrmypdf-12.6.0.ebuild:
   app-text/ocrmypdf: removed old
