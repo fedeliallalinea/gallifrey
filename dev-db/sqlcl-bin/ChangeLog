@@ -1,3 +1,8 @@
+*sqlcl-bin-21.3.1.281.1748 (13 Nov 2021)
+
+  13 Nov 2021;  <fat@gentoo.org> +sqlcl-bin-21.3.1.281.1748.ebuild:
+  dev-db/sqlcl-bin: bump version to 21.3.1.281.1748
+
   22 Aug 2021;  <fat@gentoo.org> -sqlcl-bin-21.2.1.195.1252.ebuild:
   dev-db/sqlcl-bin: removed old
 
