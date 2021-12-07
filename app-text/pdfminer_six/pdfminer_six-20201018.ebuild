@@ -1,11 +1,11 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 2020-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
 
 MY_PN="${PN/_/.}"
 
-PYTHON_COMPAT=( python3_{7..9} )
+PYTHON_COMPAT=( python3_{8..10} )
 
 if [[ ${PV} == "9999" ]] ; then
 	inherit git-r3 distutils-r1
