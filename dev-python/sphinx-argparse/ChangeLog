@@ -1,3 +1,6 @@
+  07 Dec 2021;  <fat@gentoo.org> sphinx-argparse-0.2.5.ebuild:
+  dev-python/sphinx-argpars: update python targets
+
   06 Dec 2020;  <fat@gentoo.org> sphinx-argparse-0.2.5.ebuild:
   dev-python/sphinx-argparse: fix python targets
 
