@@ -1,3 +1,8 @@
+*eclipse-ide-bin-4.22.0 (19 Dec 2021)
+
+  19 Dec 2021;  <fat@gentoo.org> +eclipse-ide-bin-4.22.0.ebuild:
+  dev-util/eclipse-ide-bin: bump version to 4.22
+
   22 Sep 2021;  <fat@gentoo.org> eclipse-ide-bin-4.20.0.ebuild:
   dev-util/eclipse-ide-bin: add missing dependency in old ebuild
 
