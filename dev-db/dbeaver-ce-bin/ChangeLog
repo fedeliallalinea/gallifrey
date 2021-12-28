@@ -1,3 +1,8 @@
+*dbeaver-ce-bin-21.3.2 (28 Dec 2021)
+
+  28 Dec 2021;  <fat@gentoo.org> +dbeaver-ce-bin-21.3.2.ebuild:
+  dev-db/dbeaver-ce-bin: bump version to 21.3.2
+
   14 Dec 2021;  <fat@gentoo.org> -dbeaver-ce-bin-21.3.0.ebuild:
   dev-db/dbeaver-ce-bin: removed old
 
