@@ -1,0 +1,29 @@
+From 02cc9c54f2cdb6987ec1dd86c8a8276c9fe0d6a6 Mon Sep 17 00:00:00 2001
+From: Marco Genasci <fedeliallalinea@gmail.com>
+Date: Wed, 5 Jan 2022 09:30:59 +0100
+Subject: [PATCH 2/2] Change deprecated dash-separated with underscore in
+ setup.cfg
+
+Signed-off-by: Marco Genasci <fedeliallalinea@gmail.com>
+---
+ setup.cfg | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/setup.cfg b/setup.cfg
+index 081fab6..d417aa6 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -31,8 +31,8 @@ keywords = bumblebee-status
+ 
+ [options]
+ include_package_data = True
+-allow-all-external = yes
+-trusted-host =
++allow_all_external = yes
++trusted_host =
+     gitlab.*
+     bitbucket.org
+     github.com
+-- 
+2.34.1
+

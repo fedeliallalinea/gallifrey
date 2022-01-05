@@ -1,0 +1,6 @@
+*bumblebee-status-2.1.4 (05 Jan 2022)
+
+  05 Jan 2022;  <fat@gentoo.org> +bumblebee-status-2.1.4.ebuild,
+  +files/bumblebee-status-2.1.4-change-deprecated-dash-separated.patch,
+  +files/bumblebee-status-2.1.4-excluding-tests-folder.patch, +metadata.xml:
+  x11-misc/bumblebee-status: new package
