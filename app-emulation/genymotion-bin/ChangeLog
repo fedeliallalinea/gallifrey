@@ -1,3 +1,9 @@
+  09 Jan 2022;  <fat@gentoo.org> genymotion-bin-3.0.2-r1.ebuild,
+  genymotion-bin-3.0.3.ebuild, genymotion-bin-3.0.4.ebuild,
+  genymotion-bin-3.1.1.ebuild, genymotion-bin-3.1.2.ebuild,
+  genymotion-bin-3.2.1-r1.ebuild, genymotion-bin-3.2.1.ebuild:
+  app-emulation/genymotion-bin: port to EAPI 8
+
 *genymotion-bin-3.2.1-r1 (26 Oct 2021)
 
   26 Oct 2021;  <fat@gentoo.org> +genymotion-bin-3.2.1-r1.ebuild:
