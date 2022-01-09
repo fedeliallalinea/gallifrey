@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> rawkit-0.6.0.ebuild:
+  dev-python/rawkit: port to EAPI 8
+
 *rawkit-0.6.0 (02 May 2021)
 
   02 May 2021;  <fat@gentoo.org> +metadata.xml, +rawkit-0.6.0.ebuild:
