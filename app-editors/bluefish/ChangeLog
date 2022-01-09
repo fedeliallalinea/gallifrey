@@ -1,6 +1,0 @@
-*bluefish-2.2.12 (05 Dec 2020)
-
-  05 Dec 2020;  <fat@gentoo.org> +bluefish-2.2.12.ebuild,
-  +files/bluefish-2.2.9-charmap_configure.patch, +metadata.xml:
-  app-editors/bluefish: bump version to 2.2.12  - move to EAPI=7 - re-add
-  python3 support - change appdata location to metainfo
