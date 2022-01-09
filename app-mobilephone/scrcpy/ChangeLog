@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> scrcpy-1.21.ebuild:
+  app-mobilephone/scrcpy: port to EAPI 8
+
   30 Nov 2021;  <fat@gentoo.org> -scrcpy-1.20.ebuild:
   app-mobilephone/scrcpy: removed old
 
