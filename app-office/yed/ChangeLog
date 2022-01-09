@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> -yed-3.20.ebuild:
+  app-office/yed: removed old
+
 *yed-3.21.1 (09 Jan 2022)
 
   09 Jan 2022;  <fat@gentoo.org> +yed-3.21.1.ebuild:
