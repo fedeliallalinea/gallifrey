@@ -1,5 +1,0 @@
-*plasma-theme-switcher-0.1 (18 Feb 2021)
-
-  18 Feb 2021;  <fat@gentoo.org> +metadata.xml,
-  +plasma-theme-switcher-0.1.ebuild:
-  kde-misc/plasma-theme-switcher: new package
