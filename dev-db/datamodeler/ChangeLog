@@ -1,3 +1,8 @@
+*datamodeler-21.4.1.349.1605 (09 Jan 2022)
+
+  09 Jan 2022;  <fat@gentoo.org> +datamodeler-21.4.1.349.1605.ebuild:
+  dev-db/datamodeler: version bump to 21.4.1.349.1605
+
   24 Aug 2021;  <fat@gentoo.org> datamodeler-21.2.0.183.1957.ebuild:
   dev-db/datamodeler: fix log directory permissions
 
