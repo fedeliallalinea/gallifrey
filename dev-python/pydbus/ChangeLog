@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> pydbus-0.6.0.ebuild, pydbus-9999.ebuild:
+  dev-python/pydbus: port to EAPI 8
+
   06 Dec 2020;  <fat@gentoo.org> pydbus-0.6.0.ebuild, pydbus-9999.ebuild:
   dev-python/pydbus: fix python targets
 
