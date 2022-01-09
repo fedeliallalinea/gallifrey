@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> -sphinx-argparse-0.2.5.ebuild:
+  dev-python/sphinx-argparse: removed old
+
 *sphinx-argparse-0.3.1 (09 Jan 2022)
 
   09 Jan 2022;  <fat@gentoo.org> +sphinx-argparse-0.3.1.ebuild, metadata.xml:
