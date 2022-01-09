@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> d2to1-0.2.12_p1.ebuild:
+  dev-python/d2to1: port to EAPI 8
+
 *d2to1-0.2.12_p1 (02 May 2021)
 
   02 May 2021;  <fat@gentoo.org> +d2to1-0.2.12_p1.ebuild, +metadata.xml:
