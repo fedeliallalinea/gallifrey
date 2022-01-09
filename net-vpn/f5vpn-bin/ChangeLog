@@ -1,3 +1,7 @@
+  09 Jan 2022;  <fat@gentoo.org> f5vpn-bin-7184.2020.909.1.ebuild,
+  f5vpn-bin-7185.2021.0108.1.ebuild:
+  net-vpn/f5vpn-bin: port to EAPI 8
+
 *f5vpn-bin-7185.2021.0108.1 (13 Feb 2021)
 
   13 Feb 2021;  <fat@gentoo.org> +f5vpn-bin-7185.2021.0108.1.ebuild:
