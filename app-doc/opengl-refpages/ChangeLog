@@ -1,3 +1,0 @@
-  30 Aug 2019;  <fat@gentoo.org> +metadata.xml, opengl-refpages-9999.ebuild:
-  app-doc/opengl-refpages: fixes and cleanup  - update copyright header - update
-  EAPI to 7 - added metadata.xml
