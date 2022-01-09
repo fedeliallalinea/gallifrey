@@ -1,4 +1,0 @@
-*ascii-3.18 (25 Mar 2020)
-
-  25 Mar 2020;  <fat@gentoo.org> +ascii-3.18.ebuild, +metadata.xml:
-  app-text/ascii: new package
