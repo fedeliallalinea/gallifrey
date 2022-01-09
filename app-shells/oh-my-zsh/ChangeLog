@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> oh-my-zsh-99999999.ebuild:
+  app-shells/oh-my-zsh: port to EAPI 8
+
 *oh-my-zsh-99999999 (15 Oct 2019)
 
   15 Oct 2019;  <fat@gentoo.org> +metadata.xml, +oh-my-zsh-99999999.ebuild:
