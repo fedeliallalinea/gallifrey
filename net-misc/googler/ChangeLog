@@ -1,3 +1,8 @@
+*googler-4.3.2-r1 (09 Jan 2022)
+
+  09 Jan 2022;  <fat@gentoo.org> +googler-4.3.2-r1.ebuild:
+  net-misc/googler: fix python install and port to EAPI 8
+
   05 Feb 2021;  <fat@gentoo.org> -googler-4.3.1.ebuild, -googler-9999.ebuild:
   net-misc/googler: removed old
 
