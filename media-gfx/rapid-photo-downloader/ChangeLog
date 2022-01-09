@@ -1,3 +1,8 @@
+*rapid-photo-downloader-0.9.28 (09 Jan 2022)
+
+  09 Jan 2022;  <fat@gentoo.org> +rapid-photo-downloader-0.9.28.ebuild:
+  media-gfx/rapid-photo-downloader: bump version to 0.9.28
+
 *rapid-photo-downloader-0.9.26 (02 May 2021)
 
   02 May 2021;  <fat@gentoo.org> +metadata.xml,
