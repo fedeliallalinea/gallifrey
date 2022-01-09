@@ -1,3 +1,8 @@
+*yed-3.21.1 (09 Jan 2022)
+
+  09 Jan 2022;  <fat@gentoo.org> +yed-3.21.1.ebuild:
+  app-office/yed: version bump to 3.21.1
+
   03 Jun 2020;  <fat@gentoo.org> -yed-3.19.ebuild:
   app-office/yed: removed old
 
