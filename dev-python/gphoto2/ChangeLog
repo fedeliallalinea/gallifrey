@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> -gphoto2-2.2.4.ebuild:
+  dev-python/gphoto2: removed old
+
 *gphoto2-2.3.1 (09 Jan 2022)
 
   09 Jan 2022;  <fat@gentoo.org> +gphoto2-2.3.1.ebuild:
