@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> easygui-0.98.1.ebuild:
+  dev-python/easygui: port to EAPI 8
+
 *easygui-0.98.1 (02 May 2021)
 
   02 May 2021;  <fat@gentoo.org> +easygui-0.98.1.ebuild, +metadata.xml:
