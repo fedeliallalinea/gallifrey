@@ -1,3 +1,8 @@
+*gphoto2-2.3.1 (09 Jan 2022)
+
+  09 Jan 2022;  <fat@gentoo.org> +gphoto2-2.3.1.ebuild:
+  dev-python/gphoto2: version bump to 2.3.1
+
 *gphoto2-2.2.4 (02 May 2021)
 
   02 May 2021;  <fat@gentoo.org> +gphoto2-2.2.4.ebuild, +metadata.xml:
