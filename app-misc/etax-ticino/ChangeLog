@@ -1,3 +1,8 @@
+  09 Jan 2022;  <fat@gentoo.org> etax-ticino-2014.ebuild,
+  etax-ticino-2015.ebuild, etax-ticino-2016.ebuild, etax-ticino-2017.ebuild,
+  etax-ticino-2018.ebuild, etax-ticino-2019.ebuild, etax-ticino-2020.ebuild:
+  app-misc/etax-ticino: port to EAPI 8
+
   26 Jun 2020;  <fat@gentoo.org> etax-ticino-2014.ebuild,
   etax-ticino-2015.ebuild, etax-ticino-2016.ebuild, etax-ticino-2017.ebuild,
   etax-ticino-2018.ebuild, etax-ticino-2019.ebuild:
