@@ -1,3 +1,8 @@
+*sphinx-argparse-0.3.1 (09 Jan 2022)
+
+  09 Jan 2022;  <fat@gentoo.org> +sphinx-argparse-0.3.1.ebuild, metadata.xml:
+  dev-python/sphinx-argparse: version bump to 0.3.1  Version from guru overlay
+
   07 Dec 2021;  <fat@gentoo.org> sphinx-argparse-0.2.5.ebuild:
   dev-python/sphinx-argpars: update python targets
 
