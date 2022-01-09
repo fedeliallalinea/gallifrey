@@ -1,8 +1,0 @@
-  30 Aug 2019;  <fat@gentoo.org> -midieditor-3.1.1-r1.ebuild,
-  -midieditor-3.1.1.ebuild:
-  media-sound/midieditor: removed old
-
-*midieditor-3.3.0 (30 Aug 2019)
-
-  30 Aug 2019;  <fat@gentoo.org> +metadata.xml, +midieditor-3.3.0.ebuild:
-  media-sound/midieditor: bump to version 3.3.0
