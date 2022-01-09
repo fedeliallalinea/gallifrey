@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> -find_cruft-5.1.ebuild:
+  app-portage/find_cruft: removed old
+
 *find_cruft-5.2 (09 Jan 2022)
 
   09 Jan 2022;  <fat@gentoo.org> +find_cruft-5.2.ebuild:
