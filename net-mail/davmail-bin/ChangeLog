@@ -1,3 +1,6 @@
+  09 Jan 2022;  <fat@gentoo.org> -davmail-bin-5.5.1.ebuild:
+  net-mail/davmail-bin: removed old
+
   09 Jan 2022;  <fat@gentoo.org> davmail-bin-6.0.0.3375.ebuild:
   net-mail/davmail-bin: port to EAPI 8
 
