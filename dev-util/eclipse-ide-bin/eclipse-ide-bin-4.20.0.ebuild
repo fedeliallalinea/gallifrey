@@ -1,7 +1,7 @@
-# Copyright 2021 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit desktop java-pkg-2
 
@@ -44,7 +44,7 @@ src_install() {
 
 	insinto "${dest}"
 	doins -r *
-	find "${ED}${dest}" -name "*.so" -type f -exec chmod +x {} + || die "Change .so permission failed" 
+	find "${ED}${dest}" -name "*.so" -type f -exec chmod +x {} + || die "Change .so permission failed"
 
 	exeinto "${dest}"
 	doexe eclipse
