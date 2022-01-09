@@ -1,7 +1,7 @@
-# Copyright 2020 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 PV_COMMIT="2b72ef6c6f720fe0ffde5ea5c7c48152e02f6c4f"
 
