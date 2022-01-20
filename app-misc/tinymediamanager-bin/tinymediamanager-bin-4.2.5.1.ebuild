@@ -13,11 +13,10 @@ SRC_URI="https://release.tinymediamanager.org/v4/dist/tmm_${PV}_linux-amd64.tar.
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="~amd64"
 
-DEPEND="media-video/mediainfo
+RDEPEND="media-video/mediainfo
 	>=virtual/jre-11:*"
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/tinyMediaManager"
 

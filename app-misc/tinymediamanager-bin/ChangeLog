@@ -1,3 +1,7 @@
+  20 Jan 2022;  <fat@gentoo.org> tinymediamanager-bin-3.1.16.1.ebuild,
+  tinymediamanager-bin-4.2.5.1.ebuild:
+  app-misc/tinymediamanager-bin: modified dependency and keywords
+
   09 Jan 2022;  <fat@gentoo.org> tinymediamanager-bin-3.1.16.1.ebuild,
   tinymediamanager-bin-4.2.5.1.ebuild:
   app-misc/tinymediamanager-bin: port to EAPI 8
