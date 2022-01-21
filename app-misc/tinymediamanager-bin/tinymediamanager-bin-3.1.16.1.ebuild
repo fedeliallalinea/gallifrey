@@ -7,7 +7,7 @@ inherit desktop java-pkg-2
 
 MY_PN="${PN/-bin}"
 
-DESCRIPTION="tinyMediaManager is a media management tool written in Java/Swing"
+DESCRIPTION="Media manager to provide metadata for the Kodi Media Center"
 HOMEPAGE="https://www.tinymediamanager.org/"
 SRC_URI="https://release.tinymediamanager.org/v3/dist/tmm_${PV}_linux.tar.gz -> ${P}.tar.gz"
 

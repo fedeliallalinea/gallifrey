@@ -7,7 +7,7 @@ inherit desktop java-pkg-2
 
 MY_PN="${PN/-bin}"
 
-DESCRIPTION="tinyMediaManager is a media management tool written in Java/Swing"
+DESCRIPTION="Media manager to provide metadata for the Kodi Media Center"
 HOMEPAGE="https://www.tinymediamanager.org/"
 SRC_URI="https://release.tinymediamanager.org/v4/dist/tmm_${PV}_linux-amd64.tar.gz -> ${P}.tar.gz"
 
@@ -51,7 +51,7 @@ src_install() {
 pkg_postinst() {
 	elog
 	elog "This is a FREE version of tinyMediaManager, if you want to unlock all features"
-	elog "you need to buy a license for the PRO version. They key differences are listed"
+	elog "you need to buy a license for the PRO version. The key differences are listed"
 	elog "at https://www.tinymediamanager.org/purchase/."
 	elog
 }
