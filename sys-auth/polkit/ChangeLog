@@ -1,0 +1,5 @@
+*polkit-0.120-r2 (26 Jan 2022)
+
+  26 Jan 2022;  <fat@gentoo.org> +files/polkit-0.120-CVE-2021-4043.patch,
+  +files/polkit-0.120-meson.patch, +polkit-0.120-r2.ebuild:
+  sys-auth/polkit: fix CVE-2021-4034
