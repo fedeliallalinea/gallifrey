@@ -1,3 +1,8 @@
+*sqldeveloper-21.4.2.018.1706 (31 Jan 2022)
+
+  31 Jan 2022;  <fat@gentoo.org> +sqldeveloper-21.4.2.018.1706.ebuild:
+  dev-db/sqldeveloper: version bump to 21.4.2.018.1706
+
   09 Jan 2022;  <fat@gentoo.org> sqldeveloper-21.4.1.349.1822.ebuild:
   dev-db/sqldeveloper: port to EAPI 8
 
