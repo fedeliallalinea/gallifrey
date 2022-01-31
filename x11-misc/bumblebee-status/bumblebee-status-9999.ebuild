@@ -12,7 +12,7 @@ if [[ ${PV} == *9999 ]];then
 	EGIT_REPO_URI="https://github.com/tobi-wan-kenobi/bumblebee-status"
 else
 	SRC_URI="https://github.com/tobi-wan-kenobi/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64"
 fi
 
 DESCRIPTION="Modular, theme-able status line generator for the i3 window manager"
@@ -25,6 +25,7 @@ RDEPEND="
 	dev-python/netifaces[${PYTHON_USEDEP}]
 	dev-python/psutil[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
+	media-fonts/fontawesome4
 "
 
 BDEPEND="
