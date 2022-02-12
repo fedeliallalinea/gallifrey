@@ -1,3 +1,8 @@
+  12 Feb 2022;  <fat@gentoo.org> -lissi-0.0.1_beta1.ebuild,
+  -lissi-0.0.1_beta2.ebuild, -lissi-0.0.2.ebuild, -lissi-0.0.3.ebuild,
+  -lissi-0.0.4.ebuild:
+  net-irc/lissi: removed old
+
 *lissi-0.0.5 (12 Feb 2022)
 
   12 Feb 2022;  <fat@gentoo.org> +lissi-0.0.5.ebuild:
