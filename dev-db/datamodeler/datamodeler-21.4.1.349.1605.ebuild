@@ -18,7 +18,7 @@ LICENSE="OTN"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-RDEPEND=">=dev-java/openjdk-8:*[javafx]
+RDEPEND="<dev-java/openjdk-17:*[javafx]
 	>=virtual/jre-1.8:*"
 
 QA_PREBUILT="
