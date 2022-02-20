@@ -1,3 +1,6 @@
+  20 Feb 2022;  <fat@gentoo.org> -tinymediamanager-bin-4.2.5.1.ebuild:
+  app-misc/tinymediamanager-bin: removed old
+
 *tinymediamanager-bin-4.2.6 (20 Feb 2022)
 
   20 Feb 2022;  <fat@gentoo.org> +tinymediamanager-bin-4.2.6.ebuild:
