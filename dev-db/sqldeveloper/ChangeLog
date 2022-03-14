@@ -1,3 +1,8 @@
+*sqldeveloper-21.4.3.063.0100 (14 Mar 2022)
+
+  14 Mar 2022;  <fat@gentoo.org> +sqldeveloper-21.4.3.063.0100.ebuild:
+  dev-db/sqldeveloper: version bump to 21.4.3.063.0100
+
   16 Feb 2022;  <fat@gentoo.org> sqldeveloper-21.4.2.018.1706.ebuild:
   dev-db/sqldeveloper: fix <openjdk-17:*[javafx] dependency
 
