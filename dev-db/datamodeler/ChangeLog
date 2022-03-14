@@ -1,3 +1,8 @@
+*datamodeler-21.4.2.059.0838 (14 Mar 2022)
+
+  14 Mar 2022;  <fat@gentoo.org> +datamodeler-21.4.2.059.0838.ebuild:
+  dev-db/datamodeler: version bump to 21.4.2.059.0838
+
   16 Feb 2022;  <fat@gentoo.org> datamodeler-21.4.1.349.1605.ebuild:
   dev-db/datamodeler: fix <openjdk-17:*[javafx] dependency
 
