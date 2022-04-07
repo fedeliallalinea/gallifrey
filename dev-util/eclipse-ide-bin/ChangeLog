@@ -1,3 +1,8 @@
+*eclipse-ide-bin-4.23.0 (07 Apr 2022)
+
+  07 Apr 2022;  <fat@gentoo.org> +eclipse-ide-bin-4.23.0.ebuild:
+  dev-util/eclipse-ide-bin: bump version to 4.23.0
+
   09 Jan 2022;  <fat@gentoo.org> eclipse-ide-bin-4.20.0.ebuild,
   eclipse-ide-bin-4.21.0.ebuild, eclipse-ide-bin-4.22.0.ebuild:
   dev-util/eclipse-ide-bin: port to EAPI 8
