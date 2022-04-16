@@ -1,3 +1,6 @@
+  16 Apr 2022;  <fat@gentoo.org> -ocrmypdf-13.4.1.ebuild:
+  app-text/ocrmypdf: removed old
+
 *ocrmypdf-13.4.3 (16 Apr 2022)
 
   16 Apr 2022;  <fat@gentoo.org> +ocrmypdf-13.4.3.ebuild:
