@@ -1,3 +1,6 @@
+  16 Apr 2022;  <fat@gentoo.org> -pdfminer_six-20201018.ebuild:
+  app-text/pdfminer_six: removed old
+
 *pdfminer_six-20220319 (16 Apr 2022)
 
   16 Apr 2022;  <fat@gentoo.org> +pdfminer_six-20220319.ebuild:
