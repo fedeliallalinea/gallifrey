@@ -1,3 +1,8 @@
+*dbeaver-ce-bin-22.0.2 (16 Apr 2022)
+
+  16 Apr 2022;  <fat@gentoo.org> +dbeaver-ce-bin-22.0.2.ebuild:
+  dev-db/dbeaver-ce-bin: bump version to 22.0.2
+
   14 Mar 2022;  <fat@gentoo.org> -dbeaver-ce-bin-21.3.5.ebuild:
   dev-db/dbeaver-ce-bin: removed old
 
