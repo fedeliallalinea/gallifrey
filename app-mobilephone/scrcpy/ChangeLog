@@ -1,3 +1,8 @@
+*scrcpy-1.24 (29 Apr 2022)
+
+  29 Apr 2022;  <fat@gentoo.org> +scrcpy-1.24.ebuild:
+  app-mobilephone/scrcpy: bump version to 1.24
+
 *scrcpy-1.23 (23 Feb 2022)
 
   23 Feb 2022;  <fat@gentoo.org> +scrcpy-1.23.ebuild:
