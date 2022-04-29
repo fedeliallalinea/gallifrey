@@ -1,3 +1,6 @@
+  29 Apr 2022;  <fat@gentoo.org> -scrcpy-1.22.ebuild, -scrcpy-1.23.ebuild:
+  app-mobilephone/scrcpy: removed old
+
 *scrcpy-1.24 (29 Apr 2022)
 
   29 Apr 2022;  <fat@gentoo.org> +scrcpy-1.24.ebuild:
