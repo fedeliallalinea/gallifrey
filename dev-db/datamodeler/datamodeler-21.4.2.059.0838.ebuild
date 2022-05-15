@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit rpm java-pkg-2
+inherit desktop java-pkg-2 rpm
 
 MY_P="${P}-1.noarch"
 
@@ -46,8 +46,7 @@ src_prepare() {
 }
 
 src_install() {
-	insinto /usr/share/applications/
-	doins opt/${PN}/datamodeler.desktop
+	domenu opt/${PN}/datamodeler.desktop
 	rm "${S}"/opt/${PN}/datamodeler.desktop || die "rm failed"
 
 	insinto /opt/${PN}
