@@ -18,12 +18,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="server"
 
 DEPEND="|| (
-		>=virtual/jre-1.6:*
-		>=virtual/jdk-1.6:*
-	)
-	!net-mail/davmail"
+		>=virtual/jre-1.8:*
+		>=virtual/jdk-1.8:*
+	)"
 RDEPEND="${DEPEND}
 	server? ( acct-user/davmail )"
+BDEPEND="app-arch/unzip"
 
 src_install() {
 	# libraries
