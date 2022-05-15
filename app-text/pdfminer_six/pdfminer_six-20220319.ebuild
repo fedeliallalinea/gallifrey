@@ -7,11 +7,12 @@ MY_PN="${PN/_/.}"
 
 PYTHON_COMPAT=( python3_{8..10} )
 
+inherit distutils-r1
+
 if [[ ${PV} == "9999" ]] ; then
-	inherit git-r3 distutils-r1
+	inherit git-r3
 	EGIT_REPO_URI="https://github.com/pdfminer/${MY_PN}.git"
 else
-	inherit distutils-r1
 	SRC_URI="https://github.com/pdfminer/${MY_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
@@ -21,7 +22,6 @@ HOMEPAGE="https://pdfminersix.readthedocs.io/en/latest/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 #IUSE="doc examples test"
 IUSE="doc test"
 RESTRICT="!test? ( test )"
