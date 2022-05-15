@@ -28,7 +28,7 @@ RDEPEND="
 	virtual/libusb:1
 	virtual/opengl
 	bluetooth? ( net-wireless/bluez )
-	egl? ( media-libs/mesa[egl] )
+	egl? ( media-libs/mesa[egl(+)?] )
 "
 
 src_configure() {
