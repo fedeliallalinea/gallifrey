@@ -32,7 +32,7 @@ DEPEND="
 "
 
 # with opencl enabled on tesserct there is a problem with language
-# and also tesseract has a problem 
+# and also tesseract has a problem
 # https://github.com/tesseract-ocr/tesseract/issues/837
 RDEPEND="
 	app-text/ghostscript-gpl
