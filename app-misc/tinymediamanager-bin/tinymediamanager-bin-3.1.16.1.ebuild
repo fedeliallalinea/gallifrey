@@ -36,11 +36,11 @@ src_install() {
 	java-pkg_dolauncher "${MY_PN}-cli" \
 		--main org.tinymediamanager.TinyMediaManager \
 		--java_args '-Djava.net.preferIPv4Stack=true \
-            -Dappbase=http://www.tinymediamanager.org/ \
+			-Dappbase=http://www.tinymediamanager.org/ \
 			-Djna.nosys=true \
 			-Djava.awt.headless=true \
-            -Dtmm.contentfolder="${HOME}"/.tmm \
-            -Dtmm.noupdate=true \
+			-Dtmm.contentfolder="${HOME}"/.tmm \
+			-Dtmm.noupdate=true \
 			-Xms64m \
 			-Xmx512m \
 			-Xss512k'
