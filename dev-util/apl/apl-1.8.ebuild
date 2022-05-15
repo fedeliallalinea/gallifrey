@@ -3,8 +3,6 @@
 
 EAPI=8
 
-inherit flag-o-matic
-
 DESCRIPTION="GNU APL is a free interpreter for the programming language APL"
 HOMEPAGE="https://www.gnu.org/software/apl/"
 SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
