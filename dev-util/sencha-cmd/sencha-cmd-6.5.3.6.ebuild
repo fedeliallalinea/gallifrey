@@ -18,7 +18,7 @@ DEPEND="virtual/jre:1.8
 	acct-group/sencha
 	app-eselect/eselect-sencha-cmd"
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="app-arch/unzip"
 
 S="${WORKDIR}"
 
