@@ -5,7 +5,7 @@ EAPI=8
 
 if [[ ${PV} == "99999999" ]] ; then
 	inherit git-r3
-	EGIT_REPO_URI="git://github.com/fedeliallalinea/${PN}.git"
+	EGIT_REPO_URI="https://github.com/fedeliallalinea/${PN}.git"
 else
 	SRC_URI="https://github.com/fedeliallalinea/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
