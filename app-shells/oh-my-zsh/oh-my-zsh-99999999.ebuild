@@ -8,11 +8,9 @@ inherit git-r3 readme.gentoo-r1
 
 DESCRIPTION="A ready-to-use zsh configuration with plugins"
 HOMEPAGE="https://github.com/robbyrussell/oh-my-zsh"
-SRC_URI=""
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
 PROPERTIES="live"
 
