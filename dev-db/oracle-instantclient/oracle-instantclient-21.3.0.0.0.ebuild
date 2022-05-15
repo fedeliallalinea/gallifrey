@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit pax-utils multilib-minimal
+inherit pax-utils multilib multilib-minimal
 
 DESCRIPTION="Oracle 18c Instant Client with SDK"
 HOMEPAGE="https://www.oracle.com/database/technologies/instant-client.html"
