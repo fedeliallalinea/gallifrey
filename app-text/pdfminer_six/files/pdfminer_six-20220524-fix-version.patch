@@ -1,0 +1,22 @@
+From c4daf0d29edc536f6caacabe23850563a1d63884 Mon Sep 17 00:00:00 2001
+From: Marco Genasci <fedeliallalinea@gmail.com>
+Date: Sun, 12 Jun 2022 18:42:49 +0200
+Subject: [PATCH] fix-version
+
+---
+ pdfminer/__init__.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pdfminer/__init__.py b/pdfminer/__init__.py
+index e8e5221..fc7bc7a 100644
+--- a/pdfminer/__init__.py
++++ b/pdfminer/__init__.py
+@@ -1,4 +1,4 @@
+-__version__ = "__VERSION__"  # auto replaced with tag in github actions
++__version__ = "20220524"  # auto replaced with tag in github actions
+ 
+ if __name__ == "__main__":
+     print(__version__)
+-- 
+2.35.1
+
