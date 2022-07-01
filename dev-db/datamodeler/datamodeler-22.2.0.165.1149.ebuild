@@ -18,8 +18,8 @@ LICENSE="OTN"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-RDEPEND="<dev-java/openjdk-17:*[javafx]
-	>=virtual/jre-1.8:*"
+RDEPEND="dev-java/openjdk:11[javafx]
+	virtual/jre:11"
 
 QA_PREBUILT="
 	opt/${PN}/netbeans/platform/modules/lib/amd64/linux/libjnidispatch-422.so
