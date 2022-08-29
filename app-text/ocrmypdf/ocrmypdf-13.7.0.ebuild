@@ -52,6 +52,7 @@ RDEPEND="
 	media-libs/leptonica
 	jbig? ( media-libs/jbig2enc )
 "
+BDEPEND="dev-python/setuptools_scm_git_archive[${PYTHON_USEDEP}]"
 
 distutils_enable_tests pytest
 distutils_enable_sphinx docs --no-autodoc
