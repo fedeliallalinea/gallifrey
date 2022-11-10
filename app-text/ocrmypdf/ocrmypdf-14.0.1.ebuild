@@ -37,7 +37,7 @@ DEPEND="
 # https://github.com/tesseract-ocr/tesseract/issues/837
 RDEPEND="
 	app-text/ghostscript-gpl
-	>app-text/pdfminer_six-20200720[${PYTHON_USEDEP}]
+	>=app-text/pdfminer-20201018[${PYTHON_USEDEP}]
 	>=app-text/tesseract-4.0.0[-opencl]
 	app-text/unpaper
 	dev-python/chardet[${PYTHON_USEDEP}]
