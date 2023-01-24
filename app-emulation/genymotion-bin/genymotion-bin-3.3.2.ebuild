@@ -68,6 +68,12 @@ src_prepare() {
 
 	# removed windows line for bashcompletion
 	sed -i "/complete -F _gmtool gmtool.exe/d" "${MY_PN}/completion/bash/gmtool.bash" || die "sed failed"
+
+	# copy .desktop file in S directory
+	sed -i -e "s:Icon.*:Icon=/opt/${MY_PN}/icons/genymotion-logo.png:" \
+		-e "s:Exec.*:Exec=/opt/${MY_PN}/genymotion:" \
+		"${HOME}"/.local/share/applications/genymobile-genymotion.desktop || die "sed failed"
+	cp "${HOME}"/.local/share/applications/genymobile-genymotion.desktop "${S}" || die "copy .desktop file"
 }
 
 src_install() {
@@ -108,8 +114,5 @@ src_install() {
 	insinto /usr/share/zsh/site-functions
 	doins "${MY_PN}/completion/zsh/_gmtool"
 
-	sed -i -e "s:Icon.*:Icon=/opt/${MY_PN}/icons/genymotion-logo.png:" \
-		-e "s:Exec.*:Exec=/opt/${MY_PN}/genymotion:" \
-		"${HOME}"/.local/share/applications/genymobile-genymotion.desktop || die "sed failed"
-	domenu "${HOME}"/.local/share/applications/genymobile-genymotion.desktop
+	domenu genymobile-genymotion.desktop
 }
