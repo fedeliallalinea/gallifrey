@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -17,15 +17,37 @@ LICENSE="genymotion"
 SLOT="0"
 KEYWORDS="-* ~amd64"
 
-RDEPEND="app-emulation/virtualbox
+RDEPEND="app-arch/lz4
+	app-crypt/mit-krb5
+	app-emulation/virtualbox
 	|| (
-		dev-libs/openssl-compat:1.0.0
-		=dev-libs/openssl-1.0*:0
+		dev-libs/openssl-compat:1.1.0
+		=dev-libs/openssl-1.1*:0
 	)
+	dev-libs/glib:2
 	=dev-libs/hiredis-1.0*
-	sys-apps/util-linux
+	media-libs/alsa-lib
+	media-libs/fontconfig
+	media-libs/freetype
+	media-libs/libpulse
+	media-libs/gst-plugins-base:1.0
+	media-libs/gstreamer:1.0
+	sys-apps/dbus
+	sys-libs/zlib
 	virtual/opengl
+	x11-libs/libX11
+	x11-libs/libxcb
+	x11-libs/libXext
+	x11-libs/libXi
+	x11-libs/libxkbcommon
+	x11-libs/libXmu
+	x11-libs/xcb-util
+	x11-libs/xcb-util-image
+	x11-libs/xcb-util-keysyms
+	x11-libs/xcb-util-renderutil
+	x11-libs/xcb-util-wm
 "
+BDEPEND="x11-misc/xdg-utils"
 
 RESTRICT="bindist fetch"
 S="${WORKDIR}"
