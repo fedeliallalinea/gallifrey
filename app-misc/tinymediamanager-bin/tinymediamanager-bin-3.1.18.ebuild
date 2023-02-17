@@ -12,7 +12,7 @@ HOMEPAGE="https://www.tinymediamanager.org/"
 SRC_URI="https://release.tinymediamanager.org/v3/dist/tmm_${PV}_linux.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-SLOT="0"
+SLOT="0/3"
 KEYWORDS="~amd64"
 
 RDEPEND="media-video/mediainfo
