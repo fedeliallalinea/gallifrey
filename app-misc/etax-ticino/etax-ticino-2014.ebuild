@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~x86"
 MY_PV="eTax_ticino${SLOT}-unix"
 
 SRC_URI="
-	amd64? ( https://www3.ti.ch/DFE/sw/struttura/dfe/dc/etax/${SLOT}/${MY_PV}-64bit.sh )
-	x86? ( https://www3.ti.ch/DFE/sw/struttura/dfe/dc/etax/${SLOT}/${MY_PV}-32bit.sh )
+	amd64? ( https://www3.ti.ch/DFE/DC/etax/${SLOT}/${MY_PV}-64bit.sh )
+	x86? ( https://www3.ti.ch/DFE/DC/etax/${SLOT}/${MY_PV}-32bit.sh )
 "
 
 DEPEND="virtual/jre:1.8"
