@@ -13,13 +13,11 @@ KEYWORDS="~amd64"
 LICENSE="GPL-3"
 SLOT="0"
 
-DEPEND="|| (
-		net-misc/youtube-dl
-		net-misc/yt-dlp
-	)
+DEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5"
+	dev-qt/qtwidgets:5
+	net-misc/yt-dlp"
 RDEPEND="${DEPEND}"
 
 pkg_postinst() {
