@@ -24,7 +24,7 @@ RDEPEND="app-arch/lz4
 		app-emulation/virtualbox
 	)
 	|| (
-		dev-libs/openssl-compat:1.1.0
+		dev-libs/openssl-compat:1.1.1
 		=dev-libs/openssl-1.1*:0
 	)
 	dev-libs/glib:2
@@ -158,4 +158,3 @@ pkg_postinst() {
 		ewarn "to change hypervisor to QEMU."
 	fi
 }
-
