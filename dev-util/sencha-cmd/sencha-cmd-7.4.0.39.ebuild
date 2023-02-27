@@ -10,7 +10,7 @@ SRC_URI="x86? ( http://cdn.sencha.com/cmd/${PV}/no-jre/SenchaCmd-${PV}-linux-i38
 "
 
 LICENSE="sencha"
-SLOT="7.4"
+SLOT="$(ver_cut 1-2)"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
