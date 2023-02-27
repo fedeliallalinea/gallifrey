@@ -5,4 +5,7 @@
 		<email>fedeliallalinea@gmail.com</email>
 		<name>Marco Genasci</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">EricKotato/sddm-slice</remote-id>
+	</upstream>
 </pkgmetadata>
