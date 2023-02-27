@@ -27,6 +27,7 @@ src_prepare() {
 
 	local SENCHA_CMD_SH=${A/\.zip/}
 	SENCHA_CMD_SH=${SENCHA_CMD_SH/6\.2\.2/6\.2\.2\.36}
+	export INSTALL4J_ADD_VM_PARAMS="-Duser.home=${T}"
 	./${SENCHA_CMD_SH} -q \
 		-Dall=true \
 		-V'addToPath$Integer'=1 \

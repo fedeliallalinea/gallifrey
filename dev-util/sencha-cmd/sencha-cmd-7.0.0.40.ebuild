@@ -25,6 +25,7 @@ S="${WORKDIR}"
 src_prepare() {
 	default
 
+	export INSTALL4J_ADD_VM_PARAMS="-Duser.home=${T}"
 	./${A/\.zip/} -q \
 		-Dall=true \
 		-V'addToPath$Integer'=1 \
