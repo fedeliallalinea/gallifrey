@@ -5,4 +5,11 @@
 		<email>fedeliallalinea@gmail.com</email>
 		<name>Marco Genasci</name>
 	</maintainer>
+	<use>
+		<flag name="lto">Build with Link Time Optimization (LTO)</flag>
+	</use>
+	<upstream>
+		<bugs-to>https://github.com/Genymobile/scrcpy/issues</bugs-to>
+		<remote-id type="github">Genymobile/scrcpy</remote-id>
+	</upstream>
 </pkgmetadata>
