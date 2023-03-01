@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="project">
+    <email>fedeliallalinea@gmail.com</email>
+    <name>Marco Genasci</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="pypi">shell-gpt</remote-id>
+    <remote-id type="github">TheR1D/shell_gpt</remote-id>
+    <maintainer status="unknown">
+      <email>farkhod@sadykov.dev</email>
+      <name>Farkhod Sadykov</name>
+    </maintainer>
+  </upstream>
+</pkgmetadata>
