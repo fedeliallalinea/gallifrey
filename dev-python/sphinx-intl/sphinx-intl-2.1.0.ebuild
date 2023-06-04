@@ -5,11 +5,12 @@ EAPI=8
 
 PYTHON_COMPAT=( python3_{9..11} )
 DISTUTILS_USE_PEP517=setuptools
-inherit distutils-r1
+PYPI_NO_NORMALIZE=1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Utility tool to translate Sphinx generated document."
 HOMEPAGE="https://github.com/sphinx-doc/sphinx-intl https://pypi.org/project/sphinx-intl/"
-SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
+#SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -17,7 +18,6 @@ KEYWORDS="~amd64"
 IUSE="test"
 # use tox that seems not supported in distutils-r1 eclass
 RESTRICT="test"
-
 
 RDEPEND="dev-python/Babel[${PYTHON_USEDEP}]
 	dev-python/click[${PYTHON_USEDEP}]
