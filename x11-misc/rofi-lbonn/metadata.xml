@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Marco Genasci</name>
+		<email>fedeliallalinea@gmail.com</email>
+	</maintainer>
+	<use>
+		<flag name="drun">Enable desktop file run dialog</flag>
+		<flag name="windowmode">Enable normal window mode</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">lbonn/rofi</remote-id>
+	</upstream>
+</pkgmetadata>
