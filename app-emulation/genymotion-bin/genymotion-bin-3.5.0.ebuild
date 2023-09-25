@@ -11,7 +11,7 @@ BIN_ARCHIVE="${MY_P}-linux_x64.bin"
 
 DESCRIPTION="Complete set of tools that provide a virtual environment for Android"
 HOMEPAGE="https://genymotion.com"
-SRC_URI="${BIN_ARCHIVE}"
+SRC_URI="https://dl.genymotion.com/releases/${MY_P}/${BIN_ARCHIVE}"
 
 LICENSE="genymotion"
 SLOT="0"
@@ -52,7 +52,7 @@ RDEPEND="app-arch/lz4
 "
 BDEPEND="x11-misc/xdg-utils"
 
-RESTRICT="bindist fetch"
+RESTRICT="bindist mirror"
 S="${WORKDIR}"
 
 QA_PREBUILT="
@@ -66,20 +66,6 @@ QA_PREBUILT="
 	opt/${MY_PN}/gmtool
 	opt/${MY_PN}/tools/*
 "
-
-pkg_nofetch() {
-	einfo
-	einfo "Please visit"
-	einfo
-	einfo "  https://www.genymotion.com/download/"
-	einfo
-	einfo "and download "
-	einfo
-	einfo "  ${BIN_ARCHIVE}"
-	einfo
-	einfo "which must be placed in DISTDIR directory."
-	einfo
-}
 
 src_unpack() {
 	cp "${DISTDIR}/${BIN_ARCHIVE}" "${WORKDIR}" || die "cp failed"
