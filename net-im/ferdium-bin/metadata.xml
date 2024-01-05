@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <name>Marco Genasci</name>
+    <email>fedeliallalinea@gmail.com</email>
+  </maintainer>
+  <longdescription>
+    Ferdium is a desktop app that helps you organize how you use your favourite apps by combining them into one application. It is based on Franz - a software already used by thousands of people - with the difference that Ferdium gives you many additional features and doesn't restrict its usage! Furthermore, Ferdium is compatible with your existing Franz account, so you can continue right where you left off. Please find out more about Ferdium and its features on ferdium.org.
+  </longdescription>
+  <upstream>
+    <bugs-to>https://github.com/ferdium/ferdium-app/issues</bugs-to>
+    <changelog>https://github.com/ferdium/ferdium-app/releases</changelog>
+    <remote-id type="github">ferdium/ferdium-app</remote-id>
+  </upstream>
+</pkgmetadata>
