@@ -23,6 +23,7 @@ S="${WORKDIR}/tinyMediaManager"
 src_install() {
 	insinto /usr/share/tinymediamanager-bin
 	doicon tmm.png tmm.ico
+	doins -r templates
 
 	java-pkg_dojar lib/*.jar tmm.jar restart.jar
 	java-pkg_dolauncher "${MY_PN}" \
@@ -38,9 +39,24 @@ src_install() {
 			-Dfile.encoding=UTF-8 \
 			-Dsun.jnu.encoding=UTF-8 \
 			-Djna.nosys=true \
-			-Dtmm.consoleloglevel=NONE \
+			-Dtmm.consoleloglevel=OFF \
 			-Dawt.useSystemAAFontSettings=on \
 			-Dswing.aatext=true \
+			-Dtmm.contentfolder="${HOME}"/.tmm'
+	java-pkg_dolauncher "${MY_PN}-cli" \
+		--main org.tinymediamanager.TinyMediaManager \
+		--java_args '-Xms64m \
+			-Xmx512m \
+			-Xss512k \
+			-XX:+IgnoreUnrecognizedVMOptions \
+			-XX:+UseG1GC \
+			-XX:+UseStringDeduplication \
+			-Djava.awt.headless=true \
+			-Djava.net.preferIPv4Stack=true \
+			-Dfile.encoding=UTF-8 \
+			-Dsun.jnu.encoding=UTF-8 \
+			-Djna.nosys=true \
+			-Dtmm.consoleloglevel=OFF \
 			-Dtmm.contentfolder="${HOME}"/.tmm'
 
 	make_desktop_entry "${MY_PN}" "tinyMediaManager ${PV}" "/usr/share/pixmaps/tmm.png" "AudioVideo;Video;Database;Java;"
