@@ -100,8 +100,6 @@ src_unpack() {
 	MY_A_sqlplus=MY_A_${ABI}_sqlplus; MY_A_sqlplus=${!MY_A_sqlplus##*/} # sqlplus distfile
 	MY_A_tools=MY_A_${ABI}_tools    ; MY_A_tools=${!MY_A_tools##*/}     # tools distfile
 
-	echo ">>>> ${MY_A_jdbc}"
-
 	mkdir -p "${MY_WORKDIR}" || die
 	cd "${MY_WORKDIR}" || die
 	unpack ${MY_A}
