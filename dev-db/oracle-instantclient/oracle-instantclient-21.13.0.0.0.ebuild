@@ -3,9 +3,9 @@
 
 EAPI=8
 
-inherit pax-utils multilib-minimal
+inherit pax-utils
 
-DESCRIPTION="Oracle 18c Instant Client with SDK"
+DESCRIPTION="Oracle 21c Instant Client with SDK"
 HOMEPAGE="https://www.oracle.com/database/technologies/instant-client.html"
 
 MY_SOVER=21.1 # the library soname found in the zip files
@@ -142,16 +142,16 @@ src_install() {
 
 	# shared libraries
 	into "${oracle_home}"
-	dolib.so lib*$(get_libname)*
+	dolib.so lib*.so*
 	use precomp && dolib.a cobsqlintf.o
 
 	# ensure to be linkable
-	[[ -e libocci$(get_libname) ]] ||
-	dosym libocci$(get_libname ${MY_SOVER}) \
-		"${oracle_home}"/$(get_libdir)/libocci$(get_libname)
-	[[ -e libclntsh$(get_libname) ]] ||
-	dosym libclntsh$(get_libname ${MY_SOVER}) \
-		"${oracle_home}"/$(get_libdir)/libclntsh$(get_libname)
+	[[ -e libocci.so ]] ||
+	dosym libocci.so.${MY_SOVER} \
+		"${oracle_home}"/$(get_libdir)/libocci.so
+	[[ -e libclntsh.so ]] ||
+	dosym libclntsh.so.${MY_SOVER} \
+		"${oracle_home}"/$(get_libdir)/libclntsh.so
 
 	# java archives
 	insinto "${oracle_home}"/$(get_libdir)
