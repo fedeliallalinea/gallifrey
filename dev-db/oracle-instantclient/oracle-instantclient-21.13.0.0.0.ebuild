@@ -118,7 +118,7 @@ src_prepare() {
 		rm -f sdk/demo/*procob*
 	fi
 	if use sdk; then
-		PATCHES+=( "${FILESDIR}"/21.3.0.0.0-makefile.patch )
+		PATCHES+=( "${FILESDIR}"/21.13.0.0.0-makefile.patch )
 		rm sdk/include/ldap.h || die #299562
 	fi
 	default
