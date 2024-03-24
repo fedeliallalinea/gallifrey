@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fedeliallalinea@gmail.com</email>
+		<name>Marco Genasci</name>
+	</maintainer>
+	<upstream>
+		<bugs-to>https://github.com/maldoinc/plasma-theme-switcher/issues</bugs-to>
+		<remote-id type="github">maldoinc/plasma-theme-switcher</remote-id>
+	</upstream>
+</pkgmetadata>
