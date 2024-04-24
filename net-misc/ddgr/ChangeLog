@@ -1,4 +1,0 @@
-*ddgr-1.9 (22 Dec 2021)
-
-  22 Dec 2021;  <fat@gentoo.org> +ddgr-1.9.ebuild, +metadata.xml:
-  net-misc/ddgr: new package
