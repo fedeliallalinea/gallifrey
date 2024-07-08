@@ -126,11 +126,9 @@ src_install() {
 	insinto /usr/share/zsh/site-functions
 	doins "${MY_PN}/completion/zsh/_gmtool"
 
-	if has_version app-emulation/qemu ; then
-		dodir /opt/"${MY_PN}"/qemu/bin
-		dosym  -r /usr/bin/qemu-system-x86_64 /opt/"${MY_PN}"/qemu/x86_64/bin/qemu-system-x86_64
-		dosym -r /usr/bin/qemu-img /opt/"${MY_PN}"/qemu/x86_64/bin/qemu-img
-	fi
+	dodir /opt/"${MY_PN}"/qemu/bin
+	dosym  -r /usr/bin/qemu-system-x86_64 /opt/"${MY_PN}"/qemu/x86_64/bin/qemu-system-x86_64
+	dosym -r /usr/bin/qemu-img /opt/"${MY_PN}"/qemu/x86_64/bin/qemu-img
 
 	domenu genymobile-genymotion.desktop
 }
