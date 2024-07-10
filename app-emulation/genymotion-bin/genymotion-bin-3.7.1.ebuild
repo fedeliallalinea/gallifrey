@@ -141,9 +141,5 @@ pkg_postinst() {
 		ewarn "  gmtool config --hypervisor virtualbox"
 		ewarn ""
 		ewarn "to change hypervisor to VirtualBox"
-		ewarn ""
-		ewarn "If you want to change the hypervisor to QEMU later, remember to"
-		ewarn "install QEMU first and then re-emerge genymotion-bin to create"
-		ewarn "the correct symbolic links."
 	fi
 }
