@@ -10,6 +10,7 @@ MY_PN="${PN/-bin}"
 DESCRIPTION="Media manager to provide metadata for the Kodi Media Center"
 HOMEPAGE="https://www.tinymediamanager.org/"
 SRC_URI="https://release.tinymediamanager.org/v4/dist/tmm_${PV}_linux-amd64.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/tinyMediaManager"
 
 LICENSE="Apache-2.0"
 SLOT="0/4"
@@ -17,8 +18,6 @@ KEYWORDS="~amd64"
 
 RDEPEND="media-video/mediainfo
 	>=virtual/jre-11:*"
-
-S="${WORKDIR}/tinyMediaManager"
 
 src_install() {
 	insinto /usr/share/tinymediamanager-bin
