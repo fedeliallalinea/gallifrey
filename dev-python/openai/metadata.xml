@@ -11,5 +11,10 @@
 			<email>support@openai.com</email>
 		</maintainer>
 		<remote-id type="github">openai/openai-python</remote-id>
+		<remote-id type="pypi">openai</remote-id>
 	</upstream>
+	<use>
+		<flag name="datalib">Enable support for some functionality, not needed for talking API</flag>
+		<flag name="realtime">Enable realtime API support</flag>
+	</use>
 </pkgmetadata>
