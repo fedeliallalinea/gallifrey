@@ -1,0 +1,25 @@
+diff --color -Naru a/modules/javafx.graphics/src/main/native-font/pango.c b/modules/javafx.graphics/src/main/native-font/pango.c
+--- a/modules/javafx.graphics/src/main/native-font/pango.c	2025-01-15 14:59:21.525887004 +0100
++++ b/modules/javafx.graphics/src/main/native-font/pango.c	2025-01-15 15:00:22.535403889 +0100
+@@ -402,7 +402,7 @@
+     (JNIEnv *env, jclass that, jlong str, jlong pos)
+ {
+     if (!str) return 0;
+-    return (jlong)g_utf8_strlen((const gchar *)str, (const gchar *)pos);
++    return (jlong)g_utf8_strlen((const gchar *)str, (gssize)pos);
+ }
+ 
+ JNIEXPORT jlong JNICALL OS_NATIVE(g_1utf16_1to_1utf8)
+diff --color -Naru a/modules/javafx.graphics/src/main/native-prism-es2/x11/X11GLContext.c b/modules/javafx.graphics/src/main/native-prism-es2/x11/X11GLContext.c
+--- a/modules/javafx.graphics/src/main/native-prism-es2/x11/X11GLContext.c	2025-01-15 14:59:21.532553619 +0100
++++ b/modules/javafx.graphics/src/main/native-prism-es2/x11/X11GLContext.c	2025-01-15 15:01:21.924933476 +0100
+@@ -275,7 +275,8 @@
+                 dlsym(RTLD_DEFAULT, "glXSwapIntervalSGI");
+ 
+         if (ctxInfo->glXSwapIntervalSGI == NULL) {
+-            ctxInfo->glXSwapIntervalSGI = glXGetProcAddress("glXSwapIntervalSGI");
++	    ctxInfo->glXSwapIntervalSGI = (PFNGLXSWAPINTERVALSGIPROC)
++	        glXGetProcAddress((const GLubyte *)"glXSwapIntervalSGI");
+         }
+ 
+     }
