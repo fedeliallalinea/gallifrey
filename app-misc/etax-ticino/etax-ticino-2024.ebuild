@@ -16,7 +16,7 @@ MY_PV="eTax_ticino${SLOT}-unix"
 
 SRC_URI="https://www3.ti.ch/DFE/DC/etax/${SLOT}/${MY_PV}-64bit.sh"
 
-DEPEND="virtual/jre:11"
+DEPEND="virtual/jre:17"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
