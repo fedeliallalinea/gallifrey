@@ -1,0 +1,12 @@
+diff --color -Naru a/Makefile.PL b/Makefile.PL
+--- a/Makefile.PL	2025-04-22 14:20:05.823106081 +0200
++++ b/Makefile.PL	2025-04-22 14:20:33.239668907 +0200
+@@ -374,7 +374,7 @@
+ # --- UNIX Variants ---
+ 
+ elsif ($::opt_l || !defined $mkfile and # use -l to enable this direct-link approach
+-        @_=grep { m:/lib(cl(ie)?ntsh|oracle).\w+$:o } <$OH/lib/lib*>
++        @_=grep { m:/lib(cl(ie)?ntsh|oracle).\w+$:o } <$OH/lib{,64}/lib*>
+     ) {
+     # --- the simple modern way ---
+     foreach(@_) { s:\Q$OH/lib/::g }

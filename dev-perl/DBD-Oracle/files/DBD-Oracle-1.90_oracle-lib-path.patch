@@ -1,0 +1,40 @@
+From 5122724db82a29041f8f05675b76ba7357f0e78e Mon Sep 17 00:00:00 2001
+From: Sam James <sam@gentoo.org>
+Date: Sat, 27 May 2023 13:13:43 +0100
+Subject: [PATCH] Makefile.PL: help ora_libdir find ORACLE_HOME on Gentoo
+
+On Gentoo, for better or worse, we install oracle-instantclient on 64-bit
+systems to /usr/lib64/oracle/client/ with:
+* /usr/lib64/oracle/client/lib for 32-bit libraries (multilib)
+* /usr/lib64/oracle/client/lib64 for native 64-bit libraries
+
+Adapt the logic to handle lib64 if it exists and we're using a 64-bit Perl.
+
+(And fix some whitespace while at it.)
+---
+ Makefile.PL | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile.PL b/Makefile.PL
+index c793c11..bb5e628 100644
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -1115,14 +1115,15 @@ sub perl_is_64bit {
+     return defined $Config{use64bitall} ;
+ }
+ sub ora_libdir {
+-    my $libdir = 'lib' ;
++    my $libdir = 'lib';
+     if ( $client_version >= 9 ) {
+         $libdir = 'lib32' if ! perl_is_64bit() and -d "$OH/lib32";
++        $libdir = 'lib64' if perl_is_64bit() and -d "$OH/lib64";
++        # Solaris OIC 12+ from pkg
+         $libdir = 'lib/64' if perl_is_64bit() and -d "$OH/lib/64";
+-           # Solaris OIC 12+ from pkg
+     }
+     else {
+-        $libdir = 'lib64' if   perl_is_64bit() and -d "$OH/lib64";
++        $libdir = 'lib64' if perl_is_64bit() and -d "$OH/lib64";
+     }
+ 
+     return $libdir;
