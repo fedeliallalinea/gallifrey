@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -9,15 +9,9 @@ DESCRIPTION="Oracle 21c Instant Client with SDK"
 HOMEPAGE="https://www.oracle.com/database/technologies/instant-client.html"
 
 MY_SOVER=21.1 # the library soname found in the zip files
-
-IUSE="jdbc odbc precomp +sdk +sqlplus tools"
-REQUIRED_USE="precomp? ( sdk )"
-
 MY_PVM=$(ver_cut 1-2)
 MY_P="instantclient_$(ver_rs 1 _ ${MY_PVM})"
-
 MY_PVP=$(ver_cut 5) # p2
-
 MY_URI="https://download.oracle.com/otn_software/linux/instantclient/$(ver_rs 1-5 '' $(ver_cut 1-5))"
 
 # MY_PLAT_x86="Linux x86"
@@ -71,10 +65,13 @@ SRC_URI="
 	)
 "
 
+S="${WORKDIR}/${MY_P}"
+
 LICENSE="OTN"
 SLOT="0/${MY_SOVER}"
 KEYWORDS="~amd64"
-RESTRICT="mirror splitdebug test"
+IUSE="jdbc odbc precomp +sdk +sqlplus tools"
+REQUIRED_USE="precomp? ( sdk )"
 
 RDEPEND="
 	>=dev-libs/libaio-0.3.109-r5
@@ -82,7 +79,7 @@ RDEPEND="
 "
 BDEPEND="app-arch/unzip"
 
-S="${WORKDIR}/${MY_P}"
+RESTRICT="mirror splitdebug test"
 
 QA_PREBUILT="usr/lib*/oracle/client/*/*"
 
@@ -143,7 +140,7 @@ src_install() {
 	# shared libraries
 	insinto "${oracle_home}"/lib
 	doins lib*.so*
-	chmod +x "${D}"/"${oracle_home}"/lib/lib*.so*
+	chmod +x "${ED}"/"${oracle_home}"/lib/lib*.so* || die
 	if use precomp; then
 		doins cobsqlintf.o
 	fi
