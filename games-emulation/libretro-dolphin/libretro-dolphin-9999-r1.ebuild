@@ -1,7 +1,7 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
 inherit cmake git-r3
 
@@ -26,7 +26,6 @@ DEPEND="
 	net-libs/mbedtls:0=
 	net-misc/curl:0=
 	sys-libs/readline:0=
-	sys-libs/zlib:0=
 	X? (
 		x11-libs/libXext
 		x11-libs/libXi
