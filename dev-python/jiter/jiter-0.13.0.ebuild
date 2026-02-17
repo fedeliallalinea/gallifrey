@@ -137,7 +137,7 @@ LICENSE+="
 	Apache-2.0 Apache-2.0-with-LLVM-exceptions MIT MPL-2.0 UoI-NCSA
 	Unicode-3.0
 "
-SLOT="0"dev-python/orjson
+SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
