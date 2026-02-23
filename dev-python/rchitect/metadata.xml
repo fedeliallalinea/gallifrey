@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>fedeliallalinea@gmail.com</email>
+		<name>Marco Genasci</name>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<name>Randy Lai</name>
+			<email>randy.cs.lai@gmail.com</email>
+		</maintainer>
+		<remote-id type="github">randy3k/rchitect</remote-id>
+		<remote-id type="pypi">rchitect</remote-id>
+	</upstream>
+</pkgmetadata>
